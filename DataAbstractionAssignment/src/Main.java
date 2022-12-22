@@ -8,7 +8,6 @@ public class Main {
 
 
         // new deposit
-
         Date d1= new Date(122, 10, 15, 5,30,12);
         //Date d1=  rightNow.getTime();
 

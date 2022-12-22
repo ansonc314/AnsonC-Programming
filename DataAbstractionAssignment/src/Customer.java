@@ -129,13 +129,16 @@ public class Customer {
 
 
     private boolean checkOverdraft(double amt, String account){
+    // Requires : double amt <= account balance + 100 , String account
+    // Effects: Return true if withdraw amt > account balance + 100
+
         boolean result = true;
         if (account == CHECKING){
-            if (this.checkBalance  -  amt >= OVERDRAFT) {result =  false;}  // if overdraft, set result = true
+            if (this.checkBalance  -  amt >= OVERDRAFT) {result =  false;}  // if overdraft limit exceeds, set result = true
             else {result = true;}
         }
         if (account == SAVING){
-            if (this.savingBalance  -  amt >= OVERDRAFT) {result =  false;}  // if overdraft, set result = true
+            if (this.savingBalance  -  amt >= OVERDRAFT) {result =  false;}  // if overdraft limit exceeds, set result = true
             else {result = true;}
         }
 
