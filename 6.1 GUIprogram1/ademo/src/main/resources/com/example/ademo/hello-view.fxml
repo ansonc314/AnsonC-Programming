@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ademo.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label text="Game of 21" textFill="#e00404" />
+   <Label fx:id="Instruction" maxHeight="800.0" maxWidth="400.0" minHeight="92.0" minWidth="400.0" prefHeight="92.0" prefWidth="400.0" text="Instruction: This game is a simplified version of the game BlackJack. To win, the user needs to generate a number bigger than the computer's generated one, without exceeding the number 21." wrapText="true" />
+
+
+   <Button fx:id="start_button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="25.0" prefWidth="121.0" text="Click Start to Play" />
+
+   <VBox prefHeight="143.0" prefWidth="467.0">
+      <children>
+         <HBox prefHeight="30.0" prefWidth="420.0">
+            <children>
+               <Label fx:id="UserNoLabel" prefHeight="20.0" prefWidth="213.0" text="User Value" />
+               <Label fx:id="UserNoValue" alignment="CENTER" prefHeight="20.0" prefWidth="300.0" textAlignment="RIGHT" textFill="#1130f9" />
+            </children></HBox>
+         <HBox prefHeight="30.0" prefWidth="464.0">
+            <children>
+               <Label prefHeight="20.0" prefWidth="212.0" text="Computer Value" />
+               <Label fx:id="computerValueLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="300.0" text="Waiting to be generated" textAlignment="CENTER" textFill="#075ce5" />
+            </children></HBox>
+         <HBox alignment="CENTER" prefHeight="40.0" prefWidth="420.0">
+            <children>
+               <Button fx:id="moreButton" disable="true" mnemonicParsing="false" onAction="#onMoreButtonClick" text="More" />
+               <VBox prefHeight="200.0" prefWidth="100.0" />
+               <Button fx:id="holdButton" disable="true" mnemonicParsing="false" onAction="#onHoldButtonClick" text="Hold" />
+            </children>
+         </HBox>
+         <Label text="GAME RESULT: " />
+         <Label fx:id="resultLabel" prefHeight="17.0" prefWidth="396.0" textFill="#f31313" />
+      </children>
+   </VBox>
+   <Button fx:id="ReplayButton" disable="true" mnemonicParsing="false" onAction="#onReplayButtonClick" text="Replay" textAlignment="CENTER" />
+
+</VBox>

@@ -3,7 +3,7 @@ import java.util.Date;
 public class Deposit {
     private double amount;  // deposit amount
     private Date date;      // deposit date
-    private String account; // deposit account nam
+    private String account; // deposit account name
 
 
     // Constructor
