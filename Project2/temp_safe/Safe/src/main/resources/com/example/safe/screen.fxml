@@ -13,19 +13,19 @@
                             <children>
                                 <HBox layoutX="16.0" layoutY="7.0" prefHeight="246.0" prefWidth="329.0">
                                     <children>
-                                        <ListView fx:id="list_login" onMouseClicked="#display_login" prefHeight="267.0" prefWidth="222.0" />
+                                        <ListView fx:id="friendList" prefHeight="267.0" prefWidth="222.0" />
                                         <VBox prefHeight="267.0" prefWidth="128.0">
                                             <children>
                                                 <Label text="Company" />
                                                 <TextField fx:id="text_show_company" />
-                                                <Label text="Account" />
-                                                <TextField fx:id="text_show_account" />
+                                                <Label fx:id="text_show_account" text="Account" />
+                                                <TextField fx:id="text_ListShowPhone" />
                                                 <Label text="Password" />
                                                 <TextField fx:id="text_show_password" />
                                     <Label text="Website" />
                                     <TextField fx:id="text_show_website" />
                                                 <HBox prefHeight="61.0" prefWidth="118.0" />
-                                                <Button mnemonicParsing="false" onAction="#delete_login" prefHeight="25.0" prefWidth="117.0" text="delete" />
+                                                <Button mnemonicParsing="false"  prefHeight="25.0" prefWidth="117.0" text="delete" />
                                             </children>
                                         </VBox>
                                     </children>
@@ -60,7 +60,7 @@
                               <Label text="Website" GridPane.rowIndex="3" />
                                     </children>
                                 </GridPane>
-                                <Button layoutX="252.0" layoutY="231.0" mnemonicParsing="false" onAction="#add_login" text="Add" />
+                                <Button layoutX="252.0" layoutY="231.0" mnemonicParsing="false"  text="Add" />
                             </children></AnchorPane>
                     </content>
                 </Tab>
