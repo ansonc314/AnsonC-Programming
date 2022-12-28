@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61b0ff6e-7f58-4034-8a36-42d7e6fc1d3b" name="Changes" comment="" />
+    <list default="true" id="2e34ddc1-94a6-4cf3-922f-9d758439301d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +19,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -31,22 +31,29 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2JPDtQWYvxS4CSKIG8MfuuLx5sd" />
+  <component name="ProjectId" id="2JWSwwdVb0391XKpDwB3y8b0v04" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="Friendbook" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.example.friendbook.Main" />
-      <module name="friendbook" />
+    <configuration name="Safe" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.safe.Main" />
+      <module name="Safe" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -55,11 +62,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="61b0ff6e-7f58-4034-8a36-42d7e6fc1d3b" name="Changes" comment="" />
-      <created>1671971040584</created>
+      <changelist id="2e34ddc1-94a6-4cf3-922f-9d758439301d" name="Changes" comment="" />
+      <created>1672192589769</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1671971040584</updated>
+      <updated>1672192589769</updated>
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-package com.example.friendbook;
+package com.example.PasswordSafe;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
