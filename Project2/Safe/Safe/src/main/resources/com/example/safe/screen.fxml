@@ -5,15 +5,15 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.safe.Controller">
     <children>
-        <TabPane layoutX="49.0" layoutY="42.0" prefHeight="346.0" prefWidth="521.0" tabClosingPolicy="UNAVAILABLE">
+        <TabPane layoutX="49.0" layoutY="42.0" prefHeight="394.0" prefWidth="521.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab text="Logins">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="179.0" prefWidth="322.0">
                             <children>
-                                <HBox layoutX="16.0" layoutY="7.0" prefHeight="246.0" prefWidth="329.0">
+                                <HBox layoutX="16.0" layoutY="7.0" prefHeight="335.0" prefWidth="460.0">
                                     <children>
-                                        <ListView fx:id="list_login" onMouseClicked="#display_login" prefHeight="267.0" prefWidth="222.0" />
+                                        <ListView fx:id="list_login" onMouseClicked="#display_login" prefHeight="335.0" prefWidth="286.0" />
                                         <VBox prefHeight="267.0" prefWidth="128.0">
                                             <children>
                                                 <Label text="Company" />
@@ -25,6 +25,8 @@
                                     <Label text="Website" />
                                     <TextField fx:id="text_show_website" />
                                                 <HBox prefHeight="61.0" prefWidth="118.0" />
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Encrypt and Save" />
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Decrypt and Show" />
                                                 <Button mnemonicParsing="false" onAction="#delete_login" prefHeight="25.0" prefWidth="117.0" text="delete" />
                                             </children>
                                         </VBox>
@@ -60,7 +62,12 @@
                               <Label text="Website" GridPane.rowIndex="3" />
                                     </children>
                                 </GridPane>
-                                <Button layoutX="252.0" layoutY="231.0" mnemonicParsing="false" onAction="#add_login" text="Add" />
+                        <ButtonBar layoutX="122.0" layoutY="220.0" prefHeight="74.0" prefWidth="290.0">
+                          <buttons>
+                            <Button mnemonicParsing="false" onAction="#generate_random_password" prefHeight="48.0" text="Generate Password" textAlignment="CENTER" wrapText="true" />
+                                      <Button mnemonicParsing="false" onAction="#add_login" prefHeight="42.0" prefWidth="148.0" text="Add" />
+                          </buttons>
+                        </ButtonBar>
                             </children></AnchorPane>
                     </content>
                 </Tab>

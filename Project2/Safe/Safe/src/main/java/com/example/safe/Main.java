@@ -19,7 +19,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("screen.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Friendbook");
+        stage.setTitle("Password Safe");
         stage.setScene(scene);
         stage.setHeight(500);
         stage.setWidth(625);

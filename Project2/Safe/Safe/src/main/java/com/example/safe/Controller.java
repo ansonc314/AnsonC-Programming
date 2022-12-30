@@ -13,6 +13,8 @@ public class Controller {
     @FXML     public TextField text_add_company, text_add_account, text_add_password, text_add_website;
     @FXML     public TextField text_show_company, text_show_account, text_show_password, text_show_website;
     @FXML     public ListView<login> list_login = new ListView<login>();
+    @FXML     public login_list  display_list =  new login_list();
+
 
     public void add_login(){
         String company = text_add_company.getText();
@@ -36,7 +38,6 @@ public class Controller {
         text_show_website.setText(temp.website);
         show_index = list_login.getSelectionModel().getSelectedIndex();
     }
-
     public void delete_login(){
         list_login.getItems().remove(show_index);
         text_show_company.clear();
@@ -45,5 +46,8 @@ public class Controller {
         text_show_website.clear();
     }
 
+    public void generate_random_password(){
+    text_add_password.setText("generate my pasword");
+    }
 
 }
