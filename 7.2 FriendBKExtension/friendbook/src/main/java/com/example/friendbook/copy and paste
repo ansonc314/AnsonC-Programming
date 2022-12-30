@@ -18,7 +18,7 @@
                            <children>
                               <VBox prefHeight="246.0" prefWidth="225.0">
                                  <children>
-                                    <ListView fx:id="friendList_home" maxHeight="251.0" maxWidth="200.0" minHeight="230.0" minWidth="200.0" onMouseClicked="#displayFriend_home" prefHeight="251.0" prefWidth="200.0" />
+                                    <ListView fx:id="friendList_home" maxHeight="251.0" maxWidth="200.0" minHeight="230.0" minWidth="200.0" onMouseClicked="#displayFriend" prefHeight="251.0" prefWidth="200.0" />
                                  </children>
                               </VBox>
                               <VBox prefHeight="246.0" prefWidth="190.0">
@@ -39,15 +39,15 @@
                                     </Label>
                                     <Separator prefWidth="200.0" />
                                     <Label text="Email" />
-                                    <Label fx:id="lbl_ListShowEmail_home" prefHeight="17.0" prefWidth="197.0">
+                                    <Label fx:id="lbl_ListShowEmail__home" prefHeight="17.0" prefWidth="197.0">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
                                     <Separator prefWidth="200.0" />
                                     <HBox prefHeight="61.0" prefWidth="118.0" />
-                                    <Button fx:id="button_delete_home" disable="true" mnemonicParsing="false" onMouseClicked="#deleteFriend_home" prefHeight="25.0" prefWidth="117.0" text="delete" />
-                                    <Button mnemonicParsing="false" onAction="#displayFriend_home" text="Button" />
+                                    <Button disable="true" mnemonicParsing="false"  prefHeight="25.0" prefWidth="117.0" text="delete" />
+                                    <Button mnemonicParsing="false"   text="Button" />
                                  </children>
                               </VBox>
                            </children>
@@ -63,7 +63,7 @@
                                 <children>
                                     <VBox prefHeight="246.0" prefWidth="225.0">
                                         <children>
-                                            <ListView fx:id="friendList_work" maxHeight="247.0" maxWidth="200.0" minHeight="230.0" minWidth="200.0" onMouseClicked="#displayFriend_work" prefHeight="247.0" prefWidth="200.0" />
+                                            <ListView fx:id="friendList_work" maxHeight="230.0" maxWidth="200.0" minHeight="230.0" minWidth="200.0" onMouseClicked="#displayFriend" prefHeight="230.0" prefWidth="200.0" />
                                         </children>
                                     </VBox>
                                     <VBox prefHeight="246.0" prefWidth="190.0">
@@ -91,8 +91,8 @@
                                             </Label>
                                             <Separator prefWidth="200.0" />
                                             <HBox prefHeight="61.0" prefWidth="118.0" />
-                                            <Button fx:id="button_delete_work" disable="true" mnemonicParsing="false" onAction="#deleteFriend_work" prefHeight="25.0" prefWidth="117.0" text="delete" />
-                                            <Button mnemonicParsing="false" text="Button" />
+                                            <Button fx:id="button_delete" disable="true" mnemonicParsing="false"   prefHeight="25.0" prefWidth="117.0" text="delete" />
+                                            <Button mnemonicParsing="false"   text="Button" />
                                         </children>
                                     </VBox>
                                 </children>
@@ -108,7 +108,7 @@
                                 <children>
                                     <VBox prefHeight="246.0" prefWidth="225.0">
                                         <children>
-                                            <ListView fx:id="friendList_bank" maxHeight="251.0" maxWidth="200.0" minHeight="230.0" minWidth="200.0" onMouseClicked="#displayFriend_bank" prefHeight="251.0" prefWidth="200.0" />
+                                            <ListView fx:id="friendList_bank" maxHeight="230.0" maxWidth="200.0" minHeight="230.0" minWidth="200.0" onMouseClicked="#displayFriend" prefHeight="230.0" prefWidth="200.0" />
                                         </children>
                                     </VBox>
                                     <VBox prefHeight="246.0" prefWidth="190.0">
@@ -122,7 +122,7 @@
                                             </Label>
                                             <Separator prefWidth="200.0" />
                                             <Label text="Phone" />
-                                            <Label fx:id="lbl_ListShowPhone_bank" prefHeight="20.0" prefWidth="196.0">
+                                            <Label fx:id="lbl_ListShowPhone_bankk" prefHeight="20.0" prefWidth="196.0">
                                                 <font>
                                                     <Font size="14.0" />
                                                 </font>
@@ -136,8 +136,8 @@
                                             </Label>
                                             <Separator prefWidth="200.0" />
                                             <HBox prefHeight="61.0" prefWidth="118.0" />
-                                            <Button fx:id="button_delete_bank" disable="true" mnemonicParsing="false" onAction="#deleteFriend_bank" prefHeight="25.0" prefWidth="117.0" text="delete" />
-                                            <Button mnemonicParsing="false" text="Button" />
+                                            <Button fx:id="button_delete" disable="true" mnemonicParsing="false"   prefHeight="25.0" prefWidth="117.0" text="delete" />
+                                            <Button mnemonicParsing="false"   text="Button" />
                                         </children>
                                     </VBox>
                                 </children>
@@ -180,10 +180,10 @@
                            </children>
                         </GridPane>
                         <Button layoutX="252.0" layoutY="231.0" mnemonicParsing="false" onAction="#addFriend" text="Add" />
-                        <Button layoutX="322.0" layoutY="231.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="322.0" layoutY="231.0" mnemonicParsing="false"  text="Button" />
                      </children></AnchorPane>
             </content>
-          </Tab> 
+          </Tab>
 
         </tabs>
       </TabPane>

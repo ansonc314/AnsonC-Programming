@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.friendbook.Controller">
    <children>
@@ -11,19 +12,35 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="179.0" prefWidth="322.0">
                      <children>
-                        <HBox layoutX="16.0" layoutY="7.0" prefHeight="246.0" prefWidth="329.0">
+                        <HBox layoutX="16.0" layoutY="7.0" prefHeight="246.0" prefWidth="415.0">
                            <children>
                               <ListView fx:id="friendList" onMouseClicked="#displayFriend" prefHeight="267.0" prefWidth="222.0" />
-                              <VBox prefHeight="267.0" prefWidth="128.0">
+                              <VBox prefHeight="246.0" prefWidth="190.0">
                                  <children>
+                                    <Separator prefWidth="200.0" />
                                     <Label text="Name" />
-                                    <TextField fx:id="text_ListShowName" />
+                                    <Label fx:id="lbl_ListShowName" prefHeight="27.0" prefWidth="190.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator prefWidth="200.0" />
                                     <Label text="Phone" />
-                                    <TextField fx:id="text_ListShowPhone" />
+                                    <Label fx:id="lbl_ListShowPhone" prefHeight="20.0" prefWidth="196.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator prefWidth="200.0" />
                                     <Label text="Email" />
-                                    <TextField fx:id="text_ListShowEmail" />
+                                    <Label fx:id="lbl_ListShowEmail" prefHeight="17.0" prefWidth="197.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator prefWidth="200.0" />
                                     <HBox prefHeight="61.0" prefWidth="118.0" />
-                                    <Button mnemonicParsing="false" onAction="#deleteFriend" prefHeight="25.0" prefWidth="117.0" text="delete" />
+                                    <Button fx:id="button_delete" disable="true" mnemonicParsing="false" onAction="#deleteFriend" prefHeight="25.0" prefWidth="117.0" text="delete" />
                                  </children>
                               </VBox>
                            </children>
@@ -58,7 +75,8 @@
                         <Button layoutX="252.0" layoutY="231.0" mnemonicParsing="false" onAction="#addFriend" text="Add" />
                      </children></AnchorPane>
             </content>
-          </Tab>
+          </Tab> 
+
         </tabs>
       </TabPane>
    </children>

@@ -1,17 +1,13 @@
 package com.example.friendbook;
 
 import javafx.application.Application;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
+import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-//import javafx.collections.;
+import javafx.collections.*;
 
 
 public class Main extends Application {
@@ -25,7 +21,16 @@ public class Main extends Application {
         stage.setWidth(625);
         stage.show();
 
+        ChoiceBox display_choice = new ChoiceBox();
+        display_choice.getItems().addAll("item1", "item2", "item3");
+
+     Friend b1 = new Friend("a","b","c");
+     Friend b2 = new Friend("x","y","z");
+     b2 = b1;
+     b2.name = "w";
+     System.out.println(b1.name);
      }
+
 
     public static void main(String[] args) {launch();
     }
