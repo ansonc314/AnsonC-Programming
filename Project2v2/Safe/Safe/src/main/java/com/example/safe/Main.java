@@ -25,20 +25,6 @@ public class Main extends Application {
         stage.setHeight(500);
         stage.setWidth(625);
         stage.show();
-
-
-        mixing a = new mixing();
-        String str = "abcdefg@#$";
-        String encode = a.mix(str,"ce");
-        System.out.println(encode);
-
-        String decode = a.unmix(encode,"ce");
-        System.out.println(decode);
-
-
-
-        // int number = Integer.parseInt("abc");
-       // System.out.println(number);
     }
 
     public static void main(String[] args) {launch();

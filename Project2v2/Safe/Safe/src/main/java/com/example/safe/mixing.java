@@ -3,8 +3,13 @@ package com.example.safe;
 import java.util.Scanner;
 
 public class mixing {
+    public String passwd;
 
-    public String mix(String str, String passwd){
+    mixing(String passwd){
+        this.passwd = passwd;
+    }
+
+    public String mix(String str){
         int tmp = 0;
         for (int i=0; i<passwd.length(); i++){
             tmp = tmp + passwd.charAt(i);
@@ -24,7 +29,7 @@ public class mixing {
         return convertedStr;
     }
 
-    public String unmix(String str, String passwd){
+    public String unmix(String str){
         int tmp = 0;
         for (int i=0; i<passwd.length(); i++){
             tmp = tmp + passwd.charAt(i);
