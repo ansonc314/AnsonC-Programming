@@ -1,10 +1,7 @@
 package com.example.safe;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.ListView;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -20,6 +17,7 @@ public class Controller {
     public ListView<notes> list_notes = new ListView<notes>();
     public TextArea tarea_notes, tarea_Instructions;
     public TextField text_titles;
+    public ChoiceBox cbox_choice;
 
 
     public void new_login(){
@@ -93,27 +91,38 @@ public class Controller {
     }
 
     public void load_login() throws IOException {
-        list_login_data obj_loginList = new list_login_data("login.txt");
+        String choice ="";
+        choice = cbox_choice.getSelectionModel().getSelectedItem().toString();
+        String filename = choice + "_login.txt";
+        list_login_data obj_loginList = new list_login_data(filename);
         obj_loginList.list = list_login;
         obj_loginList.read2list(passwd);
     }
 
     public void save_login()  throws IOException  {
-        list_login_data obj_loginList = new list_login_data("login.txt");
+        String choice ="";
+        choice = cbox_choice.getSelectionModel().getSelectedItem().toString();
+        String filename = choice + "_login.txt";
+        list_login_data obj_loginList = new list_login_data(filename);
         obj_loginList.list = list_login;
         obj_loginList.write2txt(passwd);
     }
 
 
     public void load_notes() throws IOException {
-        list_notes_data obj_notesList = new list_notes_data("notes.txt");
+        String choice ="";
+        choice = cbox_choice.getSelectionModel().getSelectedItem().toString();
+        String filename = choice + "_notes.txt";
+        list_notes_data obj_notesList = new list_notes_data(filename);
         obj_notesList.list = list_notes;
         obj_notesList.read2list(passwd);
     }
 
     public void save_notes()  throws IOException  {
-        list_notes_data obj_notesList = new list_notes_data("notes.txt");
-        obj_notesList.list = list_notes;
+        String choice ="";
+        choice = cbox_choice.getSelectionModel().getSelectedItem().toString();
+        String filename = choice + "_notes.txt";
+        list_notes_data obj_notesList = new list_notes_data(filename);        obj_notesList.list = list_notes;
         obj_notesList.write2txt(passwd);
     }
 
