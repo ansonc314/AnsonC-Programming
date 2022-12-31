@@ -22,7 +22,9 @@ public class Main {
 
         String addToFile = "\rAdding another line";
 
-         */
+
+
+         */ Read by Lines 
         ArrayList<String> lines = new ArrayList<>();
         FileReader fr = new FileReader("in.txt");
         BufferedReader br = new BufferedReader(fr);

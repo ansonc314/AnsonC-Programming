@@ -5,8 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
+import java.io.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javafx.collections.*;
 
 
@@ -21,14 +24,15 @@ public class Main extends Application {
         stage.setWidth(625);
         stage.show();
 
-        ChoiceBox display_choice = new ChoiceBox();
-        display_choice.getItems().addAll("item1", "item2", "item3");
+        Data a = new Data("file.txt");
 
-     Friend b1 = new Friend("a","b","c");
-     Friend b2 = new Friend("x","y","z");
-     b2 = b1;
-     b2.name = "w";
-     System.out.println(b1.name);
+
+        //a.read2lines();
+        ArrayList<String> lines = new ArrayList<>();
+        lines = a.lines;
+        a.lines.add("abc");
+        a.lines.add("xyz");
+        a.write2txt();
      }
 
 
