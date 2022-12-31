@@ -2,6 +2,7 @@ package com.example.safe;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -10,8 +11,10 @@ import java.util.Random;
 
 
 public class Controller {
+    public String passwd;
     int show_index_login, show_index_notes;   // index of friend list for the friend being displayed
     public TextField text_show_company, text_show_account, text_show_password, text_show_website;
+    public TextField text_masterpassword;
     public ListView<login> list_login = new ListView<login>();
     public ListView<notes> list_notes = new ListView<notes>();
     public TextArea tarea_notes;
@@ -70,7 +73,6 @@ public class Controller {
         new_notes();
     }
 
-
     public void generate_random_password(){
         Random random = new Random();
         String generatedString = "";
@@ -80,5 +82,14 @@ public class Controller {
         }
         text_show_password.setText(generatedString);
     }
+
+    public void showPasswd(){
+    text_masterpassword.setText(passwd);
+    }
+    public void enterPasswd(){
+        passwd=text_masterpassword.getText();
+        text_masterpassword.setText("********");
+    }
+
 
 }
