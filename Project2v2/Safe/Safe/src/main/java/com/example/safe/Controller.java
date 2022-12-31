@@ -18,7 +18,7 @@ public class Controller {
     public TextField text_masterpassword;
     public ListView<login> list_login = new ListView<login>();
     public ListView<notes> list_notes = new ListView<notes>();
-    public TextArea tarea_notes;
+    public TextArea tarea_notes, tarea_Instructions;
     public TextField text_titles;
 
 
@@ -104,4 +104,20 @@ public class Controller {
         obj_loginList.write2txt(passwd);
     }
 
+
+    public void load_notes() throws IOException {
+        list_notes_data obj_notesList = new list_notes_data("notes.txt");
+        obj_notesList.list = list_notes;
+        obj_notesList.read2list(passwd);
+    }
+
+    public void save_notes()  throws IOException  {
+        list_notes_data obj_notesList = new list_notes_data("notes.txt");
+        obj_notesList.list = list_notes;
+        obj_notesList.write2txt(passwd);
+    }
+
+    public void printInstruction(){
+        tarea_Instructions.setText("print instructions");
+    }
 }

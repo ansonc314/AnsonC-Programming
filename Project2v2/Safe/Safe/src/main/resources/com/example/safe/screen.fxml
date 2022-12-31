@@ -83,8 +83,8 @@
                                 </HBox>
                                 <ButtonBar layoutX="168.0" layoutY="270.0">
                                     <buttons>
-                                        <Button mnemonicParsing="false" onAction="#delete_login" text="Load " textFill="#f00404" />
-                                        <Button mnemonicParsing="false" text="Save" textFill="#db0c0c" />
+                                        <Button mnemonicParsing="false" onAction="#load_notes" text="Load " textFill="#f00404" />
+                                        <Button mnemonicParsing="false" onAction="#save_notes" text="Save" textFill="#db0c0c" />
                                     </buttons>
                                 </ButtonBar>
                                 <Separator layoutX="93.0" layoutY="256.0" prefWidth="400.0" />
@@ -95,7 +95,12 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="179.0" prefWidth="322.0">
                             <children>
-                                    <TextArea prefHeight="286.0" prefWidth="409.0" wrapText="true" />
+                        <HBox>
+                           <children>
+                                          <TextArea fx:id="tarea_Instructions" prefHeight="286.0" prefWidth="409.0" wrapText="true" />
+                           </children>
+                        </HBox>
+                        <Button layoutX="409.0" layoutY="131.0" mnemonicParsing="false" onAction="#printInstruction" text="Show Instructions" />
                             </children></AnchorPane>
                     </content>
                 </Tab>
