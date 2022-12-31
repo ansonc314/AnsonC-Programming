@@ -4,6 +4,8 @@ import javafx.collections.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.io.IOException;
+
 public class Controller {
     int show_index_home, show_index_work, show_index_bank;   // index of friend list for the friend to be displayed/deleted
 
@@ -138,11 +140,18 @@ public class Controller {
         button_delete_bank.setDisable(true);
     }
 
-
-
-
-    public void add_choice(){
-        String temp =  cbox_add_choice.getSelectionModel().getSelectedItem().toString();
-        text_addGetName.setText(temp);
+    public void load_home() throws IOException  {
+    Data list = new Data("file.txt");
+    list.friendList = friendList_home;
+    list.read2lines();
     }
+
+    public void save_home()  throws IOException  {
+        Data list = new Data("file.txt");
+        list.friendList = friendList_home;
+        list.write2txt();
+    }
+
+
+
 }

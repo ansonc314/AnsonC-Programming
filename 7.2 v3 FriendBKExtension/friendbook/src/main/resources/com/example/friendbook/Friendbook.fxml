@@ -48,8 +48,8 @@
                                     <HBox prefHeight="61.0" prefWidth="118.0" />
                                     <ButtonBar prefHeight="40.0" prefWidth="200.0">
                                       <buttons>
-                                        <Button mnemonicParsing="false" text="Save" />
-                                          <Button mnemonicParsing="false" onAction="#displayFriend_home" text="Load" />
+                                        <Button mnemonicParsing="false" onAction="#save_home" text="Save" />
+                                          <Button mnemonicParsing="false" onAction="#load_home" text="Load" />
                                           <Button fx:id="button_delete_home" disable="true" mnemonicParsing="false" onMouseClicked="#deleteFriend_home" prefHeight="25.0" prefWidth="117.0" text="Delete" />
                                       </buttons>
                                     </ButtonBar>
