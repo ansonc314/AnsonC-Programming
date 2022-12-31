@@ -5,6 +5,9 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.nio.charset.Charset;
+import java.util.Random;
+
 
 public class Controller {
     int show_index_login, show_index_notes;   // index of friend list for the friend being displayed
@@ -69,7 +72,13 @@ public class Controller {
 
 
     public void generate_random_password(){
-    text_show_password.setText("generate my pasword");
+        Random random = new Random();
+        String generatedString = "";
+        for (int i=0; i<10; i++){
+            char c = (char) random.nextInt(97, 122);
+            generatedString = generatedString + c;
+        }
+        text_show_password.setText(generatedString);
     }
 
 }

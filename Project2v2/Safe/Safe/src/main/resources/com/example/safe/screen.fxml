@@ -90,6 +90,14 @@
                             </children></AnchorPane>
                     </content>
                 </Tab>
+                <Tab text="Instructions">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="179.0" prefWidth="322.0">
+                            <children>
+                                    <TextArea prefHeight="286.0" prefWidth="409.0" wrapText="true" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
             </tabs>
         </TabPane>
       <PasswordField layoutX="180.0" layoutY="1.0" promptText="Master Password" />

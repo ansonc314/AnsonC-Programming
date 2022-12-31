@@ -8,7 +8,7 @@ public class randA {
         /* Effects: return a number between 1 and 10.
          */
         Random rand = new Random() ;
-        return rand.nextInt(1, 10);
+       return rand.nextInt(1, 10);
     }
    public int computerNo(){
         /* Effects: return a number between 16 and 21.
