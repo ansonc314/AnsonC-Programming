@@ -1,0 +1,26 @@
+package com.example.friendbook;
+
+import java.util.ArrayList;
+import java.io.*;
+
+public class Data {
+    public String filename = "file.txt";
+    public ArrayList<String> lines = new ArrayList<>();
+
+    /*
+    Data(String inputFileName){
+        this.filename = inputFileName;
+    }
+
+    public void read_to_lines() throws IOException{
+        FileReader fr = new FileReader(filename);
+        BufferedReader br = new BufferedReader(fr);
+        String line;
+        while ((line = br.readLine()) != null){
+            System.out.println("Just read " + line);
+            lines.add(line);
+        }
+        br.close();
+    }
+    */
+}

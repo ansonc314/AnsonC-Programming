@@ -45,12 +45,9 @@
                                        </font>
                                     </Label>
                                     <Separator prefWidth="200.0" />
-                                    <HBox prefHeight="61.0" prefWidth="118.0">
-                                       <children>
-                                        <Button mnemonicParsing="false" text="Save" />
-                                          <Button mnemonicParsing="false" onAction="#displayFriend_home" text="Load" />
-                                          <Button fx:id="button_delete_home" disable="true" mnemonicParsing="false" onMouseClicked="#deleteFriend_home" prefHeight="25.0" prefWidth="117.0" text="Delete" />
-                                       </children></HBox>
+                                    <HBox prefHeight="61.0" prefWidth="118.0" />
+                                    <Button fx:id="button_delete_home" disable="true" mnemonicParsing="false" onMouseClicked="#deleteFriend_home" prefHeight="25.0" prefWidth="117.0" text="delete" />
+                                    <Button mnemonicParsing="false" onAction="#displayFriend_home" text="Button" />
                                  </children>
                               </VBox>
                            </children>
@@ -93,12 +90,9 @@
                                                 </font>
                                             </Label>
                                             <Separator prefWidth="200.0" />
-                                            <HBox prefHeight="61.0" prefWidth="118.0">
-                                       <children>
-                                        <Button mnemonicParsing="false" text="Save" />
-                                                  <Button mnemonicParsing="false" text="Load" />
-                                                  <Button fx:id="button_delete_work" disable="true" mnemonicParsing="false" onAction="#deleteFriend_work" prefHeight="25.0" prefWidth="117.0" text="Delete" />
-                                       </children></HBox>
+                                            <HBox prefHeight="61.0" prefWidth="118.0" />
+                                            <Button fx:id="button_delete_work" disable="true" mnemonicParsing="false" onAction="#deleteFriend_work" prefHeight="25.0" prefWidth="117.0" text="delete" />
+                                            <Button mnemonicParsing="false" text="Button" />
                                         </children>
                                     </VBox>
                                 </children>
@@ -141,12 +135,9 @@
                                                 </font>
                                             </Label>
                                             <Separator prefWidth="200.0" />
-                                            <HBox prefHeight="61.0" prefWidth="118.0">
-                                       <children>
-                                        <Button mnemonicParsing="false" text="Save" />
-                                                  <Button fx:id="button_delete_bank" disable="true" mnemonicParsing="false" onAction="#deleteFriend_bank" prefHeight="25.0" prefWidth="117.0" text="Delete" />
-                                                  <Button mnemonicParsing="false" text="Load" />
-                                       </children></HBox>
+                                            <HBox prefHeight="61.0" prefWidth="118.0" />
+                                            <Button fx:id="button_delete_bank" disable="true" mnemonicParsing="false" onAction="#deleteFriend_bank" prefHeight="25.0" prefWidth="117.0" text="delete" />
+                                            <Button mnemonicParsing="false" text="Button" />
                                         </children>
                                     </VBox>
                                 </children>

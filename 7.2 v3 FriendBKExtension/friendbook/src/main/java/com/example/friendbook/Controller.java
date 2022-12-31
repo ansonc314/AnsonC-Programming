@@ -107,6 +107,7 @@ public class Controller {
         lbl_ListShowEmail_home.setText("");
         button_delete_home.setDisable(true);
     }
+
     public void deleteFriend_work(){
         // Requires: An item/friend was selected in the list and the disable button is enabled.
         // Modifies: friendList
@@ -121,6 +122,7 @@ public class Controller {
         lbl_ListShowEmail_work.setText("");
         button_delete_work.setDisable(true);
     }
+
     public void deleteFriend_bank(){
         // Requires: An item/friend was selected in the list and the disable button is enabled.
         // Modifies: friendList
@@ -137,4 +139,10 @@ public class Controller {
     }
 
 
+
+
+    public void add_choice(){
+        String temp =  cbox_add_choice.getSelectionModel().getSelectedItem().toString();
+        text_addGetName.setText(temp);
+    }
 }
