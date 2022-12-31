@@ -12,7 +12,9 @@ public class list_login_data {
     }
 
 
-    public void read2list() throws IOException {
+    public void read2list(String master) throws IOException {
+        mixing rand = new mixing(master);
+
         list.getItems().clear();
         FileReader fr = new FileReader(filename);
         BufferedReader br = new BufferedReader(fr);
@@ -23,24 +25,26 @@ public class list_login_data {
             String password = br.readLine();
             String website = br.readLine();
 
-            login temp = new login(company, account, password,website);
+            login temp = new login(rand.unmix(company), rand.unmix(account), rand.unmix(password), rand.unmix(website));
             list.getItems().add(temp);
         }
         br.close();
     }
 
 
-    public void write2txt() throws IOException {
+    public void write2txt(String master) throws IOException {
+        mixing rand = new mixing(master);
+
         FileWriter fw = new FileWriter(filename);
         BufferedWriter bw = new BufferedWriter(fw);
 
         int listsize = list.getItems().size();
         for (int i=0; i< listsize; i++) {
             login temp = list.getItems().get(i);
-            bw.write(temp.company + "\r");
-            bw.write(temp.account + "\r");
-            bw.write(temp.password + "\r");
-            bw.write(temp.website + "\r");
+            bw.write(rand.mix(temp.company) + "\r");
+            bw.write(rand.mix(temp.account) + "\r");
+            bw.write(rand.mix(temp.password) + "\r");
+            bw.write(rand.mix(temp.website) + "\r");
         }
         bw.close();
     }

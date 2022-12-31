@@ -12,7 +12,7 @@ import java.util.Random;
 
 
 public class Controller {
-    public String passwd;
+    public String passwd = "default master password";
     int show_index_login, show_index_notes;   // index of friend list for the friend being displayed
     public TextField text_show_company, text_show_account, text_show_password, text_show_website;
     public TextField text_masterpassword;
@@ -95,13 +95,13 @@ public class Controller {
     public void load_login() throws IOException {
         list_login_data obj_loginList = new list_login_data("login.txt");
         obj_loginList.list = list_login;
-        obj_loginList.read2list();
+        obj_loginList.read2list(passwd);
     }
 
     public void save_login()  throws IOException  {
         list_login_data obj_loginList = new list_login_data("login.txt");
         obj_loginList.list = list_login;
-        obj_loginList.write2txt();
+        obj_loginList.write2txt(passwd);
     }
 
 }
