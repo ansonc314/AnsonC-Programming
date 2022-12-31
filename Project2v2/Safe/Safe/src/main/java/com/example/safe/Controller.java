@@ -6,6 +6,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.Random;
 
@@ -91,5 +92,16 @@ public class Controller {
         text_masterpassword.setText("********");
     }
 
+    public void load_login() throws IOException {
+        list_login_data obj_loginList = new list_login_data("login.txt");
+        obj_loginList.list = list_login;
+        obj_loginList.read2list();
+    }
+
+    public void save_login()  throws IOException  {
+        list_login_data obj_loginList = new list_login_data("login.txt");
+        obj_loginList.list = list_login;
+        obj_loginList.write2txt();
+    }
 
 }

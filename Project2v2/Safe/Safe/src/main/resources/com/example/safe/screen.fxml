@@ -46,8 +46,8 @@
                                 </HBox>
                         <ButtonBar layoutX="168.0" layoutY="270.0">
                            <buttons>
-                                               <Button mnemonicParsing="false" onAction="#delete_login" text="Load " textFill="#f00404" />
-                              <Button mnemonicParsing="false" text="Save" textFill="#db0c0c" />
+                                               <Button mnemonicParsing="false" onAction="#load_login" text="Load " textFill="#f00404" />
+                              <Button mnemonicParsing="false" onAction="#save_login" text="Save" textFill="#db0c0c" />
                            </buttons>
                         </ButtonBar>
                         <Separator layoutX="93.0" layoutY="256.0" prefWidth="400.0" />
