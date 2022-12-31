@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 
 
 public class Controller {
-    int show_index_login;   // index of friend list for the friend being displayed
+    int show_index_login, show_index_notes;   // index of friend list for the friend being displayed
     public TextField text_show_company, text_show_account, text_show_password, text_show_website;
     public ListView<login> list_login = new ListView<login>();
     public ListView<notes> list_notes = new ListView<notes>();
@@ -42,7 +42,6 @@ public class Controller {
         list_notes.getItems().add(temp);
         new_notes();
     }
-
     public void display_login(){
         login temp;
         temp = list_login.getSelectionModel().getSelectedItem();
@@ -52,10 +51,22 @@ public class Controller {
         text_show_website.setText(temp.website);
         show_index_login = list_login.getSelectionModel().getSelectedIndex();
     }
+    public void display_notes(){
+        notes temp;
+        temp = list_notes.getSelectionModel().getSelectedItem();
+        text_titles.setText(temp.title);
+        tarea_notes.setText(temp.notetext);
+        show_index_notes = list_notes.getSelectionModel().getSelectedIndex();
+    }
     public void delete_login(){
         list_login.getItems().remove(show_index_login);
         new_login();
     }
+    public void delete_notes(){
+        list_notes.getItems().remove(show_index_notes);
+        new_notes();
+    }
+
 
     public void generate_random_password(){
     text_show_password.setText("generate my pasword");

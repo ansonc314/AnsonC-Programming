@@ -59,7 +59,7 @@
                             <children>
                                 <HBox layoutX="16.0" layoutY="7.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="250.0" prefWidth="460.0">
                                     <children>
-                                        <ListView fx:id="list_notes" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#display_login" prefHeight="240.0" prefWidth="200.0" />
+                                        <ListView fx:id="list_notes" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#display_notes" prefHeight="240.0" prefWidth="200.0" />
                                         <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="250.0" prefWidth="231.0">
                                             <children>
                                                 <Label text="Title" />
@@ -72,7 +72,7 @@
                                                             <buttons>
                                                                 <Button minWidth="42.0" mnemonicParsing="false" onAction="#new_notes" prefHeight="25.0" text="New" />
                                                                 <Button mnemonicParsing="false" onAction="#add_notes" prefHeight="25.0" prefWidth="118.0" text="Add" />
-                                                                <Button mnemonicParsing="false" onAction="#delete_login" prefHeight="25.0" prefWidth="118.0" text="Delete" />
+                                                                <Button mnemonicParsing="false" onAction="#delete_notes" prefHeight="25.0" prefWidth="118.0" text="Delete" />
                                                             </buttons>
                                                         </ButtonBar>
                                                     </children></HBox>
