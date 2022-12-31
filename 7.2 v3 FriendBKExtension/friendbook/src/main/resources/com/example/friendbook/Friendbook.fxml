@@ -98,8 +98,8 @@
                                             <HBox prefHeight="61.0" prefWidth="118.0" />
                                     <ButtonBar prefHeight="40.0" prefWidth="200.0">
                                       <buttons>
-                                        <Button mnemonicParsing="false" text="Save" />
-                                                  <Button mnemonicParsing="false" text="Load" />
+                                        <Button mnemonicParsing="false" onAction="#save_work" text="Save" />
+                                                  <Button mnemonicParsing="false" onAction="#load_work" text="Load" />
                                                   <Button fx:id="button_delete_work" disable="true" mnemonicParsing="false" onAction="#deleteFriend_work" prefHeight="25.0" prefWidth="117.0" text="Delete" />
                                       </buttons>
                                     </ButtonBar>
@@ -148,8 +148,8 @@
                                             <HBox prefHeight="61.0" prefWidth="118.0" />
                                     <ButtonBar prefHeight="40.0" prefWidth="200.0">
                                       <buttons>
-                                        <Button mnemonicParsing="false" text="Save" />
-                                                  <Button mnemonicParsing="false" text="Load" />
+                                        <Button mnemonicParsing="false" onAction="#save_bank" text="Save" />
+                                                  <Button mnemonicParsing="false" onAction="#load_bank" text="Load" />
                                                   <Button fx:id="button_delete_bank" disable="true" mnemonicParsing="false" onAction="#deleteFriend_bank" prefHeight="25.0" prefWidth="117.0" text="Delete" />
                                       </buttons>
                                     </ButtonBar>
@@ -195,7 +195,6 @@
                            </children>
                         </GridPane>
                         <Button layoutX="252.0" layoutY="231.0" mnemonicParsing="false" onAction="#addFriend" text="Add" />
-                        <Button layoutX="322.0" layoutY="231.0" mnemonicParsing="false" text="Button" />
                      </children></AnchorPane>
             </content>
           </Tab> 

@@ -141,14 +141,39 @@ public class Controller {
     }
 
     public void load_home() throws IOException  {
-    Data list = new Data("file.txt");
+    Data list = new Data("home.txt");
     list.friendList = friendList_home;
     list.read2lines();
     }
 
     public void save_home()  throws IOException  {
-        Data list = new Data("file.txt");
+        Data list = new Data("home.txt");
         list.friendList = friendList_home;
+        list.write2txt();
+    }
+
+
+    public void load_work() throws IOException  {
+        Data list = new Data("work.txt");
+        list.friendList = friendList_work;
+        list.read2lines();
+    }
+
+    public void save_work()  throws IOException  {
+        Data list = new Data("work.txt");
+        list.friendList = friendList_work;
+        list.write2txt();
+    }
+
+    public void load_bank() throws IOException  {
+        Data list = new Data("bank.txt");
+        list.friendList = friendList_bank;
+        list.read2lines();
+    }
+
+    public void save_bank()  throws IOException  {
+        Data list = new Data("bank.txt");
+        list.friendList = friendList_bank;
         list.write2txt();
     }
 
