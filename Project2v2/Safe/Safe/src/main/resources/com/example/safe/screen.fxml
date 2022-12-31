@@ -3,10 +3,12 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.safe.Controller">
     <children>
-        <TabPane layoutX="49.0" layoutY="48.0" prefHeight="335.0" prefWidth="521.0" tabClosingPolicy="UNAVAILABLE">
+        <TabPane layoutX="39.0" layoutY="90.0" prefHeight="335.0" prefWidth="521.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab text="Logins">
                     <content>
@@ -112,7 +114,7 @@
                <HBox.margin>
                   <Insets top="11.0" />
                </HBox.margin></Label>
-            <TextField fx:id="text_masterpassword" layoutY="10.0">
+            <TextField fx:id="text_masterpassword" layoutY="10.0" promptText="Enter password">
                <HBox.margin>
                   <Insets top="7.0" />
                </HBox.margin>
@@ -123,6 +125,21 @@
                   <Button mnemonicParsing="false" onAction="#showPasswd" prefHeight="25.0" prefWidth="127.0" text="show" />
               </buttons>
             </ButtonBar>
+         </children>
+      </HBox>
+      <HBox layoutX="48.0" layoutY="50.0" prefHeight="17.0" prefWidth="504.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="90.0" text="Group" textAlignment="RIGHT" />
+            <HBox prefHeight="25.0" prefWidth="17.0" />
+            <ChoiceBox prefHeight="25.0" prefWidth="142.0" value="Home" >
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Home" />
+                        <String fx:value="School" />
+                        <String fx:value="Work" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
          </children>
       </HBox>
     </children>
