@@ -4,12 +4,12 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class test1 {
+public class test {
     testtest f;  // class to be test
 
     @Before
     public void setup(){
-     f = new testtest();
+        f = new testtest();
     }
 
     @Test
