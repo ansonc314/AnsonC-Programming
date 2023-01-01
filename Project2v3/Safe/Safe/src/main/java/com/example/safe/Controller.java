@@ -15,10 +15,10 @@ public class Controller {
     public TextField text_masterpassword;
     public ListView<login> list_login = new ListView<login>();
     public ListView<notes> list_notes = new ListView<notes>();
-    public TextArea tarea_notes, tarea_Instructions;
+    public TextArea tarea_notes, text_instruction;
     public TextField text_titles;
     public ChoiceBox cbox_choice;
-
+    public Label lbl_message;
 
     public void new_login(){
         text_show_company.clear();
@@ -86,8 +86,15 @@ public class Controller {
     text_masterpassword.setText(passwd);
     }
     public void enterPasswd(){
-        passwd=text_masterpassword.getText();
-        text_masterpassword.setText("********");
+        String temp;
+        temp=text_masterpassword.getText();
+        if (temp.length()>7){
+            passwd=temp;
+            text_masterpassword.setText("********");
+            lbl_message.setText("");
+        }
+        else {lbl_message.setText("Password length must be at least 8"); }
+
     }
 
     public void load_login() throws IOException {
@@ -126,7 +133,31 @@ public class Controller {
         obj_notesList.write2txt(passwd);
     }
 
-    public void printInstruction(){
-        tarea_Instructions.setText("print instructions");
+
+
+    public void initialize() {
+        /* Effects: Display instructions on the TextArea tarea_instruction
+         */
+        String str =
+                "1) To save a list to a file\n" +
+                        "1.a) Choose the group name (e.g. home) \n" +
+                        "1.b) Click the save button   \n" +
+                        "1.c) The current friend list will save to a file, where the file name is the group name. e.g., if group name is home, the file is called home.txt  \n" +
+                        "2) To load the list from a file\n" +
+                        "2.a) Choose the group name  \n" +
+                        "2.b) Click the load button   \n" +
+                        "2.c) The list will be loaded using the corresponding data file. e.g., if group name is home, the file is called home.txt  \n" +
+                        "3) To add a friend to a list\n" +
+                        "3.a) Choose the group name  \n" +
+                        "3.b) Enter the friend's details and press add button.   \n" +
+                        "4) To delete a friend from a list\n" +
+                        "4.a) Select the friend from the list and details of the friend will be displayed\n" +
+                        "4.c) Press delete and the friend will be removed from the current list. Remember to save the list after all editing. \n" +
+                        "5) To clear a list\n" +
+                        "5.a) Use the clear button  \n" +
+                        "   ";
+        text_instruction.setText(str);
     }
+
+
 }
