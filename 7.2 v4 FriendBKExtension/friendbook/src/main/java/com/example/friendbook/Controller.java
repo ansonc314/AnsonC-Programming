@@ -1,6 +1,5 @@
 package com.example.friendbook;
 
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import java.io.IOException;
 
