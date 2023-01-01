@@ -81,8 +81,8 @@ public class Controller {
     }
     public void deleteFriend_home(){
         /* Requires: An item/friend was selected in the list (show_index_home was set) and the disable button is enabled.
-           Modifies: friendList
-           Effects:  1) Removed the selected item from the friendList
+           Modifies: friendList_home
+           Effects:  1) Removed the selected item from the friendList_home
                      2) Disable the delete button to prevent further deletion before another friend is selected
         */
         friendList_home.getItems().remove(show_index_home); // remove the item from the list
