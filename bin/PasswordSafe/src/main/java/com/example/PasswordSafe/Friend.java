@@ -1,4 +1,4 @@
-package com.example.friendbook;
+package com.example.PasswordSafe;
 
 public class Friend {
     public String name;  // Full Name
