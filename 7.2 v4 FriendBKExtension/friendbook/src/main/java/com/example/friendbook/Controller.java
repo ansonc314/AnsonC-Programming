@@ -7,17 +7,13 @@ import javafx.scene.control.*;
 import java.io.IOException;
 
 public class Controller {
-    int show_index_home, show_index_work, show_index_bank;   // index of friend list for the friend to be displayed/deleted
+    int show_index_home;   // index of friend list for the friend to be displayed/deleted
 
-    public TextField text_addGetName, text_addGetPhone, text_addGetEmail;
+    public TextField text_group, text_addGetName, text_addGetPhone, text_addGetEmail;
     public Label lbl_ListShowName_home, lbl_ListShowPhone_home, lbl_ListShowEmail_home;
-    public Label lbl_ListShowName_work, lbl_ListShowPhone_work, lbl_ListShowEmail_work;
-    public Label lbl_ListShowName_bank, lbl_ListShowPhone_bank, lbl_ListShowEmail_bank;
     public ListView<Friend> friendList_home = new ListView<Friend>();
-    public ListView<Friend> friendList_work = new ListView<Friend>();
-    public ListView<Friend> friendList_bank = new ListView<Friend>();
-    public Button button_delete_home, button_delete_work, button_delete_bank;
-    public ChoiceBox cbox_display_choice, cbox_add_choice;
+    public Button button_delete_home;
+    public ChoiceBox  cbox_add_choice;
 
     public void addFriend(){
         /*  Requires: Strings (name, phone and email) from text fields
@@ -25,26 +21,12 @@ public class Controller {
             Effects: create a friend object and add to the friendList and
                   reset the text fields
         */
-        ListView<Friend> local = friendList_home;
-        String choice ="";
-        choice = cbox_add_choice.getSelectionModel().getSelectedItem().toString();
-        switch(choice) {
-            case "Home":
-                local = friendList_home;
-                break;
-            case "Work":
-                local = friendList_work;
-                break;
-            case "Bank":
-                local = friendList_bank;
-        }
-
 
         String name = text_addGetName.getText();
         String phone = text_addGetPhone.getText();
         String email = text_addGetEmail.getText();
         Friend temp = new Friend(name, phone, email);
-        local.getItems().add(temp);
+        friendList_home.getItems().add(temp);
         text_addGetName.clear();
         text_addGetPhone.clear();
         text_addGetEmail.clear();
@@ -81,17 +63,19 @@ public class Controller {
     }
 
     public void load_home() throws IOException  {
-    Data list = new Data("home.txt");
-    list.friendList = friendList_home;
-    list.read2lines();
+        String str = text_group.getText();
+        Data list = new Data(str + ".txt");
+        list.friendList = friendList_home;
+        list.read2lines();
     }
 
     public void save_home()  throws IOException  {
-        Data list = new Data("home.txt");
+        String str = text_group.getText();
+        Data list = new Data(str + ".txt");
         list.friendList = friendList_home;
         list.write2txt();
     }
 
-  
+
 
 }
