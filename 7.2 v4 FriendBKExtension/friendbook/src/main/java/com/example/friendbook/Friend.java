@@ -19,28 +19,34 @@ public class Friend {
     }
     public void setName(String Name){
     // Requires: String Name
-    // Modifies: this
+    // Modifies: this.name
     // Effects: set name
         this.name= Name;
     }
-
     public String getPhone() {
+        // Effects: return phone number
         return this.phone;
     }
-
     public void setPhone(String Phone) {
+        // Requires: String Phone
+        // Modifies: this.phone
+        // Effects: set phone number
         this.phone= Phone ;
     }
-
     public String getEmail() {
+        // Effects: return email address
         return this.email;
     }
-
     public void setEmail(String emailName) {
+        // Requires: String emailName
+        // Modifies: this.email
+        // Effects: set this.email
         this.email=emailName;
     }
-
     public String toString(){
+    /*
+    Effects: Return the object's name
+     */
         return this.name;
     }
 
