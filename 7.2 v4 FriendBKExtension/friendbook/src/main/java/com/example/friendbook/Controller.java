@@ -65,36 +65,6 @@ public class Controller {
         button_delete_home.setDisable(false);
     }
 
-    public void displayFriend_work(){
-        // Requires: Mouse selection of an item in the friendList
-        // Effects: 1) display the name, phone and email of the selected friend.
-        //          2) enable the delete button.
-        ListView<Friend> local;
-        local = friendList_work;
-        Friend temp;
-        temp = local.getSelectionModel().getSelectedItem();
-        lbl_ListShowName_work.setText(temp.name);
-        lbl_ListShowPhone_work.setText(temp.phone);
-        lbl_ListShowEmail_work.setText(temp.email);
-        show_index_work = local.getSelectionModel().getSelectedIndex();
-        button_delete_work.setDisable(false);
-    }
-
-    public void displayFriend_bank(){
-        // Requires: Mouse selection of an item in the friendList
-        // Effects: 1) display the name, phone and email of the selected friend.
-        //          2) enable the delete button.
-        ListView<Friend> local;
-        local = friendList_bank;
-        Friend temp;
-        temp = local.getSelectionModel().getSelectedItem();
-        lbl_ListShowName_bank.setText(temp.name);
-        lbl_ListShowPhone_bank.setText(temp.phone);
-        lbl_ListShowEmail_bank.setText(temp.email);
-        show_index_bank = local.getSelectionModel().getSelectedIndex();
-        button_delete_bank.setDisable(false);
-    }
-
     public void deleteFriend_home(){
         // Requires: An item/friend was selected in the list and the disable button is enabled.
         // Modifies: friendList
@@ -110,36 +80,6 @@ public class Controller {
         button_delete_home.setDisable(true);
     }
 
-    public void deleteFriend_work(){
-        // Requires: An item/friend was selected in the list and the disable button is enabled.
-        // Modifies: friendList
-        // Effects:  1) Removed the selected item from the friendList
-        //           2) Disable the delete button to prevent further deletion before another friend is selected
-
-        ListView<Friend> local;
-        local = friendList_work;
-        local.getItems().remove(show_index_work);
-        lbl_ListShowName_work.setText("");
-        lbl_ListShowPhone_work.setText("");
-        lbl_ListShowEmail_work.setText("");
-        button_delete_work.setDisable(true);
-    }
-
-    public void deleteFriend_bank(){
-        // Requires: An item/friend was selected in the list and the disable button is enabled.
-        // Modifies: friendList
-        // Effects:  1) Removed the selected item from the friendList
-        //           2) Disable the delete button to prevent further deletion before another friend is selected
-
-        ListView<Friend> local;
-        local = friendList_bank;
-        local.getItems().remove(show_index_bank);
-        lbl_ListShowName_bank.setText("");
-        lbl_ListShowPhone_bank.setText("");
-        lbl_ListShowEmail_bank.setText("");
-        button_delete_bank.setDisable(true);
-    }
-
     public void load_home() throws IOException  {
     Data list = new Data("home.txt");
     list.friendList = friendList_home;
@@ -152,31 +92,6 @@ public class Controller {
         list.write2txt();
     }
 
-
-    public void load_work() throws IOException  {
-        Data list = new Data("work.txt");
-        list.friendList = friendList_work;
-        list.read2lines();
-    }
-
-    public void save_work()  throws IOException  {
-        Data list = new Data("work.txt");
-        list.friendList = friendList_work;
-        list.write2txt();
-    }
-
-    public void load_bank() throws IOException  {
-        Data list = new Data("bank.txt");
-        list.friendList = friendList_bank;
-        list.read2lines();
-    }
-
-    public void save_bank()  throws IOException  {
-        Data list = new Data("bank.txt");
-        list.friendList = friendList_bank;
-        list.write2txt();
-    }
-
-
+  
 
 }
