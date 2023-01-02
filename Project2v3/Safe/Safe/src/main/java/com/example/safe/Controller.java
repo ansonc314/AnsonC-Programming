@@ -135,27 +135,12 @@ public class Controller {
 
 
 
-    public void initialize() {
+    public void initialize() throws IOException {
         /* Effects: Display instructions on the TextArea tarea_instruction
          */
-        String str =
-                "1) To save a list to a file\n" +
-                        "1.a) Choose the group name (e.g. home) \n" +
-                        "1.b) Click the save button   \n" +
-                        "1.c) The current friend list will save to a file, where the file name is the group name. e.g., if group name is home, the file is called home.txt  \n" +
-                        "2) To load the list from a file\n" +
-                        "2.a) Choose the group name  \n" +
-                        "2.b) Click the load button   \n" +
-                        "2.c) The list will be loaded using the corresponding data file. e.g., if group name is home, the file is called home.txt  \n" +
-                        "3) To add a friend to a list\n" +
-                        "3.a) Choose the group name  \n" +
-                        "3.b) Enter the friend's details and press add button.   \n" +
-                        "4) To delete a friend from a list\n" +
-                        "4.a) Select the friend from the list and details of the friend will be displayed\n" +
-                        "4.c) Press delete and the friend will be removed from the current list. Remember to save the list after all editing. \n" +
-                        "5) To clear a list\n" +
-                        "5.a) Use the clear button  \n" +
-                        "   ";
+        data instruction = new data ("instruction.txt");
+        instruction.create_line_array();
+        String str = instruction.read2string();
         text_instruction.setText(str);
     }
 

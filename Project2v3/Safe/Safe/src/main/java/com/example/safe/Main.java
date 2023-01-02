@@ -25,6 +25,10 @@ public class Main extends Application {
         stage.setHeight(500);
         stage.setWidth(625);
         stage.show();
+
+        data instruction = new data ("instruction.txt");
+        instruction.create_line_array();
+        System.out.println(instruction.read2string());
     }
 
     public static void main(String[] args) {launch();
