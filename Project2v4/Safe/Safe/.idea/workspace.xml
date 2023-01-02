@@ -51,21 +51,10 @@
     "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.test_data">
+  <component name="RunManager" selected="JUnit.test_list_login_data">
     <configuration name="Safe" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.safe.Main" />
       <module name="Safe" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="class_trial2" type="JUnit" factoryName="JUnit">
-      <module name="Safe" />
-      <option name="PACKAGE_NAME" value="com.example.safe" />
-      <option name="MAIN_CLASS_NAME" value="com.example.safe.test_class_trial2" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,6 +63,16 @@
       <module name="Safe" />
       <option name="PACKAGE_NAME" value="com.example.safe" />
       <option name="MAIN_CLASS_NAME" value="com.example.safe.test_data" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_list_login_data" type="JUnit" factoryName="JUnit">
+      <module name="Safe" />
+      <option name="PACKAGE_NAME" value="com.example.safe" />
+      <option name="MAIN_CLASS_NAME" value="com.example.safe.test_list_login_data" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -89,7 +88,7 @@
       <item itemvalue="Application.Safe" />
       <item itemvalue="JAR Application.junit-4.13.2.jar" />
       <item itemvalue="JUnit.test_data" />
-      <item itemvalue="JUnit.class_trial2" />
+      <item itemvalue="JUnit.test_list_login_data" />
     </list>
     <recent_temporary>
       <list>
