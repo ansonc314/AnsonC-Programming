@@ -26,6 +26,14 @@ public class Main extends Application {
         stage.setWidth(625);
         stage.show();
 
+        int v = 122;
+        char c = (char) v;
+        int w = (int) c;
+        System.out.println(w);
+
+        Password master = new Password("Aabcz");
+        System.out.println(master.character_check());
+
     }
 
     public static void main(String[] args) {launch();

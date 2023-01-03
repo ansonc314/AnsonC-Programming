@@ -21,9 +21,10 @@ public class test_list_login_data {
     Main test_main = new Main();
     //test_main.start();
 
-   //     list_login_data list = new list_login_data("test_data_file.txt");
+ //       list_login_data list = new list_login_data("test_data_file.txt");
         mixing rand = new mixing("password");
         ArrayList<String> list = new ArrayList<>();
+//        ListView<String> a = new ListView<>();
 
         data instruction = new data ("test_data_file.txt");
         instruction.create_line_array();

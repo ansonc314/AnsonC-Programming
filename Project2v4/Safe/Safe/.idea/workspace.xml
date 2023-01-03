@@ -59,6 +59,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test_Password" type="JUnit" factoryName="JUnit">
+      <module name="Safe" />
+      <option name="PACKAGE_NAME" value="com.example.safe" />
+      <option name="MAIN_CLASS_NAME" value="com.example.safe.test_Password" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test_data" type="JUnit" factoryName="JUnit">
       <module name="Safe" />
       <option name="PACKAGE_NAME" value="com.example.safe" />
@@ -87,6 +97,7 @@
     <list>
       <item itemvalue="Application.Safe" />
       <item itemvalue="JAR Application.junit-4.13.2.jar" />
+      <item itemvalue="JUnit.test_Password" />
       <item itemvalue="JUnit.test_data" />
       <item itemvalue="JUnit.test_list_login_data" />
     </list>

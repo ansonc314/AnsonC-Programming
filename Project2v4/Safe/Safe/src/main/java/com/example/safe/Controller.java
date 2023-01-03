@@ -9,7 +9,8 @@ import java.util.Random;
 
 
 public class Controller {
-    public String passwd = "default master password";
+    public Password master_password;
+    public String passwd = "masterpassword";
     int show_index_login, show_index_notes;   // index of friend list for the friend being displayed
     public TextField text_show_company, text_show_account, text_show_password, text_show_website;
     public TextField text_masterpassword;
@@ -88,12 +89,14 @@ public class Controller {
     public void enterPasswd(){
         String temp;
         temp=text_masterpassword.getText();
-        if (temp.length()>7){
+        Password passwd_obj = new Password(temp);
+
+        if (passwd_obj.length_check() && passwd_obj.character_check()){
             passwd=temp;
             text_masterpassword.setText("********");
             lbl_message.setText("");
         }
-        else {lbl_message.setText("Password length must be at least 8"); }
+        else {lbl_message.setText("Password length must be at least 8 using small letters"); }
 
     }
 
