@@ -50,6 +50,9 @@ public class Controller {
     }
     public void display_login(){
         login temp;
+        if (list_login.getItems().size() == 0){
+            return;
+        }
         temp = list_login.getSelectionModel().getSelectedItem();
         text_show_company.setText(temp.company);
         text_show_account.setText(temp.account);
@@ -59,6 +62,9 @@ public class Controller {
     }
     public void display_notes(){
         notes temp;
+        if (list_notes.getItems().size() == 0){
+            return;
+        }
         temp = list_notes.getSelectionModel().getSelectedItem();
         text_titles.setText(temp.title);
         tarea_notes.setText(temp.notetext);

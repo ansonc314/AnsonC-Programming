@@ -51,7 +51,7 @@
     "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.test_list_login_data">
+  <component name="RunManager" selected="JUnit.test_mixing">
     <configuration name="Safe" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.safe.Main" />
       <module name="Safe" />
@@ -89,6 +89,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test_mixing" type="JUnit" factoryName="JUnit">
+      <module name="Safe" />
+      <option name="PACKAGE_NAME" value="com.example.safe" />
+      <option name="MAIN_CLASS_NAME" value="com.example.safe.test_mixing" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="junit-4.13.2.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/lib/junit-4.13.2.jar" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -97,6 +107,7 @@
     <list>
       <item itemvalue="Application.Safe" />
       <item itemvalue="JAR Application.junit-4.13.2.jar" />
+      <item itemvalue="JUnit.test_mixing" />
       <item itemvalue="JUnit.test_Password" />
       <item itemvalue="JUnit.test_data" />
       <item itemvalue="JUnit.test_list_login_data" />

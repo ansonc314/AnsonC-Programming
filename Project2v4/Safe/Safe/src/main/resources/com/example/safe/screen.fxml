@@ -126,9 +126,9 @@
       </HBox>
       <HBox layoutX="48.0" layoutY="50.0" prefHeight="17.0" prefWidth="504.0">
          <children>
-            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="90.0" text="Group" textAlignment="RIGHT" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="53.0" text="Group" textAlignment="RIGHT" />
             <HBox prefHeight="25.0" prefWidth="17.0" />
-            <ChoiceBox fx:id="cbox_choice" prefHeight="25.0" prefWidth="81.0" value="Home">
+            <ChoiceBox fx:id="cbox_choice" prefHeight="25.0" prefWidth="92.0" value="Home">
                 <items>
                     <FXCollections fx:factory="observableArrayList">
                         <String fx:value="Home" />
@@ -137,8 +137,8 @@
                     </FXCollections>
                 </items>
             </ChoiceBox>
-            <HBox prefHeight="25.0" prefWidth="72.0" />
-            <Label fx:id="lbl_message" prefHeight="17.0" prefWidth="200.0" />
+            <HBox prefHeight="25.0" prefWidth="22.0" />
+            <Label fx:id="lbl_message" prefHeight="17.0" prefWidth="277.0" />
          </children>
       </HBox>
     </children>

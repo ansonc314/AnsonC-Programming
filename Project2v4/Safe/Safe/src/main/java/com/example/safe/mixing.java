@@ -4,17 +4,19 @@ import java.util.Scanner;
 
 public class mixing {
     public String passwd;
+    public int passwd_int;
 
     mixing(String passwd){
         this.passwd = passwd;
-    }
-
-    public String mix(String str){
         int tmp = 0;
         for (int i=0; i<passwd.length(); i++){
             tmp = tmp + passwd.charAt(i);
         }
+        this.passwd_int = tmp;
+    }
 
+    public String mix(String str){
+        int tmp = this.passwd_int;
 
         char convertedChar;
         String convertedStr="";
@@ -30,10 +32,7 @@ public class mixing {
     }
 
     public String unmix(String str){
-        int tmp = 0;
-        for (int i=0; i<passwd.length(); i++){
-            tmp = tmp + passwd.charAt(i);
-        }
+        int tmp = this.passwd_int;
 
         char convertedChar;
         String convertedStr="";
