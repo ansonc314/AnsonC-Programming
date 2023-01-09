@@ -1,15 +1,14 @@
 package com.example.friendbook;
 
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 public class Controller {
     int show_index;   // index of friend list for the friend to be displayed/deleted
 
-    @FXML     public TextField text_addGetName, text_addGetPhone, text_addGetEmail;
-    @FXML     public Label lbl_ListShowName, lbl_ListShowPhone, lbl_ListShowEmail;
-    @FXML     public ListView<Friend> friendList = new ListView<Friend>();
-    @FXML     public Button button_delete;
+         public TextField text_addGetName, text_addGetPhone, text_addGetEmail;
+         public Label lbl_ListShowName, lbl_ListShowPhone, lbl_ListShowEmail;
+         public ListView<Friend> friendList = new ListView<Friend>();
+         public Button button_delete;
 
     public void addFriend(){
         // Requires: Strings (name, phone and email) from text fields
@@ -34,7 +33,9 @@ public class Controller {
                     2) display the name, phone and email of the selected friend.
                     3) enable the delete button.
          */
-
+        if (friendList.getItems().size()==0){
+            return;
+        }
         Friend temp;
         temp = friendList.getSelectionModel().getSelectedItem();  // extracted the friend object from list
         lbl_ListShowName.setText(temp.name);                     // display the friend's info.

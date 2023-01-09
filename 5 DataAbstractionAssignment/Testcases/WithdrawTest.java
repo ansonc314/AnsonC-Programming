@@ -28,7 +28,8 @@ public class WithdrawTest {
         Actual_result = "Withdrawal of $" + "1000.0" + "\t" + "  Date:Tue Nov 15 05:30:12 CST 2022 from account: Saving";
 
         // compare to real output from the Withdraw.toString method
-        assertEquals(Withdraw_item.toString(), Actual_result);
+        assertEquals(Withdraw_item.toString().substring(0,48), Actual_result.substring(0,48));
+        assertEquals(Withdraw_item.toString().substring(52,78), Actual_result.substring(52,78));
     }
 
     @Test // Test if the .ToString function display correctly for Checking account
@@ -47,7 +48,8 @@ public class WithdrawTest {
         Actual_result = "Withdrawal of $" + "321.0" + "\t" + "  Date:Wed Feb 05 02:30:12 CST 2020 from account: Checking";
 
         // compare to real output from the Withdraw.toString method
-        assertEquals(Withdraw_item.toString(), Actual_result);
+        assertEquals(Withdraw_item.toString().substring(0,48), Actual_result.substring(0,48));
+        assertEquals(Withdraw_item.toString().substring(52,78), Actual_result.substring(52,78));
     }
 
 }

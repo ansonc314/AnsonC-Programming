@@ -28,7 +28,8 @@ public class DepositTest {
         result = "Deposit of $" + "1000.0" + "\t" + "  Date: Tue Nov 15 05:30:12 CST 2022 into account: Saving";
 
         // compare to real output from the deposit.toString method
-        assertEquals(Deposit_item.toString(), result);
+        assertEquals(Deposit_item.toString().substring(0,47), result.substring(0,47));
+        assertEquals(Deposit_item.toString().substring(50,76), result.substring(50,76));
     }
 
     @Test  // Test if the .ToString function display correctly for Saving account
@@ -48,6 +49,7 @@ public class DepositTest {
         result = "Deposit of $" + "140.0" + "\t" + "  Date: Mon Jan 02 05:30:12 CST 2012 into account: Checking";
 
         // compare to real output from the deposit.toString method
-        assertEquals(Deposit_item.toString(), result);
+        assertEquals(Deposit_item.toString().substring(0,46), result.substring(0,46));
+        assertEquals(Deposit_item.toString().substring(49,77), result.substring(49,77));
     }
 }

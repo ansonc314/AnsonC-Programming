@@ -14,7 +14,7 @@ public class test_Password {
     }
 
     @Test
-    public void mytest() throws IOException {
+    public void mytest_lengthcheck() throws IOException {
         Password password = new Password("");
 
         password.set_Password("1234567");
@@ -24,6 +24,14 @@ public class test_Password {
         password.set_Password("12345678");
         value = password.length_check();
         assertEquals(value,true);
+
+
+    }
+
+    @Test
+    public void mytest_charactercheck() throws IOException {
+        Password password = new Password("");
+        boolean value;
 
         password.set_Password("abc");
         value = password.character_check();
