@@ -11,8 +11,8 @@ public class Controller {
     int show_index_login, show_index_notes;   // index of friend list for the friend being displayed
     public TextField text_show_company, text_show_account, text_show_password, text_show_website;
     public TextField text_masterpassword;
-    public ListView<login> list_login = new ListView<login>();
-    public ListView<notes> list_notes = new ListView<notes>();
+    public ListView<login> list_login = new ListView<>();
+    public ListView<notes> list_notes = new ListView<>();
     public TextArea tarea_notes, text_instruction;
     public TextField text_titles;
     public ChoiceBox cbox_choice;
@@ -40,30 +40,45 @@ public class Controller {
         button_add_notes.setDisable(false);
     }
     public void add_login() throws IOException {
-        String company = text_show_company.getText();
+        /*
+        Requires: the login info was entered in to the text field
+        Modifies: list_login
+        Effects:  add the new item to the list_login and save to file
+         */
+        String company = text_show_company.getText();      // get login info from the corresponding text field
         String account = text_show_account.getText();
         String password = text_show_password.getText();
         String website = text_show_website.getText();
-        login temp = new login(company,account, password, website);
-        list_login.getItems().add(temp);
-        text_show_company.clear();
+        login temp = new login(company,account, password, website);  // create a new login item
+        list_login.getItems().add(temp);   // add the new item to  the login list
+        text_show_company.clear();   // clear the text field for another input
         text_show_account.clear();
         text_show_password.clear();
         text_show_website.clear();
 
-        button_delete_login.setDisable(true);
+        button_delete_login.setDisable(true);   // update button status
         button_update_login.setDisable(true);
+        button_add_login.setDisable(false);
 
-        save_login();
+        save_login();   // save the list to file
     }
     public void add_notes()  throws IOException {
-        String title  = text_titles.getText();
+        /*
+        Requires: the notes info was entered in to the text field
+        Modifies: list_notes
+        Effects:  add the new item to list_notes and save to file
+         */
+        String title  = text_titles.getText();  // get notes info from the text field
         String notetext = tarea_notes.getText();
-        notes temp = new notes(title,notetext);
-        list_notes.getItems().add(temp);
-        new_notes();
+        notes temp = new notes(title,notetext);  // create a new note object
+        list_notes.getItems().add(temp);  // add new note object to the note list
+        tarea_notes.clear();                    // clear the text field for another input
+        text_titles.clear();
+        button_delete_notes.setDisable(true);   // update button status
+        button_update_notes.setDisable(true);
+        button_add_notes.setDisable(false);
 
-        save_notes();
+        save_notes();   // save the list to the file
     }
     public void display_login(){
         button_delete_login.setDisable(false);
@@ -131,13 +146,25 @@ public class Controller {
         save_notes();
     }
 
-    public void delete_login(){
-        list_login.getItems().remove(show_index_login);
-        new_login();
+    public void delete_login()  throws IOException {
+        /*
+        Requires: an item has been selected
+        Modifies: list_login
+        Effects: Remove the selected item from the list and save to file
+         */
+        list_login.getItems().remove(show_index_login);   // remove selected item from list
+        new_login();   // clear the text area and update button status
+        save_login();  // save to file
     }
-    public void delete_notes(){
-        list_notes.getItems().remove(show_index_notes);
-        new_notes();
+    public void delete_notes()  throws IOException {
+        /*
+        Requires: an item has been selected
+        Modifies: list_notes
+        Effects: Remove the selected item from the list and save to file
+         */
+        list_notes.getItems().remove(show_index_notes); // remove selected item from list
+        new_notes();   // clear the text area and update button status
+        save_notes();  // save to file
     }
 
     public void generate_random_password(){
@@ -168,7 +195,7 @@ public class Controller {
     }
 
     public void load_login() throws IOException {
-        String choice ="";
+        String choice ;
         choice = cbox_choice.getSelectionModel().getSelectedItem().toString();
         String filename = choice + "_login.txt";
         list_login_data obj_loginList = new list_login_data(filename);
@@ -181,11 +208,12 @@ public class Controller {
         text_show_website.setText("");
         button_update_login.setDisable(true);
         button_delete_login.setDisable(true);
+        button_add_login.setDisable(false);
 
     }
 
     public void save_login()  throws IOException  {
-        String choice ="";
+        String choice ;
         choice = cbox_choice.getSelectionModel().getSelectedItem().toString();
         String filename = choice + "_login.txt";
         list_login_data obj_loginList = new list_login_data(filename);
@@ -195,7 +223,7 @@ public class Controller {
 
 
     public void load_notes() throws IOException {
-        String choice ="";
+        String choice ;
         choice = cbox_choice.getSelectionModel().getSelectedItem().toString();
         String filename = choice + "_notes.txt";
         list_notes_data obj_notesList = new list_notes_data(filename);
@@ -211,7 +239,7 @@ public class Controller {
     }
 
     public void save_notes()  throws IOException  {
-        String choice ="";
+        String choice ;
         choice = cbox_choice.getSelectionModel().getSelectedItem().toString();
         String filename = choice + "_notes.txt";
         list_notes_data obj_notesList = new list_notes_data(filename);        obj_notesList.list = list_notes;
@@ -227,7 +255,8 @@ public class Controller {
         instruction.create_line_array();
         String str = instruction.read2string();
         text_instruction.setText(str);
-        passwd = "masterpassword";
+        passwd = "";
+        lbl_message.setText("Use \"masterpassword\" as default");
 
         button_delete_login.setDisable(true);
         button_delete_notes.setDisable(true);
