@@ -49,7 +49,7 @@ public class Controller {
     }
     public void addFriend(){
         /*  Requires: Strings (name, phone and email) from text fields. Requires the group not to be empty
-            Modifies: friendList
+            Modifies: friendList_home
             Effects: create a friend object and add to the friendList and
                   reset the text fields
         */
