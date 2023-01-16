@@ -81,69 +81,93 @@ public class Controller {
         save_notes();   // save the list to the file
     }
     public void display_login(){
-        button_delete_login.setDisable(false);
+        /*
+        Requires: an item in the list was selected and correct password entered
+        Effects: display the item info in the corresponding text field
+         */
+        button_delete_login.setDisable(false);   // reset the button status
         button_update_login.setDisable(false);
-        button_add_login.setDisable(false);
-        login temp;
-        if (list_login.getItems().size() == 0){
+        button_add_login.setDisable(true);
+
+        login temp;             // create a login object to be display
+        if (list_login.getItems().size() == 0){  // ensure the list is nonempty
             return;
         }
 
         temp = list_login.getSelectionModel().getSelectedItem();
-        if (temp==null){
+        if (temp==null){  // ensure an item was selected
             return;
         }
-        text_show_company.setText(temp.company);
+        text_show_company.setText(temp.company);   // display the item info
         text_show_account.setText(temp.account);
         text_show_password.setText(temp.password);
         text_show_website.setText(temp.website);
-        show_index_login = list_login.getSelectionModel().getSelectedIndex();
+        show_index_login = list_login.getSelectionModel().getSelectedIndex();   //retrieve the index of the selected item
 
-        button_add_login.setDisable(true);
     }
     public void display_notes(){
-        button_delete_notes.setDisable(false);
+        /*
+        Requires: an item in the list was selected and correct password entered
+        Effects: display the item info in the corresponding text field
+         */
+        button_delete_notes.setDisable(false);   // reset the button status
         button_update_notes.setDisable(false);
-        button_add_notes.setDisable(false);
-        notes temp;
-        if (list_notes.getItems().size() == 0){
+        button_add_notes.setDisable(true);
+
+        notes temp;     // create a note object to be displayed
+        if (list_notes.getItems().size() == 0){ // ensure the list is nonempty
             return;
         }
         temp = list_notes.getSelectionModel().getSelectedItem();
-        if (temp==null){
+        if (temp==null){     // ensure an item was selected
             return;
         }
 
-        text_titles.setText(temp.title);
+        text_titles.setText(temp.title);       // display the item info
         tarea_notes.setText(temp.notetext);
-        show_index_notes = list_notes.getSelectionModel().getSelectedIndex();
-
-        button_add_notes.setDisable(true);
+        show_index_notes = list_notes.getSelectionModel().getSelectedIndex();   //retrieve the index of the selected item
     }
 
     public void update_login()  throws IOException {
+        /*
+        Requires: an item has been selected, the correct password is entered and info was entered
+        Modifies: list_login
+        Effects: update the item in the list
+         */
         login temp;
-        if (list_login.getItems().size() == 0){
+        if (list_login.getItems().size() == 0){  // ensure the list is not empty
             return;
         }
         temp = list_login.getSelectionModel().getSelectedItem();
-        temp.company = text_show_company.getText();
+        if (temp==null){  // ensure an item was selected
+            return;
+        }
+
+        temp.company = text_show_company.getText();   //update the list
         temp.account = text_show_account.getText();
         temp.password = text_show_password.getText();
         temp.website = text_show_website.getText();
 
-        save_login();
+        save_login();  // save the updated list
     }
     public void update_notes()  throws IOException  {
+        /*
+        Requires: an item has been selected, the correct password is entered and info was entered
+        Modifies: list_notes
+        Effects: update the item in the list
+         */
         notes temp;
-        if (list_notes.getItems().size() == 0){
+        if (list_notes.getItems().size() == 0){   // ensure the list is not empty
             return;
         }
         temp = list_notes.getSelectionModel().getSelectedItem();
-        temp.title = text_titles.getText();
+        if (temp==null){     // ensure an item was selected
+            return;
+        }
+        temp.title = text_titles.getText();    // update the list info
         temp.notetext = tarea_notes.getText();
 
-        save_notes();
+        save_notes();   // save the list
     }
 
     public void delete_login()  throws IOException {
@@ -178,8 +202,11 @@ public class Controller {
     }
 
     public void showPasswd(){
-    text_masterpassword.setText(passwd);
-    }
+        /*
+        Effects: display the entered password
+         */
+        text_masterpassword.setText(passwd);
+        }
     public void enterPasswd(){
         String temp;
         temp=text_masterpassword.getText();
