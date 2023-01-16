@@ -1,11 +1,13 @@
 package com.example.safe;
 
 import java.util.Random;
-import java.lang.Iterable;
 
 public class Password {
-    public String password;
+    // this object is for storing password and for checking the validity of the password
 
+    private String password;
+
+    // constructor
     Password(String input){
         set_Password(input);
     }
@@ -28,22 +30,30 @@ public class Password {
         return value;
     }
 
-    public String get_Password(){
-        return this.password;
-    }
-
     public void set_Password(String input){
+        /* Requires: String input
+           Modifies: this.password
+           Effects:  Set this.password as input
+         */
         this.password = input;
     }
 
+    public String get_Password(String input){
+        /*
+           Effects:  return this.password
+         */
+        return this.password;
+    }
+
+
     public boolean character_check(){
-
-        boolean value = true;
+        /*
+        Effects: Check if the password is made of lower case character or not
+         */
+        boolean value = true;  // initialize the value
         for (int i=0 ; i< this.password.length(); i++){
-            char s = this.password.charAt(i);
-
-            int tmp = (int) s;
-            if ( (tmp>122)||(tmp<97)) {
+            char s = this.password.charAt(i);     // read every char, and set the value to false if inelgiible char is used.
+            if ( (s>122)||(s<97)) {
                 value = false;
             }
         }
