@@ -47,7 +47,6 @@ public class test_mixing {
 
     }
 
-
     @Test // this test check if mix and unmix reverse each other.
     public void test_method_mix_unmix() {
         mixing rand = new mixing("ab");

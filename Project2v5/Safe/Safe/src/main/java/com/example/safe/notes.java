@@ -18,7 +18,6 @@ public class notes {
          */
         this.title = title;
     }
-
     public void set_notetext(String notetext) {
         /*
         Requires: String notetext
@@ -27,25 +26,22 @@ public class notes {
          */
         this.notetext = notetext;
     }
-
     public String get_title() {
         /*
         Effects: return note title
          */
         return this.title;
     }
-
     public String get_notetext() {
         /*
         Effects: return note text
          */
         return this.notetext;
     }
-
-
-
-
     public String toString(){
+        /*
+        Effects: return title
+         */
         return this.title;
     }
 }

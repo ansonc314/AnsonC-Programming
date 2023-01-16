@@ -11,7 +11,7 @@ public class test_Password {
     public void setup() throws IOException {
     }
 
-    @Test  // this test the password length check functino
+    @Test  // this test the password length check function
     public void mytest_lengthcheck() throws IOException {
         Password password = new Password("");
 

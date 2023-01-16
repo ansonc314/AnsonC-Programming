@@ -13,15 +13,18 @@ public class Password {
     }
 
     public void generate_random(){
-        Random random = new Random();
+        /*
+        Modifies: this.password
+        Effects: Generate a random string of length 10 with lower case letters and store it to this.password
+         */
+        Random random = new Random();   // create a Random object for generating random number
         String generatedString = "";
         for (int i=0; i<10; i++){
-            char c = (char) random.nextInt(97, 122);
-            generatedString = generatedString + c;
+            char c = (char) random.nextInt(97, 122);   // generate a random number and convert it to a letter
+            generatedString = generatedString + c;  // append the random char to the string.
         }
         this.password =  generatedString;
     }
-
     public boolean length_check(){
         /*
         Requires: String this.password
@@ -33,7 +36,6 @@ public class Password {
         }
         return value;
     }
-
     public void set_Password(String input){
         /* Requires: String input
            Modifies: this.password
@@ -41,15 +43,12 @@ public class Password {
          */
         this.password = input;
     }
-
     public String get_Password(){
         /*
            Effects:  return this.password
          */
         return this.password;
     }
-
-
     public boolean character_check(){
         /*
         Effects: Check if the password is made of lower case character or not
