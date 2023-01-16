@@ -29,14 +29,12 @@ public class login {
          */
         this.company= company;
     }
-
     public String get_account() {
         /*
         Effects: return account
          */
         return this.account;
     }
-
     public void set_account(String account) {
         /*
         Requires: String account
@@ -45,14 +43,12 @@ public class login {
          */
         this.account= account ;
     }
-
     public String get_password() {
         /*
         Effects: return password
          */
         return this.password;
     }
-
     public void set_password(String password) {
         /*
         Requires: String password
@@ -61,14 +57,12 @@ public class login {
          */
         this.password = password;
     }
-
     public String get_website() {
         /*
         Effects: return website
          */
         return this.website;
     }
-
     public void set_website(String website) {
         /*
         Requires: String website
@@ -77,7 +71,6 @@ public class login {
          */
         this.website = website;
     }
-
     public String toString(){
         /*
         Effects: return company name

@@ -13,7 +13,7 @@ public class test_data {
     public void setup() throws IOException {
     }
 
-    @Test
+    @Test // this test check create_line_array if it can read all lines in the file
     public void mytest_create_line_array() throws IOException {
         data instruction = new data ("test_data_file.txt");
         instruction.create_line_array();
@@ -23,16 +23,11 @@ public class test_data {
 
     }
 
-    @Test
+    @Test // this test check if the read2string function perform correctly or not.
     public void mytest_read2string() throws IOException {
         data instruction = new data ("test_data_file.txt");
         instruction.create_line_array();
         String str = instruction.read2string();
-        assertEquals("line1",str.substring(0,5));
-        assertEquals("line2",str.substring(6,11));
-        String str2 = "" + str.charAt(5);
-
-        assertEquals("\n",str2);
-
+        assertEquals("line1\nline2\n",str.substring(0,12));
     }
 }

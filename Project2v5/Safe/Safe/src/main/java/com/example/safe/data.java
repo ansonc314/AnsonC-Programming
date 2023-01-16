@@ -28,7 +28,6 @@ public class data {
         br.close();
         return lines;
     }
-
     public String read2string(){
     /*
     Requires: String Array List this.lines

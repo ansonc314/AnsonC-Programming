@@ -15,45 +15,42 @@ public class test_mixing {
     public void setup() throws IOException {
     }
 
-    @Test
+    @Test  // this test check the mix method.
     public void test_method_mix() {
         mixing rand = new mixing("ab");
-        assertEquals(rand.passwd_int, 97+98);
+        assertEquals(rand.get_passwd_int(), 97+98);  // check if passwd_int is generated correctly
 
         String str = "ry";
-
-        int tmp = rand.passwd_int;
+        int tmp = rand.get_passwd_int();
         int newvalue =  (int) str.charAt(0) + 1 + ((tmp + 0*0)%15);
-        assertEquals((int) rand.mix(str).charAt(0), newvalue);
+        assertEquals((int) rand.mix(str).charAt(0), newvalue);        // check if the first char is encrypted properly
 
         newvalue =  (int) str.charAt(1) + 1 + ((tmp + 1*1)%15);
-        assertEquals((int) rand.mix(str).charAt(1), newvalue);
-
+        assertEquals((int) rand.mix(str).charAt(1), newvalue);   // check if the second char is encrypted properly
 
     }
 
-    @Test
+    @Test  // this test check the unmix method.
     public void test_method_unmix() {
         mixing rand = new mixing("ab");
-        assertEquals(rand.passwd_int, 97+98);
+        assertEquals(rand.get_passwd_int(), 97+98);  // check if passwd_int is generated correctly
 
         String str = "ry";
 
-        int tmp = rand.passwd_int;
-        int newvalue =  (int) str.charAt(0) - 1 - ((tmp + 0*0)%15);
+        int tmp = rand.get_passwd_int();
+        int newvalue =  (int) str.charAt(0) - 1 - ((tmp + 0*0)%15);   // check if the first char is encrypted properly
         assertEquals((int) rand.unmix(str).charAt(0), newvalue);
 
-        newvalue =  (int) str.charAt(1) - 1 - ((tmp + 1*1)%15);
+        newvalue =  (int) str.charAt(1) - 1 - ((tmp + 1*1)%15);  // check if the second char is encrypted properly
         assertEquals((int) rand.unmix(str).charAt(1), newvalue);
 
 
     }
 
 
-    @Test
+    @Test // this test check if mix and unmix reverse each other.
     public void test_method_mix_unmix() {
         mixing rand = new mixing("ab");
-        assertEquals(rand.passwd_int, 97+98);
 
         String str = "test";
         assertEquals(rand.unmix(rand.mix(str))   , str);

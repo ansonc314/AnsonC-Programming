@@ -12,7 +12,7 @@ public class Password {
         set_Password(input);
     }
 
-    public void generate_random_password(){
+    public void generate_random(){
         Random random = new Random();
         String generatedString = "";
         for (int i=0; i<10; i++){
@@ -23,6 +23,10 @@ public class Password {
     }
 
     public boolean length_check(){
+        /*
+        Requires: String this.password
+        Effects: Return false if the length is smaller than or equal to 7
+         */
         boolean value = false;
         if (this.password.length()>7){
              value = true;
@@ -38,7 +42,7 @@ public class Password {
         this.password = input;
     }
 
-    public String get_Password(String input){
+    public String get_Password(){
         /*
            Effects:  return this.password
          */
@@ -55,6 +59,7 @@ public class Password {
             char s = this.password.charAt(i);     // read every char, and set the value to false if inelgiible char is used.
             if ( (s>122)||(s<97)) {
                 value = false;
+                return value;
             }
         }
         return value;

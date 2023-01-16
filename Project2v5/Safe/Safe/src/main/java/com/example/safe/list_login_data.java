@@ -13,7 +13,6 @@ public class list_login_data {
         this.filename = input;
     }
 
-
     public void read2list(String master) throws IOException {
         /*
         Requires: a correct password String master
@@ -39,8 +38,6 @@ public class list_login_data {
         br.close();
         fr.close();
     }
-
-
     public void write2txt(String master) throws IOException {
         /*
         Requires: a correct password String master

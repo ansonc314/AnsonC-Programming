@@ -21,10 +21,15 @@ public class mixing {
         this.passwd_int = tmp;
     }
 
-
+    public int get_passwd_int(){
+        /*
+        Effects: return the passwd_int
+         */
+        return this.passwd_int;
+    }
     public String mix(String str){
         /*
-        Requires: String str - to be encrypted
+        Requires: String str - to be encrypted and this.pass_int initialized
         Effects:  Encrypt the str using the key this.passwd_int. Return the encrypted string
          */
         String convertedStr=""; // initialize
@@ -39,10 +44,9 @@ public class mixing {
         }
         return convertedStr;
     }
-
     public String unmix(String str){
         /*
-        Requires: String str - to be decrypted
+        Requires: String str - to be decrypted and this.pass_int initialized
         Effects:  Decrypt the str using the key this.passwd_int. Return the decrypted string
          */
         String convertedStr="";
