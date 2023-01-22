@@ -38,10 +38,10 @@ public class test_mixing {
         String str = "ry";
 
         int tmp = rand.get_passwd_int();
-        int newvalue =  (int) str.charAt(0) - 1 - ((tmp + 0*0)%15);   // check if the first char is decrypted properly
+        int newvalue =  (int) str.charAt(0) - 1 - ((tmp + 0*0)%15);   // check if the first char is encrypted properly
         assertEquals((int) rand.unmix(str).charAt(0), newvalue);
 
-        newvalue =  (int) str.charAt(1) - 1 - ((tmp + 1*1)%15);  // check if the second char is decrypted properly
+        newvalue =  (int) str.charAt(1) - 1 - ((tmp + 1*1)%15);  // check if the second char is encrypted properly
         assertEquals((int) rand.unmix(str).charAt(1), newvalue);
 
 

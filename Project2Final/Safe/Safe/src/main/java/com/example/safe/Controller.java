@@ -7,7 +7,7 @@ import java.lang.String;
 
 public class Controller {
 
-    public String passwd = "";
+    public String passwd;
     int show_index_login, show_index_notes;   // index of selected items in list
     public TextField text_show_company, text_show_account, text_show_password, text_show_website;
     public TextField text_masterpassword;
@@ -20,7 +20,7 @@ public class Controller {
     public Button button_delete_login, button_delete_notes;
     public Button button_update_login, button_update_notes;
     public Button button_add_login, button_add_notes;
-    public TabPane tabpane;
+
 
     public void new_login(){
         /*
@@ -281,37 +281,6 @@ public class Controller {
         button_delete_notes.setDisable(true);
         button_add_notes.setDisable(false);
     }
-    public void save_notes()  throws IOException  {
-        /*
-        Effects: write the notes list to file
-         */
-        String choice ;
-        choice = cbox_choice.getSelectionModel().getSelectedItem().toString(); // read the group name
-        String filename = choice + "_notes.txt"; // derive the filename of the file to be save
-        list_notes_data obj_notesList = new list_notes_data(filename); // create the list_notes_data object to write into file
-        obj_notesList.list = list_notes;  // pass by reference the list_login to the object
-        obj_notesList.write2txt(passwd);  // write the notes list to the file
-    }
-    public void initialize() throws IOException {
-        /*
-        Effects:
-        1) Display instructions on the TextArea tarea_instruction
-        2) set default master passwd as "" and display prompt
-        3) set button status
-         */
-        data instruction = new data ("instruction.txt");   // create a data object to read from file
-        instruction.create_line_array();         // read lines and store in line array
-        String str = instruction.read2string();  // convert line array into strings
-
-        text_instruction.setText(str);   // set default master passwd and display prompt
-        passwd = "masterpassword";
-        lbl_message.setText("Use \"masterpassword\" as default");
-
-        button_delete_login.setDisable(true);   // set button status
-        button_delete_notes.setDisable(true);
-        button_update_login.setDisable(true);
-        button_update_notes.setDisable(true);
-    }
     public void load_login_switch()  {
         /*
         Modifies: list_login
@@ -339,6 +308,37 @@ public class Controller {
         button_update_notes.setDisable(true);
         button_delete_notes.setDisable(true);
         button_add_notes.setDisable(false);
+    }
+    public void save_notes()  throws IOException  {
+        /*
+        Effects: write the notes list to file
+         */
+        String choice ;
+        choice = cbox_choice.getSelectionModel().getSelectedItem().toString(); // read the group name
+        String filename = choice + "_notes.txt"; // derive the filename of the file to be save
+        list_notes_data obj_notesList = new list_notes_data(filename); // create the list_notes_data object to write into file
+        obj_notesList.list = list_notes;  // pass by reference the list_login to the object
+        obj_notesList.write2txt(passwd);  // write the notes list to the file
+    }
+    public void initialize() throws IOException {
+        /*
+        Effects:
+        1) Display instructions on the TextArea tarea_instruction
+        2) set default master passwd as "" and display prompt
+        3) set button status
+         */
+        data instruction = new data ("instruction.txt");   // create a data object to read from file
+        instruction.create_line_array();         // read lines and store in line array
+        String str = instruction.read2string();  // convert line array into strings
+
+        text_instruction.setText(str);   // set default master passwd and display prompt
+        passwd  = "masterpassword";
+        lbl_message.setText("Use \"masterpassword\" as default");
+
+        button_delete_login.setDisable(true);   // set button status
+        button_delete_notes.setDisable(true);
+        button_update_login.setDisable(true);
+        button_update_notes.setDisable(true);
     }
 
 

@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.safe.Controller">
     <children>
-        <TabPane fx:id="tabpane" layoutX="39.0" layoutY="90.0" prefHeight="335.0" prefWidth="521.0" tabClosingPolicy="UNAVAILABLE">
+        <TabPane layoutX="39.0" layoutY="90.0" prefHeight="335.0" prefWidth="521.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab onSelectionChanged="#load_login_switch" text="Logins">
                     <content>
