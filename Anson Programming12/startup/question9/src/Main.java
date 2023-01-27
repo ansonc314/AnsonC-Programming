@@ -4,7 +4,6 @@ import java.io.*;
 
 public class Main {
 
-
     public static void main(String[] args) throws IOException {
         /*
             Effects: 1) Read 1 line from the file happyorsad.txt
@@ -21,13 +20,13 @@ public class Main {
         // Step 1: Read 1 line from the text
         FileReader fr = new FileReader(filename);    // construct FileReader and BufferedReader objects
         BufferedReader br = new BufferedReader(fr);
-        String line = br.readLine();
+        String line = br.readLine();  // read a line
         br.close();
         fr.close();
 
 
         // Step 2: Count and display the search result
-
+        // 2.1 count number of happy faces
        int hword_count = 0;
         for (int pos=0; pos < line.length() - word_length + 1; pos++){
             String subword = line.substring(pos, pos+word_length);  // choose a substring from a given line
@@ -36,7 +35,7 @@ public class Main {
             }
         }
 
-
+        // 2.2 count number of sad faces
         int sword_count = 0;
         for (int pos=0; pos < line.length() - word_length + 1; pos++) {
             String subword = line.substring(pos, pos + word_length);  // choose a substring from a given line
@@ -45,17 +44,23 @@ public class Main {
             }
         }
 
+        System.out.print("Number of happy emoticons is ");
+        System.out.println(hword_count);
+        System.out.print("Number of sad emoticons is ");
+        System.out.println(sword_count);
+
+
         if (hword_count == sword_count && hword_count==0 ){
-            System.out.println("none");
+            System.out.println("Result: none");
         }
         if (hword_count == sword_count && hword_count>0 ){
-            System.out.println("unsure");
+            System.out.println("Result: unsure");
         }
         if (hword_count > sword_count){
-            System.out.println("happy");
+            System.out.println("Result: happy");
         }
         if (hword_count < sword_count){
-            System.out.println("sad");
+            System.out.println("Result: sad");
         }
 
     }
