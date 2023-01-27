@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AnsonC-Programming.iml" filepath="$PROJECT_DIR$/.idea/AnsonC-Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming11/Project2v5/Safe/Safe/Safe.iml" filepath="$PROJECT_DIR$/Programming11/Project2v5/Safe/Safe/Safe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming11/6.1 GUIprogram1/ademo/ademo.iml" filepath="$PROJECT_DIR$/Programming11/6.1 GUIprogram1/ademo/ademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming11/6.2 FriendBook/friendbook/friendbook.iml" filepath="$PROJECT_DIR$/Programming11/6.2 FriendBook/friendbook/friendbook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming11/7.2 v4 FriendBKExtension/friendbook/friendbook (1).iml" filepath="$PROJECT_DIR$/Programming11/7.2 v4 FriendBKExtension/friendbook/friendbook (1).iml" />
+    </modules>
+  </component>
+</project>
