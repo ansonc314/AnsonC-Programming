@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int x = 20;
-        int y = 15;
-        boolean z = false;
-        System.out.println(!z || x < y);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many hotdogs do you want?");
+        int hotdogs = scanner.nextInt();
+        System.out.println("How many drinks do you want?");
+        int drinks = scanner.nextInt();
 
-
-        //question4();
+        double total = (hotdogs*3.5 + drinks)*1.12;
+        total = Math.round(total * 100.0) / 100.0;
+        System.out.println("Total you owe $" + total);
     }
-
-
 
     public static void question4(){
         int arraySize=5;
@@ -45,9 +45,33 @@ public class Main {
 
         double total = (hotdogs*3.5 + drinks)*1.12;
         total = Math.round(total * 100.0) / 100.0;
-        System.out.println("Total you owe " + total);
+        System.out.println("Total you owe $" + total);
     }
 }
+
+/*
+    // For reference variable
+    Person A = new Person("Ann");
+    Person B = new Person("Ben");
+
+        B = A;
+                System.out.println(B.name); // B's name is Anne
+                A.name = "Dale";  // Change A's value
+                System.out.println(B.name);   // B's name changed to Dale now
+
+
+
+                // For primitive variable
+                int a = 10;
+                int b = 20;
+                b = a;
+                System.out.println(b); // b's value is 10
+                a  = 30;  // Change a's value
+                System.out.println(b);   // b's value unchanged
+
+
+
+ */
 
 /*
 Codes for circle class

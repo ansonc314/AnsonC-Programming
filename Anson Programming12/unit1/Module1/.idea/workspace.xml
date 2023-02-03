@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed581c5-e06e-4477-b600-8f6ee89281d2" name="Changes" comment="" />
+    <list default="true" id="ef301421-22fc-43df-b4a9-a2f70dced9d9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -16,9 +23,8 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Kvj8X5JmIbF3LkAL9qd67sdc8R" />
+  <component name="ProjectId" id="2LCxERx9KoXdNA6EEhZMas1qvbh" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -28,14 +34,19 @@
     "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.anson.module1.module1_2" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7ed581c5-e06e-4477-b600-8f6ee89281d2" name="Changes" comment="" />
-      <created>1674861796531</created>
+      <changelist id="ef301421-22fc-43df-b4a9-a2f70dced9d9" name="Changes" comment="" />
+      <created>1675388755129</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1674861796531</updated>
+      <updated>1675388755129</updated>
     </task>
     <servers />
   </component>
