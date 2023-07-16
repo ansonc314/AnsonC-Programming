@@ -15,6 +15,6 @@ public class CircleTest {
     @Test
     public void getArea() {
         Circle testCircle = new Circle(10,Colour.RED);
-        assertEquals(314.159,testCircle.getArea(), 0.1);  // expected area is 6.
+        assertEquals(314.159,testCircle.getArea(), 0.1);  // expected area is 314.159
     }
 }
