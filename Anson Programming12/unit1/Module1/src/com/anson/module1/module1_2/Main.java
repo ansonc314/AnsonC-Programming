@@ -8,7 +8,7 @@ public class Main {
         list.add(new Triangle(3,5,4));
         list.add(new Circle(2));
         list.add(new Circle(1));
-        list.add(new Triangle(12,5,13));
+        list.add(new Triangle(2,3, 4));
 
        for (int ii = 0 ; ii<4 ; ii++){
            System.out.println(list.get(ii));

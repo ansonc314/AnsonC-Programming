@@ -38,38 +38,22 @@ public abstract class TwoDShape {
      */
         public abstract double getArea();
 
-    /**
-     * Setter - height
-     * @param height
-     */
         public void setHeight(double height){
             this.height=height;
         }
-
-    /**
-     * Setter - width
-     * @param width
-     * @result this.width = width
-     */
-    public void setWidth(double width){
+        public void setWidth(double width){
             this.width=width;
         }
+        public void setColour(Colour colour){
+        this.colour = colour;
+    }
 
-    /**
-     * Getter - width
-     * @return this.width
-     */
-    public double getWidth(){
+        public double getWidth(){
             return this.width;
         }
         public double getHeight(){
             return this.height;
         }
-
-        public void setColour(Colour colour){
-            this.colour = colour;
-        }
-
         public Colour getColour(){
             return this.colour;
         }

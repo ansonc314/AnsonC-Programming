@@ -72,7 +72,7 @@ public class Triangle extends TwoDShape implements Rotate {
         String temp;
         temp = "This Triangle has sides of length " + Double.toString(this.side1)
                 + ", " + Double.toString(this.side2) + " and " + Double.toString(this.side3);
-        temp = temp + "\nIts area is "  + Double.toString(this.getArea()) +  ", its colour is "  + this.getColour()   + " and its rotation angle is "  + Double.toString(this.angle) + "\n";
+        temp = temp +    ", its colour is "  + this.getColour()   + " and its rotation angle is "  + Double.toString(this.angle) + "\n";
 
         return temp;
     }

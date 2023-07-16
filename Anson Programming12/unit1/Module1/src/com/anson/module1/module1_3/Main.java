@@ -18,10 +18,19 @@ public class Main {
         System.out.println("Now, test the rotate interface/n");
         Triangle d = (Triangle) list.get(0);
         System.out.println("inital angle = " + d.getAngle());
+
+        System.out.println("\nNow rotate for 90 degrees");
         d.rotate90();   // rotate 90 degree
+        System.out.println("after rotation, the angle is "+d.getAngle());
+
+
+        System.out.println("\nNow rotate for another 180 degrees");
         d.rotate180();  // rotate another 180 degree
+        System.out.println("after rotation, the angle is "+d.getAngle());
+
+        System.out.println("\nNow rotate for another 50 degrees");
         d.rotate(50);  // rotate another 50 degree. So totally rotate for 320 degree
-        System.out.println("after rotation is "+d.getAngle());
+        System.out.println("after rotation, the angle is "+d.getAngle());
 
 
 

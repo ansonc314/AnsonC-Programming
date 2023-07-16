@@ -17,7 +17,7 @@ public class Main {
         System.out.println(b);
 
         System.out.println("\nTriangle c");
-        TwoDShape c = new Triangle(3,4,5);
+        TwoDShape c = new Triangle(3,4);
         System.out.println(c);
 
     }

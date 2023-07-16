@@ -26,8 +26,9 @@ public abstract class TwoDShape {
 
     public String toString(){
         String temp;
-        temp = "TwoDShape: The width of this shape is " + Double.toString(this.width)
-                + " and the height is " + Double.toString(this.height);
+        temp = "TwoDShapes: The width of this shape is " + Double.toString(this.width)
+                + " and the height is " + Double.toString(this.height)
+                + ". \nIts area is " + Double.toString(this.getArea()) ;
         return temp;
     }
 

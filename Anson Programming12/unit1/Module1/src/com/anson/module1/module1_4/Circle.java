@@ -35,6 +35,6 @@ public class Circle extends TwoDShape {
      * @return
      */
     public String toString(){
-        return "This is a circle [Radius=" + this.radius + "], its colour is " + this.getColour() + " and its area is " + Double.toString(getArea())   + "\n";
+        return "This is a circle [Radius=" + this.radius + "], its colour is " + this.getColour()   + "\n";
     }
 }
