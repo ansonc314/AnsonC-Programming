@@ -34,7 +34,7 @@ public abstract class TwoDShape {
 
     /**
      * Abstract Method - implementation specified in the subclass
-     * @return double area of the shape.
+     * @return area of the shape.
      */
         public abstract double getArea();
 

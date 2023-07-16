@@ -6,8 +6,9 @@ public class Circle extends TwoDShape {
 
     /**
      * Constructor for Circle
-     * @param radius
-     * @param colour
+     * @param radius  the ciricle's radius
+     * @param colour  the circle's colour
+     * @return circle object with given color, and radius
      */
     Circle(double radius, Colour colour){
         this.radius = radius;
@@ -32,7 +33,7 @@ public class Circle extends TwoDShape {
 
     /**
      * Display circle's radius, colour and area
-     * @return
+     * @return a string, with description of the radius and the color of the circle
      */
     public String toString(){
         return "This is a circle [Radius=" + this.radius + "], its colour is " + this.getColour()   + "\n";

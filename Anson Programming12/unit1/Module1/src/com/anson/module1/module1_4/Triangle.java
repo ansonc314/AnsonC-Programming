@@ -28,7 +28,7 @@ public class Triangle extends TwoDShape implements Rotate {
 
     /**
      * Computer Area of triangle using Heron formula
-     * https://en.wikipedia.org/wiki/Heron%27s_formula
+     * see https://en.wikipedia.org/wiki/Heron%27s_formula
      * @return area of triangle
      */
     @Override
@@ -43,7 +43,7 @@ public class Triangle extends TwoDShape implements Rotate {
      * https://en.wikipedia.org/wiki/Heron%27s_formula
      * @return height
      */
-    private double heronsHeight(){
+    public double heronsHeight(){
         // height with respect to side1
         return 2*getArea()/side1;
     }
@@ -66,7 +66,7 @@ public class Triangle extends TwoDShape implements Rotate {
 
     /**
      * Return Properties of Triangles: the lengths of 3 sides, colour, rotation angle and area
-     * @return side1,side2,side3,this.getArea(), angle and this.getColour
+     * @return side1,side2,side3, angle and colour
      */
     public String toString(){
         String temp;
@@ -80,16 +80,30 @@ public class Triangle extends TwoDShape implements Rotate {
     public double getAngle(){
         return this.angle;
     }
+
+    /**
+     * Rotate the angle of the triangle by 90 degree
+     * @return increment the angle variable by 90 degree
+     */
     @Override
     public void rotate90() {
         this.angle = this.angle + 90;
     }
 
+    /**
+     * Rotate the angle of the triangle by 180 degree
+     * @return increment the angle variable by 180 degree
+     */
     @Override
     public void rotate180() {
         this.angle = this.angle + 180;
     }
 
+    /**
+     * Rotate the angle of the triangle
+     * @param degree - the input of the degrees to be rotated
+     * @return increment the angle variable by the amount of the input degree
+     */
     @Override
     public void rotate(double degree) {
         this.angle = this.angle + degree;
