@@ -1,7 +1,5 @@
 package module2_4;
 
-import com.sun.nio.sctp.AbstractNotificationHandler;
-
 import java.util.HashSet;
 
 public class Word {

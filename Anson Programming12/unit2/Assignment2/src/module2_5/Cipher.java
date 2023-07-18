@@ -1,4 +1,8 @@
-   /**
+package module2_5;
+
+public class Cipher {
+
+    /**
      *
      * @param key  = 0, ... 25
      * @param plainText - only lower case letters will be encrypted
@@ -7,7 +11,7 @@
     public static String encrypt(int key, String plainText){
 
         String cipherText= plainText;
-    int len = plainText.length();
+        int len = plainText.length();
 
         for(int i=0 ; i<plainText.length() ; i++) {
             int charASCII = (int) plainText.charAt(i);
@@ -44,18 +48,4 @@
 
 
 
-
-        /**
-         *
-         * Read the file and Create a String line by concatenating all lines in the file.
-         */
-
-        FileReader fr = new FileReader(filename);    // construct FileReader and BufferedReader objects
-        BufferedReader br = new BufferedReader(fr);
-
-        String line = "";
-        String newLine;
-        while ((newLine = br.readLine()) != null){
-            line = line + " " + newLine;                         // read each line from file and add to the arraylist
-        }
-        br.close();
+}
