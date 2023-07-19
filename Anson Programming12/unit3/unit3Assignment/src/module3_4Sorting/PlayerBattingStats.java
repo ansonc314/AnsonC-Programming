@@ -80,16 +80,42 @@ public class PlayerBattingStats {
     @Override
     public String toString() {
         return "PlayerBattingStats{" +
-                "name='" + name + '\'' +
-                ", team='" + team + '\'' +
-                ", games=" + games +
-                ", atBats=" + atBats +
-                ", runs=" + runs +
-                ", hits=" + hits +
-                ", doubles=" + doubles +
-                ", triples=" + triples +
-                ", homeRuns=" + homeRuns +
-                ", rbi=" + rbi +
+                String.format("%-30s" , "\tname='" + name + '\'') +
+                "\t team='" + team + '\'' +
+                "\t games=" + games +
+                "\t atBats=" + atBats +
+                "\t runs=" + runs +
+                "\t hits=" + hits +
+                "\t doubles=" + doubles +
+                "\t triples=" + triples +
+                String.format("%-15s" , "\t homeRuns=" + homeRuns ) +
+                "\t rbi=" + rbi +
                 '}';
     }
+
+
+    public double getValue(int selector){
+        double out = 0;
+        switch (selector){
+            case 0:
+                out =  this.games;
+                break;
+            case 1:
+                out =  this.atBats;
+                break;
+            case 2:
+                out =  this.runs;
+                break;
+            case 3:
+                out =  ((double) this.runs) / ((double) this.atBats);
+                break;
+            case 4:
+                out =  ((double) (this.runs + this.doubles + this.triples  )) / ((double) this.atBats);
+                break;
+
+        }
+        return out;
+    }
+
+
 }

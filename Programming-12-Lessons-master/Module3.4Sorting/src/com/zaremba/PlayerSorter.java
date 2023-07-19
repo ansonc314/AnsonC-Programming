@@ -1,39 +1,54 @@
 package com.zaremba;
 
+import java.util.ArrayList;
+
 public class PlayerSorter {
 
-    public static PlayerBattingStats[] mergeSort(PlayerBattingStats[] array, int k ) {
+    public static ArrayList<PlayerBattingStats> mergeSort(ArrayList<PlayerBattingStats> playerList, int k ) {
 
         // Recursive control 'if' statement.
-        if(array.length <= 1) {
+        if(playerList.size() <= 1) {
 
-            return array;
+            return playerList;
 
         }
 
-        int midpoint = array.length / 2;
+        int midpoint = playerList.size() / 2;
 
-        // Declare and initialize left and right arrays.
-        PlayerBattingStats[] left = new PlayerBattingStats[midpoint];
-        PlayerBattingStats[] right = new PlayerBattingStats[array.length - midpoint];
+        // Declare and initialize left and right playerLists.
+        ArrayList<PlayerBattingStats> left = new ArrayList<PlayerBattingStats>(playerList.subList(0,midpoint));
+        ArrayList<PlayerBattingStats> right = new ArrayList<PlayerBattingStats>(playerList.subList(midpoint, playerList.size()));
 
-        System.arraycopy(array, 0, left, 0, midpoint);
-        System.arraycopy(array,midpoint,right,0, array.length - midpoint);
+        // Recursive call for left and right playerLists.
+        left =  mergeSort(left,k);
+        right =  mergeSort(right,k);
 
 
-        PlayerBattingStats[] result = new PlayerBattingStats[array.length];
 
-        // Recursive call for left and right arrays.
-               left =  mergeSort(left,k);
-               right =  mergeSort(right,k);
+        // Get the merged left and right playerLists.
+        ArrayList<PlayerBattingStats> result = merge(left, right, k);
 
-        // Get the merged left and right arrays.
-         result = merge(left, right, k);
-
-        // Return the sorted merged array.
+        // Return the sorted merged playerList.
         return result;
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -43,46 +58,48 @@ public class PlayerSorter {
      * @param right
      * @return
      */
-    // Merges the left and right array in ascending order.
-    public static PlayerBattingStats[] merge(PlayerBattingStats[] left, PlayerBattingStats[] right, int k) {
+    // Merges the left and right playerList in ascending order.
+    public static ArrayList<PlayerBattingStats> merge(ArrayList<PlayerBattingStats> left, ArrayList<PlayerBattingStats> right, int k) {
 
-        // Merged result array.
-        PlayerBattingStats[] result = new PlayerBattingStats[left.length + right.length];
+        // Merged result playerList.
+        ArrayList<PlayerBattingStats> result = new ArrayList<PlayerBattingStats>();
 
-        // Declare and initialize pointers for all arrays.
+        // Declare and initialize pointers for all playerLists.
         int leftPointer, rightPointer, resultPointer;
         leftPointer = rightPointer = resultPointer = 0;
 
-        // While there are items in either array...
-        while(leftPointer < left.length || rightPointer < right.length) {
+        // While there are items in either playerList...
+        while(leftPointer < left.size() || rightPointer < right.size()) {
 
-            // If there are items in BOTH arrays...
-            if(leftPointer < left.length && rightPointer < right.length) {
+            // If there are items in BOTH playerLists...
+            if(leftPointer < left.size() && rightPointer < right.size()) {
 
                 // If left item is less than right item...
-                if(left[leftPointer].getValue(k) < right[rightPointer].getValue(k)) {
+                if(left.get(leftPointer).getValue(k) < right.get(rightPointer).getValue(k)) {
 
-                    result[resultPointer++] = left[leftPointer++];
+                    result.add(left.get(leftPointer));
+                    leftPointer++;
 
                 } else {
 
-                    result[resultPointer++] = right[rightPointer++];
-
+                    result.add(right.get(rightPointer));
+                    rightPointer++;
                 }
 
             }
 
-            // If there are only items in the left array...
-            else if(leftPointer < left.length) {
+            // If there are only items in the left playerList...
+            else if(leftPointer < left.size()) {
 
-                result[resultPointer++] = left[leftPointer++];
-
+                result.add(left.get(leftPointer));
+                leftPointer++;
             }
 
-            // If there are only items in the right array...
-            else if(rightPointer < right.length) {
+            // If there are only items in the right playerList...
+            else if(rightPointer < right.size()) {
 
-                result[resultPointer++] = right[rightPointer++];
+                result.add(right.get(rightPointer));
+                rightPointer++;
 
             }
 
@@ -91,9 +108,5 @@ public class PlayerSorter {
         return result;
 
     }
-
-
-
-
 
 }

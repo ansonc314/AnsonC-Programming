@@ -36,14 +36,21 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        players = new ArrayList<>();
+        players = new ArrayList<PlayerBattingStats>();
         try {
             parseCSVData(new File("PlayerData.csv"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
-        for(PlayerBattingStats p: players){
+        Scanner myInput = new Scanner( System.in );
+        System.out.print( "Input : n =  \n" );
+        //int n = myInput.nextInt();
+
+        ArrayList<PlayerBattingStats>  players_sorted = new ArrayList<PlayerBattingStats>();
+        players_sorted   = PlayerSorter.sort(players,4);
+
+        for(PlayerBattingStats p: players_sorted){
             System.out.println(p);
         }
 
