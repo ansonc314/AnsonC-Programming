@@ -1,7 +1,6 @@
 package module3_4Sorting;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -35,7 +34,7 @@ public class Main {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         players = new ArrayList<PlayerBattingStats>();
         try {
             parseCSVData(new File("PlayerData.csv"));
@@ -48,11 +47,15 @@ public class Main {
         //int n = myInput.nextInt();
 
         ArrayList<PlayerBattingStats>  players_sorted = new ArrayList<PlayerBattingStats>();
-        players_sorted   = PlayerSorter.sort(players,4);
+        players_sorted   = PlayerSorter.sort(players,1);
 
+        ArrayList<String> tt = new ArrayList<String>();
         for(PlayerBattingStats p: players_sorted){
-            System.out.println(p);
+            tt.add(p.toString());
         }
+
+        Write2File.write2txt("report.txt",tt);
+
 
     }
 }
