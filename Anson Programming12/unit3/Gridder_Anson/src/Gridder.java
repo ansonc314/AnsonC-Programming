@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.event.*;
 import flanagan.io.*;
 import java.awt.Image;
+import java.util.Random;
 
 
 public class Gridder extends javax.swing.JFrame 
@@ -678,49 +679,165 @@ public class Gridder extends javax.swing.JFrame
     }//GEN-LAST:event_jSliderDelayStateChanged
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.out.println("button 1 pressed: Generate random points");
 
-        grid[1][2] = 1;
-        System.out.println("1");
+        Random rand = new Random();
+        for (int i=0 ;  i <100 ; i++ ) {
+            int x = rand.nextInt(gridCount);
+            int y = rand.nextInt(gridCount);
+            grid[x][y] = 1;
+        }
         draw();
     }//GEN-LAST:event_jButton1ActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        System.out.println("2");
+        System.out.println("button 2 pressed: Generate random column");
+        Random rand = new Random();
+        int x = rand.nextInt(gridCount);
+        for (int i=0 ;  i <gridCount ; i++ ) {
+            grid[x][i] = 1;
+        }
+        draw();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.out.println("3");
-        draw();
+        System.out.println("button 3 pressed: Color the top half");
+        clearGrid();
+        for (int y=0 ;  y <gridCount/2 ; y++ ) {
+            for (int x = 0; x < gridCount; x++) {
+                grid[x][y] = 1;
+            }
+            draw();
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
-
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("4");
-
-        draw();
+        System.out.println("button 4 pressed: Count the white squares");
+        int count = 0 ;
+        for (int y=0 ;  y <gridCount ; y++ ) {
+            for (int x = 0; x < gridCount; x++) {
+                if (grid[x][y] == 1){
+                       count ++;
+                }
+            }
+        }
+        textInfo.setText(Integer.toString(count) );
     }//GEN-LAST:event_jButton11ActionPerformed
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("5");
 
+
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        System.out.println("button 5 pressed: Print the X");
+        clearGrid();
+        for (int i=0 ;  i <gridCount ; i++ ) {
+            grid[i][i] = 1;
+            grid[gridCount-1-i][i] = 1;
+        }
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("6");
+        System.out.println("button 6 pressed: Reverse colors");
+        for (int y=0 ;  y <gridCount ; y++ ) {
+            for (int x = 0; x < gridCount; x++) {
+                if (grid[x][y] == 1){
+                    grid[x][y] = 0;
+                }
+                else {grid[x][y] = 1;}
+            }
+        }
 
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("7");
+        System.out.println("button 7 pressed: Two white square rules");
+
+        int [][] tempGrid= new int[gridCount][gridCount];   // create a temporary grid
+        for (int x=0; x<gridCount; x++){
+            for (int y=0; y<gridCount; y++){
+                tempGrid[x][y] = grid[x][y];
+            }
+        }
+
+        // scan through tempGrid.
+        // will modify on the inner part of the gird, not on the edge
+        for (int x=1; x<gridCount-1; x++){
+            for (int y=1; y<gridCount-1; y++){
+                 if (tempGrid[x][y] == 0){
+                     int count = 0;
+                     count = tempGrid[x-1][y-1] + tempGrid[x-1][y]+ tempGrid[x-1][y+1];  // count white sq in the left column
+                     count = count + tempGrid[x][y-1] + tempGrid[x][y+1];  // count white sq in the mid column
+                     count = count + tempGrid[x+1][y-1] + tempGrid[x+1][y]+ tempGrid[x+1][y+1];  // count white sq in the right column
+
+                     if (count == 2){
+                         grid[x][y] = 1;
+                     }
+                 }
+            }
+        }
 
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("8");
+        System.out.println("button 8 pressed: move to left");
+
+        int [][] tempGrid= new int[gridCount][gridCount];   // create a temporary grid
+        for (int x=0; x<gridCount; x++){
+            for (int y=0; y<gridCount; y++){
+                tempGrid[x][y] = grid[x][y];
+            }
+        }
+
+        for (int x=0; x<gridCount; x++){
+            for (int y=0; y<gridCount; y++){
+                grid[x][y] = tempGrid[(x+1)%gridCount][y];
+            }
+        }
 
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("9");
+        System.out.println("button 9 pressed - rotate");
+
+        int [][] tempGrid= new int[gridCount][gridCount];   // create a temporary grid
+        for (int x=0; x<gridCount; x++){
+            for (int y=0; y<gridCount; y++){
+                tempGrid[x][y] = grid[x][y];
+            }
+        }
+
+        clearGrid();
+
+        // rotate from quarter 2 to quarter 1
+        for (int x=0; x<gridCount/2; x++){
+            for (int y=0 ; y<gridCount/2; y++){
+                grid[ gridCount-1 -y ][x] = tempGrid[x][y];
+            }
+        }
+
+        // rotate from quarter 3 to quarter 2
+        for (int x=0; x<gridCount/2; x++){
+            for (int y=gridCount/2; y < gridCount; y++){
+                grid[gridCount-1 - y ][x] = tempGrid[x][y];
+            }
+        }
+
+
+        // rotate from quarter 4 to quarter 3
+        for (int x=gridCount/2; x< gridCount; x++){
+            for (int y=gridCount/2; y<gridCount; y++){
+                grid[ gridCount -1 - y][x] = tempGrid[x][y];
+            }
+        }
+
+        // rotate from quarter 1 to quarter 4
+        for (int x =gridCount/2; x<gridCount; x++){
+            for (int y=0 ; y<gridCount/2; y++){
+                grid[ gridCount-1 - y  ][x] = tempGrid[x][y];
+            }
+        }
+
+
+
 
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
@@ -728,11 +845,13 @@ public class Gridder extends javax.swing.JFrame
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         System.out.println("10");
+        clearGrid();
         draw();
     }//GEN-LAST:event_jButton10ActionPerformed
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         System.out.println("11");
 
+        grid[0][0] = 1;
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
