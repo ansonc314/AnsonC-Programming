@@ -47,7 +47,7 @@ public class Main {
         //int n = myInput.nextInt();
 
         ArrayList<PlayerBattingStats>  players_sorted = new ArrayList<PlayerBattingStats>();
-        players_sorted   = PlayerSorter.sort(players,1);
+        players_sorted   = PlayerSorter.sort(players,0);
 
         ArrayList<String> tt = new ArrayList<String>();
         for(PlayerBattingStats p: players_sorted){

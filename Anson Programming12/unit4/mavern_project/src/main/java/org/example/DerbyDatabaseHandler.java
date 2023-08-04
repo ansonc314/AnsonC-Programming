@@ -1,20 +1,22 @@
-package com.zaremba.databases;
+package org.example;
+
 import java.sql.*;
 
-public class DatabaseHandler {
+public class DerbyDatabaseHandler {
+
     private static final String DB_url = "jdbc:derby:database/forum;create=true";
     private static Connection conn = null;
     private static Statement stmt = null;
-    public static DatabaseHandler handler;
+    public static DerbyDatabaseHandler handler;
 
-    public DatabaseHandler() {
+    public DerbyDatabaseHandler() {
         createConnection();
-        //createTable();
+        createTable();
     }
 
-    public static DatabaseHandler getHandler(){
+    public static DerbyDatabaseHandler getHandler(){
         if(handler == null){
-            handler = new DatabaseHandler();
+            handler = new DerbyDatabaseHandler();
             return handler;
         }else{
             return handler;

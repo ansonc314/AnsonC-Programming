@@ -77,6 +77,9 @@ public class PlayerBattingStats {
         return rbi;
     }
 
+    /**
+     * @return  output a string displaying the player batting statistics
+     */
     @Override
     public String toString() {
         return "PlayerBattingStats{" +
@@ -94,6 +97,11 @@ public class PlayerBattingStats {
     }
 
 
+    /**
+     * this method will be used when sorting
+     * @param selector (choosing the sorting criteria)
+     * @return  the value of the record, which will be used for comparison records when sorting
+     */
     public double getValue(int selector){
         double out = 0;
         switch (selector){

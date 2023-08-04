@@ -1,7 +1,6 @@
 package module3_4Sorting;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * Class that takes in an ArrayList and sorts the players by various criteria
@@ -17,8 +16,7 @@ public class PlayerSorter {
     public static int PERCENTONBASE = 4; // Calculated by (hits + doubles + triples) / atBats
 
     /**
-     * This method is an interface that allows the sorting of a player given based on
-     * certain criteria.  There are 5 options to sort a player which are by Games played,
+     * There are 5 options to sort a player which are by Games played,
      * at bats, runs, percent runs, percent on base.
      * The sort is in descending order (Largest to smallest)
      * This method calls one of 5 private methods that will do the sort based on the chosen criteria.
@@ -27,14 +25,12 @@ public class PlayerSorter {
      *                 the 5 static fields from the class.
      * @return An ArrayList that is sorted according to the users specification.
      */
-    // public static ArrayList<PlayerBattingStats> sort(ArrayList<PlayerBattingStats> list, int sortType) {
+
         public static ArrayList<PlayerBattingStats> sort(ArrayList<PlayerBattingStats> playerList, int sortType ) {
 
             // Recursive control 'if' statement.
             if(playerList.size() <= 1) {
-
                 return playerList;
-
             }
 
             int midpoint = playerList.size() / 2;
@@ -47,8 +43,6 @@ public class PlayerSorter {
                left =  sort(left,sortType);
                right = sort(right,sortType);
 
-
-
             // Get the merged left and right playerLists.
             ArrayList<PlayerBattingStats> result =  merge(left, right, sortType);
 
@@ -58,39 +52,20 @@ public class PlayerSorter {
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         /**
-         *  Merging  sorted list
-         * @param left
-         * @param right
-         * @return
+         *  Merging 2 sorted list
+         * @param left  - a sorted playerlist
+         * @param right  - another sorted playerlist
+         * @return   sorted list by merging left and right
          */
-        // Merges the left and right playerList in ascending order.
-        public static ArrayList<PlayerBattingStats> merge(ArrayList<PlayerBattingStats> left, ArrayList<PlayerBattingStats> right, int k) {
+        public static ArrayList<PlayerBattingStats> merge(ArrayList<PlayerBattingStats> left, ArrayList<PlayerBattingStats> right, int sortType) {
 
             // Merged result playerList.
             ArrayList<PlayerBattingStats> result = new ArrayList<PlayerBattingStats>();
 
             // Declare and initialize pointers for all playerLists.
-            int leftPointer, rightPointer, resultPointer;
-            leftPointer = rightPointer = resultPointer = 0;
+            int leftPointer, rightPointer;
+            leftPointer = rightPointer  = 0;
 
             // While there are items in either playerList...
             while(leftPointer < left.size() || rightPointer < right.size()) {
@@ -98,8 +73,8 @@ public class PlayerSorter {
                 // If there are items in BOTH playerLists...
                 if(leftPointer < left.size() && rightPointer < right.size()) {
 
-                    // If left item is less than right item...
-                    if(left.get(leftPointer).getValue(k) < right.get(rightPointer).getValue(k)) {
+                    // If left item is greater than right item...
+                    if(left.get(leftPointer).getValue(sortType) > right.get(rightPointer).getValue(sortType)) {
 
                         result.add(left.get(leftPointer));
                         leftPointer++;
