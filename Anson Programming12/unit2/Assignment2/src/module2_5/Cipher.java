@@ -7,8 +7,15 @@ public class Cipher {
     /**
      * encrypt describes the encryption mapping. For example, when constructed with the key k=1,
      * the mapping is a->b, b->c ,.... z->a
+     *
      */
     private HashMap<String, String> encrypt = new HashMap<String, String>();
+
+    /**
+     * decrypt describes the decryption mapping. For example, when constructed with the key k=1,
+     * the mapping is b->a, c->b ,.... a->z
+     *
+     */
     private HashMap<String, String> decrypt = new HashMap<String, String>();
     int key;
 
@@ -38,8 +45,6 @@ public class Cipher {
             char cipherTextChar = (char) (((letterIdx + 26 - key) % 26) + 97);
             decrypt.put(Character.toString(plainTextChar), Character.toString(cipherTextChar));
         }
-
-
     }
 
     public void resetKey(int k){
@@ -69,7 +74,6 @@ public class Cipher {
 
 
         /**
-         *
          * @param plainText - only lower case letters will be encrypted
          * @return cipherText - lower case letter will be shifted for key positions.
          */

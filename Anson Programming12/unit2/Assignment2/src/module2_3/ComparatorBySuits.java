@@ -41,11 +41,10 @@ public class ComparatorBySuits implements Comparator<Cards> {
         if (suit_index1 > suit_index2){
             return 1;
         }
-        else if (suit_index1 < suit_index2){
+        else {
             return -1;
         }
 
-        return 0;
     }
 
 }

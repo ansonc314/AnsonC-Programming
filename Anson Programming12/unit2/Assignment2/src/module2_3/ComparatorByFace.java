@@ -2,7 +2,7 @@ package module2_3;
 
 import java.util.Comparator;
 
-public class ComparatorByValues  implements Comparator<Cards>  {
+public class ComparatorByFace implements Comparator<Cards>  {
 
     /**
      *
@@ -13,10 +13,10 @@ public class ComparatorByValues  implements Comparator<Cards>  {
     @Override
     public int compare(Cards o1, Cards o2) {
 
-        if (o1.getValue()  > o2.getValue()){
+        if (o2.getFaceCard() &&  !o1.getFaceCard()){  // card 1 is face card and card 2 not
             return 1;
         }
-        else  {
+        else {
             return -1;
         }
 

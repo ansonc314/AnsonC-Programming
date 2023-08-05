@@ -8,9 +8,10 @@ import java.util.ArrayList;
 public class Bonus {
     public static void main(String[] args) throws IOException {
         Cipher cipher = new Cipher(0);
-        ArrayList<String> line = ReadFile.Read2StringArray("words_alpha.txt");
-        ArrayList<String> decryptLine = new ArrayList<>();
-       String filenamePrefix = "trial";
+        ArrayList<String> line = ReadFile.Read2StringArray("words_alpha.txt");   // read the file to string array list
+        ArrayList<String> decryptLine = new ArrayList<>();   // declare a string array for storing decrypted words
+
+        String filenamePrefix = "trial";  // the decrypted file will be store in a filename "trial" + x where x is the key
        for (int i=0; i<26; i++){
            decryptLine.clear();
            String filename = filenamePrefix + i;
@@ -21,8 +22,6 @@ public class Bonus {
                 }
             Write2File.write2txt(filename,decryptLine);
        }
-
-
     }
 
 }

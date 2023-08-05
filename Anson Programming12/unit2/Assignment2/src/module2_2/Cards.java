@@ -6,51 +6,20 @@ public class Cards {
 
     private Suits suit;
     private int value;
-
     private boolean faceCard;
 
-    /**
-     * Default constructor (a random card will be generated)
-     */
-    public Cards(){
-        Random rand = new Random();
-        int int_random = rand.nextInt(13);
-        this.value = int_random  + 1;
 
-        int_random = rand.nextInt(4);
-
-        switch (int_random) {
-            case 0:
-                this.suit =  Suits.SPADES;
-                break;
-            case 1:
-                this.suit = Suits.HEARTS;
-                break;
-            case 2:
-                this.suit = Suits.CLUBS;
-                break;
-            case 3:
-                this.suit = Suits.DIAMONDS;
-                break;
-        }
-        if (value>9){
-            this.faceCard = true;
-        }
-        else {
-            this.faceCard = false;
-        }
-
-    }
 
     /**
      * Constructor
      * @param int_index  integers 0, ... , 51
      *        Each integer corresponds to one of the cards
+     *        0, 1, .... 12 - means spade A, 2, .... J,Q,K
+     *        13, 1, .... 25 - means heart A, 2, .... J,Q,K          etc
      * @return  a card with card index corresponding to the integer int_index
      */
     public Cards(int int_index){
-        this.value = int_index%13  + 1;
-
+        this.value = int_index%13  + 1;  // this is value of the cards, 1,2.... 13
 
         switch (int_index/13) {
             case 0:
@@ -66,7 +35,7 @@ public class Cards {
                 this.suit = Suits.DIAMONDS;
                 break;
         }
-        if (value>9){
+        if (value>10){
             this.faceCard = true;
         }
         else {
@@ -83,7 +52,7 @@ public class Cards {
     public Cards(Suits suit, int value){
         this.suit = suit;
         this.value = value;
-        if (value>9){
+        if (value>10){
             this.faceCard = true;
         }
         else {

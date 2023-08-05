@@ -10,16 +10,17 @@ public class Word {
      * Default constructor
      */
     public Word(){
-
     }
 
     /**
      * Constructor
-     * @param line
+     * @param line -- it is a String
      */
     public Word(String line){
         this.line = line;
     }
+
+
 
     /**
      * @return  format the line String by a) turn all letters to lower case, b) turn all non-letter character to space
@@ -41,8 +42,7 @@ public class Word {
      *@return Split formatted string into wordArrays
      */
     public void FormWordArray(){
-        String[] wordArray =  line.split(" ", 0);
-
+        String[] wordArray =  line.split(" ", 0);  // split the line using " " and store the words in the wordArray
         /**
          * Add words into set
          */

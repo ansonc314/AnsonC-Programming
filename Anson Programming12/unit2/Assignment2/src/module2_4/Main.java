@@ -8,12 +8,12 @@ public class Main {
 
     public static void main(String[] args)  throws IOException {
 
-        String line = ReadFile.Read2String("file.txt");
+        String line = ReadFile.Read2String("illiad.txt");
 
         /**
          * Create a Word object - which read the String line as input
          * Format the string by 1) turn all upper case letter to lower case ones, 2) convert all nonletter character to space
-         * Then extract unit words and store them in a Set wordSet
+         * Then extract unique words and store them in a Set wordSet
          */
         Word illiad = new Word(line);
         illiad.FormatString();

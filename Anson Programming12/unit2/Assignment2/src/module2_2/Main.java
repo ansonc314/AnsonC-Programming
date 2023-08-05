@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         /**
-         * Generate a random permutation of integers 0,1, ... 51
+         * Generate a random permutation of integers 0,1, ... 51 -- this simulates randomly shuffle the cards
          */
         ArrayList<Integer> deck_int = new ArrayList<Integer>();
         for (int i = 0; i <= 51; i++) {   // Create a list of integers 0, 1, ... 51
@@ -27,7 +27,7 @@ public class Main {
          * to the cardList
          * @ return: cardList is a list with 52 random cards
          */
-        Iterator<Integer> iterator_deck_int = deck_int.iterator();
+        Iterator<Integer> iterator_deck_int = deck_int.iterator();  //iterate over the random integer list
         while(iterator_deck_int.hasNext()){
             cardList.add(new Cards(iterator_deck_int.next()));
         }
@@ -43,7 +43,9 @@ public class Main {
             drawCardList.add(drawCard);
         }
 
-
+        /**
+         * Iterate over the drawCardList and print out the cards
+         */
         Iterator<Cards> iterator_drawCardList = drawCardList.iterator();
         while (iterator_drawCardList.hasNext()){
             System.out.println(iterator_drawCardList.next());

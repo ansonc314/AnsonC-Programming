@@ -50,17 +50,34 @@ public class Main {
 
         System.out.println("*********** SORTED by Suits");
         ComparatorBySuits compareBySuits = new ComparatorBySuits();
-        Collections.sort(drawCardList, compareBySuits);
+        LinkedList<Cards> cardsSortedBySuits =  drawCardList;  // Create a linkedList for storing drawn cards
+
+        Collections.sort(cardsSortedBySuits, compareBySuits);
         for (Cards c : drawCardList){
             System.out.println(c);
         }
 
-        System.out.println("*********** SORTED by Values");
-        ComparatorByValues  compareByValues = new ComparatorByValues();
-        Collections.sort(drawCardList, compareByValues);
+        System.out.println("*********** SORTED by Face");
+        ComparatorByFace  compareByFace = new ComparatorByFace();
+        LinkedList<Cards> cardsSortedByFace =  drawCardList;  // Create a linkedList for storing drawn cards
+
+        Collections.sort(cardsSortedByFace, compareByFace);
         for (Cards c : drawCardList){
             System.out.println(c);
         }
+
+
+        System.out.println("*********** SORTED by Values");
+        ComparatorByValues  compareByValues = new ComparatorByValues();
+        LinkedList<Cards> cardsSortedByValues =  drawCardList;  // Create a linkedList for storing drawn cards
+
+        Collections.sort(cardsSortedByValues, compareByValues);
+        for (Cards c : drawCardList){
+            System.out.println(c);
+        }
+
+
+
 
     }
 }

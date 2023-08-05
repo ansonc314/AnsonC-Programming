@@ -16,11 +16,10 @@ public class CipherTest {
 
     @Test
     public void decryptString() {
-
         Cipher cc = new Cipher(3);
-        String s = "def abc ghi";
+        String s = "defabc ghi";
         s= cc.decryptString(s);
-        assertTrue(s.equals("abc xyz def"));
+        assertTrue(s.equals("abcxyz def"));
 
     }
 }
