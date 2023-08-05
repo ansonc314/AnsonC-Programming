@@ -42,20 +42,78 @@ public class Main {
             e.printStackTrace();
         }
 
-        Scanner myInput = new Scanner( System.in );
-        System.out.print( "Input : n =  \n" );
-        //int n = myInput.nextInt();
 
-        ArrayList<PlayerBattingStats>  players_sorted = new ArrayList<PlayerBattingStats>();
-        players_sorted   = PlayerSorter.sort(players,0);
+        System.out.println( "Select your sorting criteria. \n(The player statistics will be sorted in descending order):" );
+        System.out.println( "Enter 0: Sort according to GAMESPLAYED" );
+        System.out.println( "Enter 1: Sort according to ATBATS" );
+        System.out.println( "Enter 2: Sort according to RUNS" );
+        System.out.println( "Enter 3: Sort according to PERCENTRUNS" );
+        System.out.println( "Enter 4: Sort according to PERCENTONBASE" );
+        System.out.println( "Enter 5: Create 1 single report, sorted according to all 5 criteria" );
 
-        ArrayList<String> tt = new ArrayList<String>();
-        for(PlayerBattingStats p: players_sorted){
-            tt.add(p.toString());
+        System.out.print( "Enter your choice: " );
+        Scanner choice = new Scanner( System.in );
+        int input = choice.nextInt();
+
+        ArrayList<PlayerBattingStats> players_sorted = new ArrayList<PlayerBattingStats>();
+        if (input<5) {
+            players_sorted = PlayerSorter.sort(players, input);
+
+            ArrayList<String> sortedList = new ArrayList<String>();
+            for (PlayerBattingStats p : players_sorted) {
+                sortedList.add(p.toString());
+            }
+
+            Write2File.write2txt("report.txt", sortedList);
+            System.out.print("\nThe sorted output will be stored in the file report.txt ");
         }
+        else{
+            ArrayList<String> sortedList = new ArrayList<String>();
 
-        Write2File.write2txt("report.txt",tt);
+            /* sorted based on GAMESPLAYED */
+                players_sorted = PlayerSorter.sort(players, 0);
+                sortedList.add("Sorted according to GAMESPLAYED");
+            for (PlayerBattingStats p : players_sorted) {
+                sortedList.add(p.toString());
+            }
+                sortedList.add("\n\n");
 
+            /* sorted based on ATBATS */
+            players_sorted = PlayerSorter.sort(players, 1);
+            sortedList.add("Sorted according to ATBATS");
+            for (PlayerBattingStats p : players_sorted) {
+                sortedList.add(p.toString());
+            }
+            sortedList.add("\n\n");
+
+            /* sorted based on RUNS */
+            players_sorted = PlayerSorter.sort(players, 2);
+            sortedList.add("Sorted according to RUNS");
+            for (PlayerBattingStats p : players_sorted) {
+                sortedList.add(p.toString());
+            }
+            sortedList.add("\n\n");
+
+
+            /* sorted based on PERCENTRUNS */
+            players_sorted = PlayerSorter.sort(players, 3);
+            sortedList.add("Sorted according to PERCENTRUNS");
+            for (PlayerBattingStats p : players_sorted) {
+                sortedList.add(p.toString());
+            }
+            sortedList.add("\n\n");
+
+            /* sorted based on PERCENTONBASE */
+            players_sorted = PlayerSorter.sort(players, 4);
+            sortedList.add("Sorted according to PERCENTONBASE");
+            for (PlayerBattingStats p : players_sorted) {
+                sortedList.add(p.toString());
+            }
+            sortedList.add("\n\n");
+
+            Write2File.write2txt("report.txt", sortedList);
+            System.out.print("\nThe sorted output will be stored in the file report.txt ");
+        }
 
     }
 }

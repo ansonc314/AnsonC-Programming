@@ -680,17 +680,22 @@ public class Gridder extends javax.swing.JFrame
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         System.out.println("button 1 pressed: Generate random points");
-
+        clearGrid();
         Random rand = new Random();
         for (int i=0 ;  i <100 ; i++ ) {
             int x = rand.nextInt(gridCount);
             int y = rand.nextInt(gridCount);
+                while (grid[x][y] == 1){   // if the grid is already white, choose again.
+                     x = rand.nextInt(gridCount);
+                     y = rand.nextInt(gridCount);
+                }
             grid[x][y] = 1;
         }
         draw();
     }//GEN-LAST:event_jButton1ActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         System.out.println("button 2 pressed: Generate random column");
+        clearGrid();
         Random rand = new Random();
         int x = rand.nextInt(gridCount);
         for (int i=0 ;  i <gridCount ; i++ ) {
@@ -713,6 +718,7 @@ public class Gridder extends javax.swing.JFrame
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         System.out.println("button 4 pressed: Count the white squares");
+
         int count = 0 ;
         for (int y=0 ;  y <gridCount ; y++ ) {
             for (int x = 0; x < gridCount; x++) {

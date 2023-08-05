@@ -3,11 +3,14 @@ package module2_5;
 public class Main {
     public static void main(String[] args){
 
+        Cipher cc = new Cipher(1);
+        cc.resetKey(22);   // reset the key to 2;
+        String s = "eel";
+        s= cc.encryptString(s);
+        System.out.println(s);
 
-        String s = "abc def . yz";
-        String o = Cipher.encrypt(2,s);
-        System.out.println(o);
-        System.out.println(Cipher.decrypt(2,o));
+        String p= cc.decryptString(s);
+        System.out.println(p);
 
 
     }

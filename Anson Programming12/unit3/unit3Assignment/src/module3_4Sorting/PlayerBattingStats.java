@@ -118,7 +118,7 @@ public class PlayerBattingStats {
                 out =  ((double) this.runs) / ((double) this.atBats);
                 break;
             case 4:
-                out =  ((double) (this.runs + this.doubles + this.triples  )) / ((double) this.atBats);
+                out =  ((double) (this.hits + this.doubles + this.triples  )) / ((double) this.atBats);
                 break;
 
         }

@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 public class Write2File {
 
+    // Default constructor
     Write2File(){
-
     }
     public static void write2txt(String filename, ArrayList<String> lines) throws IOException {
         FileWriter fw = new FileWriter(filename);    // create FileReader and BufferedReader
