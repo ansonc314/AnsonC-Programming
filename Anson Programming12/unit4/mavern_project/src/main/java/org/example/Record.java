@@ -17,9 +17,9 @@ public class Record {
     public String toString(){
         String out = "";
         for (int k= 0; k< RecordInfo.noHeader; k++){
-           out  = out +  "Record Value " + k  + " is equal to " +recordValue[k]+ "\n" ;
+           out  = out +  RecordInfo.header[k]   + " is equal to " +recordValue[k]+ "        " ;
         }
-        return out;
+        return out + "\n";
     }
 
     public String[]  getRecord(){
@@ -42,7 +42,7 @@ public class Record {
         for (int k= 0; k< RecordInfo.noHeader; k++){
             out  = out +  "Record Value " + k  + " is equal to " +recordValue[k]+ "    " ;
         }
-        System.out.println(out);
+        System.out.println(this.toString());
     }
 
 
