@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Aug 06 18:58:55 ACST 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0189-ca2d-a010-00000ef85e80 
+on database directory C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\derby_test\DB_test_plain\loginDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@78308db1 
+Loaded from file:/C:/Users/teren/OneDrive/Desktop/VLN-Program12-2013/AnsonC-Programming/Anson%20Programming12/derby_test/DB_test_plain/libs/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=19.0.1+10-21
+user.dir=C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\derby_test\DB_test_plain
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

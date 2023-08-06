@@ -9,7 +9,7 @@ public class DatabaseHandler {
 
     public DatabaseHandler() {
         createConnection();
-        //createTable();
+        createTable();
     }
 
     public static DatabaseHandler getHandler(){
@@ -45,7 +45,8 @@ public class DatabaseHandler {
 
     private void createConnection() {
         try {
-            Class.forName("org.apache.derby.jdbc.ClientDriver");
+//                   Class.forName("org.apache.derby.jdbc.CleintDriver"); is obsolete and is replaced by ??
+            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
             conn = DriverManager.getConnection(DB_url);
         } catch (SQLException throwables) {
             throwables.printStackTrace();

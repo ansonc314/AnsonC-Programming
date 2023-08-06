@@ -6,14 +6,6 @@ import java.sql.SQLException;
 
 public class Main {
     public static DatabaseHandler handler;
-
-    /**
-     * Add a record to the database (handler)
-     * @param id
-     * @param name
-     * @param email
-     * @param nickName
-     */
     public static void addMember(String id, String name, String email, String nickName){
         String qu = "INSERT INTO MEMBER VALUES (" +
                 "'" + id + "'," +
@@ -23,15 +15,8 @@ public class Main {
         handler.execAction(qu);
     }
     public static void main(String[] args) {
-        if(handler == null){
-            System.out.println("null");
-        }
-        handler = new DatabaseHandler();
-//handler.getClass();
-        //        System.out.println(handler.toString());
-//        handler = DatabaseHandler.getHandler();
-/**
-        addMember("322434","sg2fdsg","sdfsdf2sgf","sdf2fdsgs");
+        handler = DatabaseHandler.getHandler();
+//        addMember("322436","ans","sdfsdf2sgf","sdf2fdsgs");
         String qu = "SELECT * FROM MEMBER";
         ResultSet resultSet = handler.execQuery(qu);
         try{
@@ -43,7 +28,7 @@ public class Main {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-*/
+
 
     }
 }
