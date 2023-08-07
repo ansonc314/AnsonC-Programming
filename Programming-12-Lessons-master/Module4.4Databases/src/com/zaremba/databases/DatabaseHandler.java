@@ -50,7 +50,8 @@ public class DatabaseHandler {
             conn = DriverManager.getConnection(DB_url);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        }
+        catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

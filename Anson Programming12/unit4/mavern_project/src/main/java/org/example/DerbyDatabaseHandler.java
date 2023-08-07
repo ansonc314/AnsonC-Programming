@@ -1,10 +1,11 @@
 package org.example;
 
 import java.sql.*;
-
+import java.sql.ResultSet;
+import java.sql.SQLException;
 public class DerbyDatabaseHandler {
 
-    private static final String DB_url = "jdbc:derby:database/forum;create=true";
+    private static final String DB_url = "jdbc:derby:database/loginDB;create=true";
     private static Connection conn = null;
     private static Statement stmt = null;
     public static DerbyDatabaseHandler handler;
@@ -46,14 +47,17 @@ public class DerbyDatabaseHandler {
     }
 
     private void createConnection() {
+
         try {
-            Class.forName("org.apache.derby.jdbc.ClientDriver");
+            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
             conn = DriverManager.getConnection(DB_url);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        } catch (ClassNotFoundException throwables) {
+            throwables.printStackTrace();
         }
+
+
     }
 
     public boolean execAction(String qu) {
