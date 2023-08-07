@@ -4,15 +4,14 @@ import java.sql.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 public class DerbyDatabaseHandler {
-
     private static final String DB_url = "jdbc:derby:database/loginDB;create=true";
-    private static Connection conn = null;
-    private static Statement stmt = null;
+    public static Connection conn = null;
+    public static Statement stmt = null;
     public static DerbyDatabaseHandler handler;
 
     public DerbyDatabaseHandler() {
         createConnection();
-        createTable();
+        //createTable();
     }
 
     public static DerbyDatabaseHandler getHandler(){
@@ -24,6 +23,7 @@ public class DerbyDatabaseHandler {
         }
     }
 
+    /*
     private void createTable() {
         String TABLE_NAME = "MEMBER2";
         try {
@@ -45,6 +45,7 @@ public class DerbyDatabaseHandler {
             throwables.printStackTrace();
         }
     }
+     */
 
     private void createConnection() {
 
