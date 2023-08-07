@@ -37,9 +37,9 @@ public class csvHandle {
 
         for (CSVRecord csvRecord : csvParser) {
             // Accessing values by the names assigned to each column
-            String entry1 = csvRecord.get(RecordInfo.header[0]);
-            String entry2 = csvRecord.get(RecordInfo.header[1]);
-            recordSet.addRecord(new Record(new String[]{entry1,entry2}));
+            String entry0 = csvRecord.get(RecordInfo.header[0]);
+            String entry1 = csvRecord.get(RecordInfo.header[1]);
+            recordSet.addRecord(new Record(new String[]{entry0,entry1}));
         }
         return recordSet;
     }

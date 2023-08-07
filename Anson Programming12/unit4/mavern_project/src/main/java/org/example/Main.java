@@ -15,36 +15,23 @@ public class Main {
 
     public static void main(String[] args)  throws IOException {
 
-    csvHandle csvFileHandle = new csvHandle();
-    // csvFileHandle.ReadFromCSV()
+        csvHandle csvFileHandle = new csvHandle();
+        RecordSet recordSet = csvFileHandle.ReadFromCSV2RecordSet();
 
 
-
-
-    RecordSet recordSet = csvFileHandle.ReadFromCSV2RecordSet();
-//    recordSet.printRecordSet();
-
-       RecordSet myRecords = new RecordSet();
-        myRecords.addRecord(new Record(new String[]{"abc1","12ww"}));
-        myRecords.addRecord(new Record(new String[]{"ab2c","12ww"}));
-        myRecords.addRecord(new Record(new String[]{"ab3c","12ww"}));
-
-       csvFileHandle.RecordSetWrite2CSV(recordSet);
-
-
-
-        /*
         DerbyDatabaseHandler handler = new DerbyDatabaseHandler();
-        DerbyTableHandler tableHandler = new DerbyTableHandler();
+        DerbyTableHandler tableHandler = new DerbyTableHandler(handler);
 
-        handler = DerbyDatabaseHandler.getHandler();
+//        handler = DerbyDatabaseHandler.getHandler();
 //        tableHandler.createTable(handler);  // only need to create once.
 
-        tableHandler.addMember(handler,"100","4an72");
-        tableHandler.printMembers(handler);
+        tableHandler.RecordSet2Derby(recordSet);
+        tableHandler.printMembers();
+
+        RecordSet retr = tableHandler.Derby2RecordSet();
+        retr.printRecordSet();
 
 
- */
 
 
 
