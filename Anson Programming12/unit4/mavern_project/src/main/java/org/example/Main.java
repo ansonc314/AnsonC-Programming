@@ -16,11 +16,20 @@ public class Main {
     public static void main(String[] args)  throws IOException {
 
     csvHandle csvFileHandle = new csvHandle();
-    // csvFileHandle.ReadFromCSV();
-    csvFileHandle.Write2CSV();
+    // csvFileHandle.ReadFromCSV()
 
 
 
+
+    RecordSet recordSet = csvFileHandle.ReadFromCSV2RecordSet();
+//    recordSet.printRecordSet();
+
+       RecordSet myRecords = new RecordSet();
+        myRecords.addRecord(new Record(new String[]{"abc1","12ww"}));
+        myRecords.addRecord(new Record(new String[]{"ab2c","12ww"}));
+        myRecords.addRecord(new Record(new String[]{"ab3c","12ww"}));
+
+       csvFileHandle.RecordSetWrite2CSV(recordSet);
 
 
 

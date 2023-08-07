@@ -8,16 +8,26 @@ import java.sql.SQLException;
 
 public class DerbyTableHandler {
 
-    String tableName = "tableProduct";
+    String tableName ;
     public DerbyTableHandler(){
+        tableName = "tableProduct";
+    }
 
+    public DerbyTableHandler(String tableName){
+        this.tableName = tableName;
     }
 
 
-    public void addMember(DerbyDatabaseHandler handler, String product, String country){
+    /**
+     *
+     * @param handler
+     * @param entry1
+     * @param entry2
+     */
+    public void addMember(DerbyDatabaseHandler handler, String entry1, String entry2){
         String qu = "INSERT INTO " + this.tableName+  " VALUES (" +
-                "'" + product + "'," +
-                "'" + country  + "')";
+                "'" + entry1 + "'," +
+                "'" + entry2  + "')";
         handler.execAction(qu);
 
     }

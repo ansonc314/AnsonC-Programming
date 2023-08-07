@@ -2,16 +2,13 @@ package org.example;
 
 import org.globalVariables.RecordInfo;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 /**
  * This class is for storing records in a map format
  */
 public class RecordSet {
-    public HashMap<String, Record > recordSet = new HashMap<String, Record >();
+    public LinkedHashMap<String, Record > recordSet = new LinkedHashMap<String, Record >();
     /* the first parameter is the key - the first entry of the Record to be stored
      */
 
