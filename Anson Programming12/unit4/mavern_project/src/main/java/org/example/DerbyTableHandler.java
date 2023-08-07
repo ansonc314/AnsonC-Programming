@@ -1,23 +1,23 @@
 package org.example;
 
+import org.globalVariables.RecordInfo;
+
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DerbyTableHandler {
 
-    String tableName = "testTable1";
+    String tableName = "tableProduct";
     public DerbyTableHandler(){
 
     }
 
 
-    public void addMember(DerbyDatabaseHandler handler, String id, String name, String email, String nickName){
+    public void addMember(DerbyDatabaseHandler handler, String product, String country){
         String qu = "INSERT INTO " + this.tableName+  " VALUES (" +
-                "'" + id + "'," +
-                "'" + name + "'," +
-                "'" + email + "'," +
-                "'" + nickName + "')";
+                "'" + product + "'," +
+                "'" + country  + "')";
         handler.execAction(qu);
 
     }
@@ -27,9 +27,9 @@ public class DerbyTableHandler {
         ResultSet resultSet = handler.execQuery(qu);
         try{
             while(resultSet.next()){
-                String id = resultSet.getString("ID");
-                String name = resultSet.getString("NAME");
-                System.out.println("Entry: ID" + id + "\tName: " + name);
+                String product = resultSet.getString(RecordInfo.header[0]);
+                String country = resultSet.getString(RecordInfo.header[1]);
+                System.out.println(RecordInfo.header[0]+ " " + product + "\t  " + RecordInfo.header[1]+ " " + country);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -40,7 +40,6 @@ public class DerbyTableHandler {
 
 
     public void createTable(DerbyDatabaseHandler handler){
-//        String TABLE_NAME = "MEMBER2";
         try {
             handler.stmt = handler.conn.createStatement();
             DatabaseMetaData dmn = handler.conn.getMetaData();
@@ -49,10 +48,8 @@ public class DerbyTableHandler {
                 System.out.println("Table " + this.tableName + " exists");
             } else {
                 String statement = "CREATE TABLE " + this.tableName + " ("
-                        + "id varchar(200) primary key, \n"
-                        + "name varchar(200), \n"
-                        + "email varchar(200), \n"
-                        + "nickname varchar(200))";
+                        + RecordInfo.header[0] + " varchar(200) primary key, \n"
+                        + RecordInfo.header[1] + " varchar(200))";
                 System.out.println(statement);
                 handler.stmt.execute(statement);
             }
