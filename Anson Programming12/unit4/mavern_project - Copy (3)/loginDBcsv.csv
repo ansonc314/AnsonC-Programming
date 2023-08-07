@@ -1,0 +1,4 @@
+﻿userName,password,group,comments
+admin,admin_pass,adminGroup,default
+user1,user1_pass,userGroup,VSB
+user2,user2_pass,userGroup,Churchill
