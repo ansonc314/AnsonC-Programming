@@ -13,11 +13,11 @@ import java.io.IOException;
 public class MainWIndow {
 
     public void opensWindow() {
-        loadWindow("newWindow.fxml","New Window Title");
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setContentText("This is an alert");
-        alert.setHeaderText("Header Text");
-        alert.showAndWait();
+        loadWindow("newWindow.fxml","New Window 1 Title");
+//        Alert alert = new Alert(Alert.AlertType.ERROR);
+//        alert.setContentText("This is an alert");
+//        alert.setHeaderText("Header Text");
+//        alert.showAndWait();
     }
 
     private void loadWindow(String location, String title){

@@ -3,13 +3,13 @@ https://docs.oracle.com/javase/8/javafx/get-started-tutorial/css.htm#BABBJFAH
 https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html#typeeffect
 */
 .root {
-     -fx-background-image: url("bg.jpg");
+     -fx-background-image: url("bg.png");
 }
 
 .label {
     -fx-font-size: 12px;
     -fx-font-weight: bold;
-    -fx-text-fill: #333333;
+//    -fx-text-fill: #333333;
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 }
 
