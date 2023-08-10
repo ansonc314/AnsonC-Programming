@@ -1,5 +1,6 @@
-package com.example.login;
+package com.example.gui;
 
+import com.example.database.Person;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;

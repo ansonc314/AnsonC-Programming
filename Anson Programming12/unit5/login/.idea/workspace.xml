@@ -14,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,13 +40,17 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/teren/OneDrive/Desktop/VLN-Program12-2013/AnsonC-Programming/Anson Programming12/unit5/login/src/main/resources/com/example/login"
+    "last_opened_file_path": "C:/Users/teren/OneDrive/Desktop/VLN-Program12-2013/AnsonC-Programming/Anson Programming12/unit5/login/src/main/resources/com/example/gui"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\login\src\main\resources\com\example\gui" />
       <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\login\src\main\resources\com\example\login" />
       <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\login\target\classes\com\example\login" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.database" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.login" />
@@ -53,7 +58,7 @@
   </component>
   <component name="RunManager">
     <configuration name="loginApplication" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.example.login.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.example.gui.Main" />
       <module name="login" />
       <method v="2">
         <option name="Make" enabled="true" />
