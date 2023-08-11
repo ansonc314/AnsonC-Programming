@@ -1,5 +1,6 @@
 package com.example.database;
 import com.example.globalVariables.*;
+import javafx.beans.property.SimpleStringProperty;
 
 public class Record {
 

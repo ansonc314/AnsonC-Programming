@@ -1,6 +1,8 @@
 package com.example.database;
 
 import com.example.globalVariables.*;
+import javafx.beans.property.SimpleStringProperty;
+
 import java.io.IOException;
 
 public class test_DB {
@@ -24,12 +26,22 @@ public class test_DB {
 
         // test 2: DB - ReSET - CSV
 
-        RecordSetHandler retr = tableHandler.Derby2RecordSet();
-        csvFileHandle.RecordSet2CSV(retr);
-        retr.printRecordSet();
+        RecordSetHandler retr = tableHandler.Derby2RecordSet();  // read data from database to recordSet
+        //csvFileHandle.RecordSet2CSV(retr);
+        //retr.printRecordSet();
 
+        /*
+        String a = "xv";
+        SimpleStringProperty b = new SimpleStringProperty(a);
+        System.out.println(b);
 
-
-
+         */
+        String[] Sarray = new String[3];
+        Sarray[0]="a";
+        Sarray[1]="b";
+        Sarray[2]="3";
+        Record x = new Record(Sarray);
+        SimpleStringRecord y = new SimpleStringRecord(Sarray);
+        System.out.println(y.recordValue[2] );
     }
 }
