@@ -64,7 +64,7 @@ public class DerbyTableHandler {
     public void RecordSet2Derby(RecordSetHandler input){
         deleteTable();
         Iterator<String> iterator = input.recordSet.keySet().iterator();
-        input.recordSet.get(iterator.next());  // do not store the first header row in the database in the LinkedHashMap
+        //input.recordSet.get(iterator.next());  // do not store the first header row in the database in the LinkedHashMap
         while (iterator.hasNext()){
             Record temp = input.recordSet.get(iterator.next());
             addMember(temp.getRecord()[0], temp.getRecord()[1], temp.getRecord()[2] );
@@ -78,11 +78,13 @@ public class DerbyTableHandler {
         String qu = "SELECT * FROM " + this.tableName ;
         ResultSet resultSet = handler.execQuery(qu);
 
+        /*
         // add header to RecordSet
         String header_entry0 = RecordInfo.header[0];
         String header_entry1 = RecordInfo.header[1];
         String header_entry2 = RecordInfo.header[2];
         recordSet.addRecord(new Record(new String[]{header_entry0,header_entry1,header_entry2}));
+        */
 
         try{
             while(resultSet.next()){

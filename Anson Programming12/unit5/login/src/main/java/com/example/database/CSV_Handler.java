@@ -42,6 +42,7 @@ public class CSV_Handler {
                 .withIgnoreHeaderCase()
                 .withTrim());
 
+
         for (CSVRecord csvRecord : csvParser) {
             // Accessing values by the names assigned to each column
             String entry0 = csvRecord.get(RecordInfo.header[0]);
@@ -49,6 +50,7 @@ public class CSV_Handler {
             String entry2 = csvRecord.get(RecordInfo.header[2]);
             recordSet.addRecord(new Record(new String[]{entry0,entry1,entry2}));
         }
+        recordSet.deleteRecord(RecordInfo.header[0]);  // delete the header entry
         return recordSet;
     }
 
@@ -56,6 +58,8 @@ public class CSV_Handler {
         BufferedWriter writer = Files.newBufferedWriter(Paths.get(SAMPLE_CSV_FILE_PATH));
 
         CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT);
+
+        csvPrinter.printRecord(RecordInfo.header[0],RecordInfo.header[1],RecordInfo.header[2]); // add header row
 
         Iterator<String> iterator = input.recordSet.keySet().iterator();
         while (iterator.hasNext()){
