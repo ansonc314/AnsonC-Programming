@@ -1,6 +1,8 @@
 module com.example.login {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
+    requires org.apache.commons.csv;
 
 
     opens com.example.gui to javafx.fxml;

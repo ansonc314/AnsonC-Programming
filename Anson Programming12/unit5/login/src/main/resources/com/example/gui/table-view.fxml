@@ -38,9 +38,9 @@
                   </TableView>
                   <ButtonBar opacity="0.54" prefHeight="40.0" prefWidth="514.0">
                     <buttons>
-                        <Button id="loginButton" mnemonicParsing="false" prefHeight="22.0" prefWidth="317.0" stylesheets="@style.css" text="Add User" />
-                      <Button id="loginButton" mnemonicParsing="false" stylesheets="@style.css" text="Delete User" />
-                        <Button id="loginButton" mnemonicParsing="false" prefHeight="22.0" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="#000000b8" />
+                        <Button id="loginButton" mnemonicParsing="false" onAction="#buttonAddUser" prefHeight="22.0" prefWidth="317.0" stylesheets="@style.css" text="Add User" />
+                      <Button id="loginButton" fx:id="deleteButton" mnemonicParsing="false" onAction="#buttonDeleteUser" stylesheets="@style.css" text="Delete User" />
+                        <Button id="loginButton" fx:id="exitButton" mnemonicParsing="false" onAction="#buttonExit" prefHeight="22.0" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="#000000b8" />
                     </buttons>
                      <effect>
                         <Glow />
