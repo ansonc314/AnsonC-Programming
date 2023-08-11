@@ -20,7 +20,7 @@ public class CSV_Handler {
      * Constructor - Default
      */
     public CSV_Handler(){
-        SAMPLE_CSV_FILE_PATH = "./productTableCSV.csv";
+        SAMPLE_CSV_FILE_PATH = "./loginDatabase.csv";
     }
 
     /**
@@ -38,7 +38,7 @@ public class CSV_Handler {
 
         Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
         CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT
-                .withHeader(RecordInfo.header[0],  RecordInfo.header[1])
+                .withHeader(RecordInfo.header[0],  RecordInfo.header[1],  RecordInfo.header[2])
                 .withIgnoreHeaderCase()
                 .withTrim());
 
@@ -46,7 +46,8 @@ public class CSV_Handler {
             // Accessing values by the names assigned to each column
             String entry0 = csvRecord.get(RecordInfo.header[0]);
             String entry1 = csvRecord.get(RecordInfo.header[1]);
-            recordSet.addRecord(new Record(new String[]{entry0,entry1}));
+            String entry2 = csvRecord.get(RecordInfo.header[2]);
+            recordSet.addRecord(new Record(new String[]{entry0,entry1,entry2}));
         }
         return recordSet;
     }
@@ -60,7 +61,7 @@ public class CSV_Handler {
         while (iterator.hasNext()){
             Record temp = input.recordSet.get(iterator.next());
 
-            csvPrinter.printRecord(temp.getRecord()[0], temp.getRecord()[1]);
+            csvPrinter.printRecord(temp.getRecord()[0], temp.getRecord()[1], temp.getRecord()[2]);
         }
 
         csvPrinter.flush();

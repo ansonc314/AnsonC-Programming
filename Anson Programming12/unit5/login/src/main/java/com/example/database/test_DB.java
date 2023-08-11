@@ -8,11 +8,12 @@ public class test_DB {
     public static void main(String[] args)  throws IOException {
 
 
-        CSV_Handler csvFileHandle = new CSV_Handler();
+        CSV_Handler csvFileHandle = new CSV_Handler("loginDatabase");
         DerbyDatabaseHandler handler = new DerbyDatabaseHandler();
         DerbyTableHandler tableHandler = new DerbyTableHandler(handler);
 
-        //tableHandler.createTable();
+       //  tableHandler.deleteTable();
+       //  tableHandler.createTable();
 
 
         // test 1: CSV - ReSet - DB
@@ -26,6 +27,8 @@ public class test_DB {
         RecordSetHandler retr = tableHandler.Derby2RecordSet();
         csvFileHandle.RecordSet2CSV(retr);
         retr.printRecordSet();
+
+
 
 
     }

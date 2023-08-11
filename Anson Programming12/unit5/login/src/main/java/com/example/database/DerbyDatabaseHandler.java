@@ -3,7 +3,7 @@ package com.example.database;
 import java.sql.*;
 
 public class DerbyDatabaseHandler {
-    private static final String DB_url = "jdbc:derby:database/loginDB;create=true";
+    private static final String DB_url = "jdbc:derby:database/signInDatabase;create=true";
     public static Connection conn = null;
     public static Statement stmt = null;
     public static DerbyDatabaseHandler handler;

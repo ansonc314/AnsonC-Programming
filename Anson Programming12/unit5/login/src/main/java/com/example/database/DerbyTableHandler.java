@@ -13,7 +13,7 @@ public class DerbyTableHandler {
 
     public DerbyTableHandler(DerbyDatabaseHandler handler){
         this.handler = handler;
-        tableName = "tableProduct";
+        tableName = "loginTable";
     }
 
     public DerbyTableHandler(DerbyDatabaseHandler handler, String tableName){
@@ -27,10 +27,11 @@ public class DerbyTableHandler {
      * @param entry0
      * @param entry1
      */
-    public void addMember(String entry0, String entry1){
+    public void addMember(String entry0, String entry1, String entry2){
         String qu = "INSERT INTO " + this.tableName+  " VALUES (" +
                 "'" + entry0 + "'," +
-                "'" + entry1  + "')";
+                "'" + entry1 + "'," +
+                "'" + entry2  + "')";
         handler.execAction(qu);
 
     }
@@ -43,7 +44,8 @@ public class DerbyTableHandler {
             while(resultSet.next()){
                 String entry0 = resultSet.getString(RecordInfo.header[0]);
                 String entry1 = resultSet.getString(RecordInfo.header[1]);
-                System.out.println(RecordInfo.header[0]+ " " + entry0 + "\t  " + RecordInfo.header[1]+ " " + entry1);
+                String entry2 = resultSet.getString(RecordInfo.header[2]);
+                System.out.println(RecordInfo.header[0]+ " " + entry0 + "\t  " + RecordInfo.header[1]+ " " + entry1 + "\t  " + RecordInfo.header[2]+ " " + entry2);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -65,7 +67,7 @@ public class DerbyTableHandler {
         input.recordSet.get(iterator.next());  // do not store the first header row in the database in the LinkedHashMap
         while (iterator.hasNext()){
             Record temp = input.recordSet.get(iterator.next());
-            addMember(temp.getRecord()[0], temp.getRecord()[1]);
+            addMember(temp.getRecord()[0], temp.getRecord()[1], temp.getRecord()[2] );
         }
 
     }
@@ -79,13 +81,15 @@ public class DerbyTableHandler {
         // add header to RecordSet
         String header_entry0 = RecordInfo.header[0];
         String header_entry1 = RecordInfo.header[1];
-        recordSet.addRecord(new Record(new String[]{header_entry0,header_entry1}));
+        String header_entry2 = RecordInfo.header[2];
+        recordSet.addRecord(new Record(new String[]{header_entry0,header_entry1,header_entry2}));
 
         try{
             while(resultSet.next()){
                 String entry0 = resultSet.getString(RecordInfo.header[0]);
                 String entry1 = resultSet.getString(RecordInfo.header[1]);
-                recordSet.addRecord(new Record(new String[]{entry0,entry1}));
+                String entry2 = resultSet.getString(RecordInfo.header[2]);
+                recordSet.addRecord(new Record(new String[]{entry0,entry1,entry2}));
 
             }
         } catch (SQLException throwables) {
@@ -107,7 +111,8 @@ public class DerbyTableHandler {
             } else {
                 String statement = "CREATE TABLE " + this.tableName + " ("
                         + RecordInfo.header[0] + " varchar(200) primary key, \n"
-                        + RecordInfo.header[1] + " varchar(200))";
+                        + RecordInfo.header[1] + " varchar(200), \n"
+                        + RecordInfo.header[2] + " varchar(200) )";
                 System.out.println(statement);
                 handler.stmt.execute(statement);
             }
