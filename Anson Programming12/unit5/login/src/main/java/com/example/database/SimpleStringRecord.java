@@ -1,24 +1,40 @@
 package com.example.database;
 
-import com.example.globalVariables.RecordInfo;
 import javafx.beans.property.SimpleStringProperty;
 
 public class SimpleStringRecord {
+    public SimpleStringProperty name;
+    public SimpleStringProperty status;
+    public SimpleStringProperty occupation;
 
-    public SimpleStringProperty[] recordValue = new SimpleStringProperty[RecordInfo.noHeader];  // fields in each record
 
-    /**
-     * Constructor
-     * @param recordValue : this is a string array for storing the record values.
-     */
-    public SimpleStringRecord(String[] recordValue) {
-        setRecordValue(recordValue);
+    public SimpleStringRecord(String name, String status, String occupation) {
+        this.name =new SimpleStringProperty(name);
+        this.status = new SimpleStringProperty(status);
+        this.occupation = new SimpleStringProperty(occupation);
     }
 
-    public void setRecordValue(String[] recordValue) {
-        for (int k= 0; k< RecordInfo.noHeader; k++){
-            this.recordValue[k] = new SimpleStringProperty((String) recordValue[k]);
-        }
+    public String getName() {
+        return name.get();
     }
 
+    public SimpleStringProperty nameProperty() {
+        return name;
+    }
+
+    public String getStatus() {
+        return status.get();
+    }
+
+    public SimpleStringProperty statusProperty() {
+        return status;
+    }
+
+    public String getOccupation() {
+        return occupation.get();
+    }
+
+    public SimpleStringProperty occupationProperty() {
+        return occupation;
+    }
 }

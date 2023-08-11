@@ -1,12 +1,10 @@
 package com.example.gui;
 
 import com.example.database.*;
-import com.example.database.Record;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -29,12 +27,11 @@ public class Controller_Table implements Initializable {
     public TableColumn colName;
     public TableColumn colStatus;
     public TableColumn colOccupation;
-    public ObservableList<Person> people;
-    public ObservableList<SimpleStringRecord> recordsObvList;
+    public ObservableList<SimpleStringRecord> people;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        recordsObvList = FXCollections.observableArrayList();
+
         people = FXCollections.observableArrayList();
         initCol();
         try {
@@ -45,15 +42,7 @@ public class Controller_Table implements Initializable {
     }
 
     private void loadData() {
-        for(int i = 0 ; i < 10;i++){
-            String name = "Name " + i;
-            String status = "status " + i;
-            String occ = "occupation " + i;
 
-//            people.add(new Person(name, status, occ));
-        }
-
-//        mainTable.getItems().setAll(people);
         CSV_Handler csvFileHandle = new CSV_Handler();
         DerbyDatabaseHandler handler = new DerbyDatabaseHandler();
         DerbyTableHandler tableHandler = new DerbyTableHandler(handler);
@@ -61,10 +50,9 @@ public class Controller_Table implements Initializable {
         RecordSetHandler retr = tableHandler.Derby2RecordSet(); // read data from database to recordSet
         Iterator<String> iterator = retr.recordSet.keySet().iterator();
         while (iterator.hasNext()){
-            //SimpleStringRecord temp = new SimpleStringRecord(retr.recordSet.get(iterator.next()).getRecord());
             String[] temp = retr.recordSet.get(iterator.next()).getRecord();
-            people.add(new Person(temp[0] , temp[1], temp[2]));
-            //recordsObvList.add(temp);
+            people.add(new SimpleStringRecord(temp[0] , temp[1], temp[2]));
+
         }
         mainTable.getItems().setAll(people);
 
