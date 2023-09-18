@@ -1,0 +1,14 @@
+1/ add highlight + hover effects to selected field:  textbox, button
+2/ add sign in checking code:  1) display the signed in required if blank, 2) if incorrect, display a message
+3) add user window, delete user -- just show the interface -- no need to do anything? Or can...
+4/ Add Welcome or title to each window
+5/ add a box for display short warning.
+
+
+***********************************************
+controller_login doc done
+CSV_Handler doc done
+DerbyDatabaseHandler done
+
+
+

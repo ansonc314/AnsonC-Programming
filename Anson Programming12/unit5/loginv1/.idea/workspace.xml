@@ -25,6 +25,11 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="workspaceImportEnabled" value="true" />
@@ -38,21 +43,31 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/teren/OneDrive/Desktop/VLN-Program12-2013/AnsonC-Programming/Anson Programming12/unit5/loginv1/libs/derbyclient.jar",
+    "last_opened_file_path": "C:/Users/teren/OneDrive/Desktop/VLN-Program12-2013/AnsonC-Programming/Anson Programming12/unit5/loginv1/src/main/resources/com/example/gui",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.50344825"
+    "project.structure.side.proportion": "0.50344825",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\loginv1\src\main\resources\com\example\gui" />
+      <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\loginv1\src\main\java\com\example\gui" />
       <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\login" />
       <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\login\target" />
       <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\login\libs" />
-      <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\login\src\main\java\com\example" />
-      <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\login\src\main\resources\com\example\gui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\login" />
@@ -61,12 +76,13 @@
       <recent name="com.example.database" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.database" />
+      <recent name="com.example.globalVariables" />
       <recent name="com.example.gui" />
+      <recent name="com.example.database" />
       <recent name="com.example.login" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.loginApplication">
     <configuration name="loginApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.gui.Main" />
       <module name="login" />
@@ -74,6 +90,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testDB" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.database.test_DB" />
+      <module name="login" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.loginApplication" />
+      <item itemvalue="Application.testDB" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

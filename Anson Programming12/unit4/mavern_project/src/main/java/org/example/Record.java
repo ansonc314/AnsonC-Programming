@@ -1,10 +1,7 @@
 package org.example;
 import org.globalVariables.*;
 public class Record {
-
-//    private int valueSize = RecordInfo.noHeader;
-    private String[] recordValue = new String[RecordInfo.noHeader];  // fields in each record
-    private String key;
+    private String[] recordValue = new String[RecordInfo.noHeader];
 
     /**
      * Constructor
@@ -17,7 +14,7 @@ public class Record {
     public String toString(){
         String out = "";
         for (int k= 0; k< RecordInfo.noHeader; k++){
-           out  = out +  RecordInfo.header[k]   + " is equal to " +recordValue[k]+ "        " ;
+           out  = out +  RecordInfo.header[k]   + ":  " +recordValue[k]+ "        " ;
         }
         return out;
     }
@@ -27,16 +24,27 @@ public class Record {
         return out;
     }
 
+    /**
+     * @return the key of the record
+     */
     public String getKey(){
         return recordValue[0];
     }
 
+    /**
+     *
+     * @param recordValue
+     * set recordValue
+     */
     public void setRecordValue(String[] recordValue) {
         for (int k= 0; k< RecordInfo.noHeader; k++){
             this.recordValue[k] = recordValue[k];
         }
     }
 
+    /*
+    Print recordValue
+     */
     public void printRecordValue(){
         System.out.println(this.toString());
     }

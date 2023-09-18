@@ -1,8 +1,8 @@
 ----------------------------------------------------------------
-Fri Aug 11 11:42:22 ACST 2023:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0189-e25d-c02d-00000ef1c5c0 
-on database directory C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit4\mavern_project\database\loginDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@78308db1 
-Loaded from file:/C:/Users/teren/OneDrive/Desktop/VLN-Program12-2013/AnsonC-Programming/Anson%20Programming12/unit4/mavern_project/libs/derby.jar
+Sat Sep 16 14:04:03 ACST 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-018a-9c44-6594-00000eeab618 
+on database directory C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit4\mavern_project\database\productDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@78308db1 
+Loaded from file:/C:/Users/teren/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=19.0.1+10-21
 user.dir=C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit4\mavern_project

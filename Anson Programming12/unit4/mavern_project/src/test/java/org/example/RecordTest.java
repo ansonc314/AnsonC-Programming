@@ -1,18 +1,23 @@
 package org.example;
 
+import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class RecordTest {
 
-    @org.junit.Test
-    public void getRecord() {
-    }
+    @Test
+    public void addRecord() {
 
-    @org.junit.Test
-    public void setRecord() {
-    }
+        RecordSetHandler myRecordSet = new RecordSetHandler();
 
-    @org.junit.Test
-    public void setRecordSimple() {
+        myRecordSet.addRecord(new Record(new String[]{"item1","first item"}));
+        myRecordSet.addRecord(new Record(new String[]{"item2","second item"}));
+
+        String[]  out = myRecordSet.recordSet.get("item1").getRecord();
+        assertEquals( "item1", out[0]   );
+        assertEquals( "first item", out[1]   );
+        assertEquals(2,myRecordSet.recordSet.size());
+
     }
 }

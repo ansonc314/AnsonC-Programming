@@ -1,20 +1,31 @@
 package org.example;
-
 import java.sql.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 public class DerbyDatabaseHandler {
-    private static final String DB_url = "jdbc:derby:database/loginDB;create=true";
-    public static Connection conn = null;
-    public static Statement stmt = null;
-    public static DerbyDatabaseHandler handler;
+    private String DB_url; // database url
+    public Connection conn = null;
+    public Statement stmt = null;
+    public DerbyDatabaseHandler handler;
 
+    /**
+     * Default constructor: Create a database with default name myDB
+     */
     public DerbyDatabaseHandler() {
+        DB_url = "jdbc:derby:database/myDB;create=true";  //default database name is myDB
         createConnection();
-        //createTable();
     }
 
-    public static DerbyDatabaseHandler getHandler(){
+    /**
+     * Create a database with name databaseName
+     * @param databaseName
+     */
+    public DerbyDatabaseHandler(String databaseName) {
+        DB_url = "jdbc:derby:database/" + databaseName + ";create=true";
+        createConnection();
+    }
+
+    public DerbyDatabaseHandler getHandler(){
         if(handler == null){
             handler = new DerbyDatabaseHandler();
             return handler;
@@ -23,21 +34,29 @@ public class DerbyDatabaseHandler {
         }
     }
 
-
+    /**
+     * this method will create a connection to the database
+     * the connection conn will be subsequently be used to execute action and query
+     */
     private void createConnection() {
-
         try {
-            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
             conn = DriverManager.getConnection(DB_url);
-        } catch (SQLException throwables) {
+        }
+        catch (SQLException throwables) {
             throwables.printStackTrace();
-        } catch (ClassNotFoundException throwables) {
+        }
+        catch (ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }
 
-
     }
 
+    /**
+     * this method will execute a database action
+     * @param qu - a database query
+     * @return
+     */
     public boolean execAction(String qu) {
         try {
             stmt = conn.createStatement();
@@ -50,6 +69,12 @@ public class DerbyDatabaseHandler {
         }
         return false;
     }
+
+    /**
+     * this method will execute a database query
+     * @param query
+     * @return ResultSet
+     */
     public ResultSet execQuery(String query){
         ResultSet resultSet;
         try{
