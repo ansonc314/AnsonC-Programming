@@ -27,6 +27,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -49,7 +50,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/teren/OneDrive/Desktop/VLN-Program12-2013/AnsonC-Programming/Anson Programming12/unit5/loginv1/src/main/resources/com/example/gui",
+    "last_opened_file_path": "C:/Users/teren/OneDrive/Desktop/VLN-Program12-2013/AnsonC-Programming/Anson Programming12/unit5/loginv2/libs/derbyclient.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.50344825",
@@ -73,7 +74,6 @@
       <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\login" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.auxfiles" />
       <recent name="com.example.database" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -83,7 +83,7 @@
       <recent name="com.example.login" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.testDB">
+  <component name="RunManager" selected="Application.loginApplication">
     <configuration name="loginApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.gui.Main" />
       <module name="login" />
@@ -92,8 +92,19 @@
       </method>
     </configuration>
     <configuration name="testDB" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.example.auxfiles.test_DB" />
+      <option name="MAIN_CLASS_NAME" value="com.example.database.test_DB" />
       <module name="login" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

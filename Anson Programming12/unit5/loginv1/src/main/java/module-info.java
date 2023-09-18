@@ -9,4 +9,6 @@ module com.example.login {
     exports com.example.gui;
     exports com.example.database;
     opens com.example.database to javafx.fxml;
+    exports com.example.auxfiles;
+    opens com.example.auxfiles to javafx.fxml;
 }
