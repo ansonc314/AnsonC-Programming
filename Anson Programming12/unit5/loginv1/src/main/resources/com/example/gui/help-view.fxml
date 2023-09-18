@@ -22,14 +22,14 @@
                   <Insets bottom="20.0" left="20.0" top="20.0" />
                </VBox.margin>
             </ImageView>
-            <Label id="help-view-label" prefHeight="96.0" prefWidth="220.0" text="If you have troubles, please contact our technical supports.  Their contact information is: help@xpertstudio.com" textFill="#f8f6f6" wrapText="true">
+            <Label id="H2_label" prefHeight="219.0" prefWidth="220.0" stylesheets="@style.css" text="If you have troubles, please contact our technical supports.  Their contact information is: help@xpertstudio.com" textAlignment="CENTER" textFill="#f8f6f6" wrapText="true">
                <VBox.margin>
-                  <Insets left="40.0" right="40.0" top="50.0" />
+                  <Insets left="40.0" right="40.0" top="20.0" />
                </VBox.margin>
             </Label>
             <ButtonBar opacity="0.54" prefHeight="40.0" prefWidth="252.0">
               <buttons>
-                  <Button id="loginButton" fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="22.0" prefWidth="203.0" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="#000000b8" />
+                  <Button id="Button" fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="22.0" prefWidth="203.0" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="#000000b8" />
               </buttons>
                <effect>
                   <Glow />

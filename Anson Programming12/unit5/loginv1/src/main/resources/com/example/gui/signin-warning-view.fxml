@@ -22,14 +22,14 @@
                   <Insets bottom="20.0" left="20.0" top="20.0" />
                </VBox.margin>
             </ImageView>
-            <Label id="signin-warning-view-label" prefHeight="119.0" prefWidth="283.0" text="User Name does not exists or password mismatches. Please retry. If you forget your password, please email technical support at help@xpertstudio.com to reset." textFill="WHITE" wrapText="true">
+            <Label id="H2_label" prefHeight="265.0" prefWidth="237.0" stylesheets="@style.css" text="User ID does not exist or incorrect password. Please retry. If you forget your password, please email technical support at help@xpertstudio.com to reset." textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <VBox.margin>
-                  <Insets left="40.0" right="40.0" top="30.0" />
+                  <Insets left="40.0" right="40.0" top="15.0" />
                </VBox.margin>
             </Label>
             <ButtonBar opacity="0.54" prefHeight="40.0" prefWidth="252.0">
               <buttons>
-                  <Button id="loginButton" fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="22.0" prefWidth="203.0" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="#000000b8" />
+                  <Button id="Button" fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="22.0" prefWidth="203.0" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="#000000b8" />
               </buttons>
                <effect>
                   <Glow />

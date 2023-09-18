@@ -23,7 +23,7 @@
                   <Insets bottom="20.0" left="20.0" top="20.0" />
                </VBox.margin>
             </ImageView>
-            <Label id="exit-warning-view-label" prefHeight="17.0" prefWidth="172.0" text="Are you sure want to exit?" textAlignment="RIGHT" textFill="#f8f8f8">
+            <Label id="H2_label" prefHeight="86.0" prefWidth="172.0" stylesheets="@style.css" text="Are you sure want to exit?" textAlignment="CENTER" textFill="#f8f8f8" wrapText="true">
                <VBox.margin>
                   <Insets bottom="50.0" left="60.0" right="40.0" top="80.0" />
                </VBox.margin>
@@ -33,11 +33,8 @@
             </Label>
             <ButtonBar opacity="0.54" prefHeight="40.0" prefWidth="252.0">
               <buttons>
-                  <Button id="loginButton" fx:id="exitWindow_exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="22.0" prefWidth="203.0" stylesheets="@style.css" text="EXIT" textAlignment="CENTER" textFill="#000000b8">
-                     <padding>
-                        <Insets top="50.0" />
-                     </padding></Button>
-                  <Button id="loginButton" fx:id="exitWindow_cancelButton" mnemonicParsing="false" onAction="#cancel" text="CANCEL" />
+                  <Button id="Button" fx:id="exitWindow_exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="23.0" prefWidth="132.0" stylesheets="@style.css" text="Exit" textFill="#000000b8" />
+                  <Button id="Button" fx:id="exitWindow_cancelButton" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
               </buttons>
                <effect>
                   <Glow />
@@ -46,7 +43,7 @@
                   <Insets />
                </opaqueInsets>
                <VBox.margin>
-                  <Insets top="30.0" />
+                  <Insets left="20.0" top="30.0" />
                </VBox.margin>
             </ButtonBar>
          </children>

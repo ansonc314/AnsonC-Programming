@@ -30,17 +30,17 @@
          </VBox.margin></HBox>
       <VBox prefHeight="200.0" prefWidth="100.0">
          <children>
-            <Label text="User Name" textAlignment="CENTER" textFill="#fcfcfc">
+            <Label id="H3_label" stylesheets="@style.css" text="User Name" textAlignment="CENTER" textFill="#fcfcfc">
                <VBox.margin>
                   <Insets left="50.0" right="50.0" />
                </VBox.margin>
             </Label>
-                <TextField fx:id="userName_loginWin" prefHeight="25.0" prefWidth="146.0" promptText="UserName" styleClass="custom-text-field" stylesheets="@style.css">
+                <TextField fx:id="userName_loginWin" prefHeight="25.0" prefWidth="146.0" promptText="User Name" styleClass="custom-text-field" stylesheets="@style.css">
                <VBox.margin>
                   <Insets left="50.0" right="50.0" />
                </VBox.margin>
             </TextField>
-            <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="137.0" text="Password" textAlignment="CENTER" textFill="#fcfcfc">
+            <Label id="H3_label" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="137.0" stylesheets="@style.css" text="Password" textAlignment="CENTER" textFill="#fcfcfc">
                <VBox.margin>
                   <Insets left="50.0" top="20.0" />
                </VBox.margin>
@@ -54,8 +54,8 @@
       </VBox>
       <ButtonBar nodeOrientation="LEFT_TO_RIGHT" opacity="0.61" prefHeight="40.0" prefWidth="200.0">
          <buttons>
-                <Button id="loginButton" fx:id="buttonLogin" alignment="CENTER" minWidth="60.0" mnemonicParsing="false" onAction="#loginButtonPressed" prefHeight="27.0" prefWidth="110.0" stylesheets="@style.css" text="Login" textAlignment="CENTER" />
-                <Button id="loginButton" fx:id="buttonHelp" alignment="CENTER" minWidth="60.0" mnemonicParsing="false" onAction="#openHelpWindow" prefHeight="27.0" prefWidth="200.0" stylesheets="@style.css" text="Help" textAlignment="CENTER" />
+                <Button id="Button" fx:id="buttonLogin" alignment="CENTER" minWidth="60.0" mnemonicParsing="false" onAction="#loginButtonPressed" prefHeight="27.0" prefWidth="110.0" stylesheets="@style.css" text="Login" textAlignment="CENTER" />
+                <Button id="Button" fx:id="buttonHelp" alignment="CENTER" minWidth="60.0" mnemonicParsing="false" onAction="#openHelpWindow" prefHeight="27.0" prefWidth="200.0" stylesheets="@style.css" text="Help" textAlignment="CENTER" />
          </buttons>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -67,13 +67,13 @@
             <Insets right="11.0" />
          </padding>
       </ButtonBar>
-      <Label id="login-view-label" prefHeight="17.0" prefWidth="258.0" stylesheets="@style.css" text="* This is a trial version" textFill="#f5f4f4">
+      <Label id="H5_label" prefHeight="17.0" prefWidth="258.0" stylesheets="@style.css" text="* This is a trial version" textFill="#f5f4f4">
          <padding>
             <Insets top="30.0" />
          </padding>
       </Label>
-      <Label id="login-view-label" prefHeight="17.0" prefWidth="258.0" text="Default user: admin" textFill="#f5f4f4" />
-      <Label id="login-view-label" prefHeight="17.0" prefWidth="258.0" text="Default password: password" textFill="#f5f4f4" />
+      <Label id="H5_label" prefHeight="17.0" prefWidth="258.0" text="Default user: admin" textFill="#f5f4f4" />
+      <Label id="H5_label" prefHeight="17.0" prefWidth="258.0" text="Default password: password" textFill="#f5f4f4" />
     </children>
     <padding>
         <Insets bottom="10.0" />
