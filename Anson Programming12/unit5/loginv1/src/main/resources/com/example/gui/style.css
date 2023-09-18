@@ -15,7 +15,7 @@ http://fxexperience.com/2011/12/styling-fx-buttons-with-css/
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 }
 
-#login-view-label{
+#login-view-label{  
     -fx-font-size: 10px;
     -fx-font-weight: bold;
 //    -fx-text-fill: #333333;
