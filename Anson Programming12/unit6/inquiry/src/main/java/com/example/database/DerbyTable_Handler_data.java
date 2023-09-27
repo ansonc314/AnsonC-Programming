@@ -2,7 +2,6 @@ package com.example.database;
 
 import com.example.globalVariables.RecordInfo;
 import com.example.globalVariables.StaticGlobalVariables;
-import com.example.globalVariables.SystemInfo;
 
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
@@ -10,7 +9,7 @@ import java.sql.SQLException;
 import java.util.Iterator;
 
 public class DerbyTable_Handler_data {
-    DerbyDatabase_Handler handler;
+    DerbyDatabase_Handler_data handler;
     String tableName ;
 
 
@@ -19,10 +18,11 @@ public class DerbyTable_Handler_data {
      * @param handler - handler of a database
      * table_name is defined in the class SystemInfo
      */
-    public DerbyTable_Handler_data(DerbyDatabase_Handler handler, String tableName){
+    public DerbyTable_Handler_data(DerbyDatabase_Handler_data handler, String tableName){
         this.handler = handler;
         this.tableName = tableName;
         createTable();
+
     }
 
 

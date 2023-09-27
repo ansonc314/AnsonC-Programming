@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  * Requires the user login database exists.
- * If run for the first time,the method test_DB in the package com.example.database can be called to
+ * If run for the first time,the method test_DB_data in the package com.example.database can be called to
  * copy the .csv file to the database
  * Once the DB was created, there is no need to re-run the program. All updates in the sign-in records will
  * simultaneously update the database and the csv files.

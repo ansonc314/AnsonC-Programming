@@ -1,6 +1,7 @@
 package com.example.gui;
 
 import com.example.database.*;
+import com.example.globalVariables.SystemInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -58,8 +59,8 @@ public class Controller_Table implements Initializable {
      */
     private void loadData() {
         //load all user names and passwords record
-        DerbyDatabase_Handler handler = new DerbyDatabase_Handler();
-        DerbyTable_Handler_user tableHandler = new DerbyTable_Handler_user(handler);
+        DerbyDatabase_Handler_user handler = new DerbyDatabase_Handler_user(SystemInfo.databaseName_user);
+        DerbyTable_Handler_user tableHandler = new DerbyTable_Handler_user(handler,SystemInfo.databaseTableName_user);
         HashMap_Handler_user recordSetList = tableHandler.Derby2RecordSet(); // read data from database to recordSet
         Iterator<String> iterator = recordSetList.recordSet.keySet().iterator();
 

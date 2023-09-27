@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.Iterator;
 
 public class DerbyTable_Handler_user {
-    DerbyDatabase_Handler handler;
+    DerbyDatabase_Handler_user handler;
     String tableName ;
 
     /**
@@ -18,9 +18,9 @@ public class DerbyTable_Handler_user {
      * @param handler - handler of a database
      * table_name is defined in the class SystemInfo
      */
-    public DerbyTable_Handler_user(DerbyDatabase_Handler handler){
+    public DerbyTable_Handler_user(DerbyDatabase_Handler_user handler){
         this.handler = handler;
-        tableName = SystemInfo.databaseTableName;
+        tableName = SystemInfo.databaseName_user;
         createTable();
     }
 
@@ -29,7 +29,7 @@ public class DerbyTable_Handler_user {
      * @param handler - handler of a database
      * table_name is defined in the class SystemInfo
      */
-    public DerbyTable_Handler_user(DerbyDatabase_Handler handler, String tableName){
+    public DerbyTable_Handler_user(DerbyDatabase_Handler_user handler, String tableName){
         this.handler = handler;
         this.tableName = tableName;
         createTable();

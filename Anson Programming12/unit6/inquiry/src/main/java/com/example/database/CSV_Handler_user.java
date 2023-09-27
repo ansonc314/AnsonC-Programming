@@ -24,7 +24,7 @@ public class CSV_Handler_user {
      * Constructor - Default
      */
     public CSV_Handler_user(){
-        CSV_FILENAME = "./csvDatabase.csv";  // default csv filename is loginDatabase
+        CSV_FILENAME = "./userCSV.csv";  // default csv filename is loginDatabase
     }
 
     /**

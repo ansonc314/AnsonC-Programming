@@ -4,33 +4,33 @@ import com.example.globalVariables.SystemInfo;
 
 import java.sql.*;
 
-public class DerbyDatabase_Handler {
+public class DerbyDatabase_Handler_data {
     private String DB_url;
     public  Connection conn = null;
     public Statement stmt = null;
-    public DerbyDatabase_Handler handler;
+    public DerbyDatabase_Handler_data handler;
 
 
     /**
-     * Default constructor: Create a database with databaseName specified in SystemInfo
+     * Default constructor: Create a database with databaseName_data specified in SystemInfo
      */
-    public DerbyDatabase_Handler() {
-        DB_url = "jdbc:derby:database/" + SystemInfo.databaseName + ";create=true";
+    public DerbyDatabase_Handler_data() {
+        DB_url = "jdbc:derby:database/" + SystemInfo.databaseName_data + ";create=true";
         createConnection();
     }
 
     /**
-     * Create a database with user-defined databaseName
-     * @param databaseName
+     * Create a database with user-defined databaseName_data
+     * @param databaseName_data
      */
-    public DerbyDatabase_Handler(String databaseName) {
-        DB_url = "jdbc:derby:database/" + databaseName + ";create=true";
+    public DerbyDatabase_Handler_data(String databaseName_data) {
+        DB_url = "jdbc:derby:database/" + databaseName_data + ";create=true";
         createConnection();
     }
 
-    public DerbyDatabase_Handler getHandler(){
+    public DerbyDatabase_Handler_data getHandler(){
         if(handler == null){
-            handler = new DerbyDatabase_Handler();
+            handler = new DerbyDatabase_Handler_data();
             return handler;
         }else{
             return handler;

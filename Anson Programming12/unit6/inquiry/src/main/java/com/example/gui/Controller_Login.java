@@ -3,6 +3,7 @@ package com.example.gui;
 import com.example.database.*;
 
 import com.example.globalVariables.StaticGlobalVariables;
+import com.example.globalVariables.SystemInfo;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -38,8 +39,10 @@ public class Controller_Login {
         String password = password_loginWin.getText();
 
         // define the derby database handler for checking if entered username and password matches DB records or not
-        DerbyDatabase_Handler handler = new DerbyDatabase_Handler();
-        DerbyTable_Handler_user tableHandler = new DerbyTable_Handler_user(handler);
+
+        DerbyDatabase_Handler_user handler = new DerbyDatabase_Handler_user(SystemInfo.databaseName_user);
+        DerbyTable_Handler_user tableHandler = new DerbyTable_Handler_user(handler,SystemInfo.databaseTableName_user);
+
 
         if (tableHandler.recordExist(userName,password)){
             // sign-in is successful. A new window with all user  info will be displayed

@@ -44,8 +44,8 @@ public class Controller_AddUser {
         String fullName = newFullName.getText();
 
         // define csv, derbyDB handlers which will be used for adding records
-        CSV_Handler_user csvFileHandle = new CSV_Handler_user(SystemInfo.csvFilename);
-        DerbyDatabase_Handler handler = new DerbyDatabase_Handler(SystemInfo.databaseName);
+        CSV_Handler_user csvFileHandle = new CSV_Handler_user(SystemInfo.csvFilename_user);
+        DerbyDatabase_Handler_user handler = new DerbyDatabase_Handler_user(SystemInfo.databaseName_user);
         DerbyTable_Handler_user tableHandler = new DerbyTable_Handler_user(handler);
 
         // copy records from DB to hashmap

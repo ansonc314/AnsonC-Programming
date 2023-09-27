@@ -83,7 +83,7 @@
       <recent name="com.example.login" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.testDB">
+  <component name="RunManager" selected="Application.loginApplication">
     <configuration name="loginApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.gui.Main" />
       <module name="login" />
@@ -91,8 +91,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testDB" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.example.database.test_DB" />
+    <configuration name="testDB_data" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.database.test_DB_data" />
       <module name="login" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -100,7 +100,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.loginApplication" />
-      <item itemvalue="Application.testDB" />
+      <item itemvalue="Application.testDB_data" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
