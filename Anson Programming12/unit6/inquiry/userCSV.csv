@@ -1,10 +1,10 @@
-UserName,Password,FullName
-ansonc,helloworld,Anson Chan
-oliverg,goodbye,Oliver Gate
-willb,ilikejava,Will Bowen
-admin,password,Administrator
-ryanc,goodMorning,Ryan Charlie
-michaelj,basketball,Michael Jordan
-georges,hellohello,George Smith
-andyk,goodnite,Andy King
-maryj,vancouver,Mary James
+UserName,Password,FullName,Height
+ansonc,helloworld,Anson Chan,170
+oliverg,goodbye,Oliver Gate,171
+willb,ilikejava,Will Bowen,172
+admin,password,Administrator,173
+ryanc,goodMorning,Ryan Charlie,174
+michaelj,basketball,Michael Jordan,175
+georges,hellohello,George Smith,176
+andyk,goodnite,Andy King,177
+maryj,vancouver,Mary James,178

@@ -17,10 +17,17 @@ public class HashMap_Handler_data {
     }
 
     /**
-     Add a recordUser to the LinkedHashMap
+     Add a recordUser to the LinkedHashMap (the newest entry is the first entry
      */
     public void addRecord(Record_data recordUser){
-       recordSet.put(recordUser.getKey(), recordUser);
+        LinkedHashMap<String, Record_data> newRecordSet = new LinkedHashMap<String, Record_data>();
+        newRecordSet.put(recordUser.getKey(), recordUser);
+        Iterator<String> iterator = recordSet.keySet().iterator();
+        while (iterator.hasNext()){
+            Record_data temp = recordSet.get(iterator.next());
+            newRecordSet.put(temp.getKey(), temp);
+        }
+        recordSet = newRecordSet;
     }
 
     /**

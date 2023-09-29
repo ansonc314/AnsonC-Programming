@@ -15,10 +15,10 @@ public class test_DB_user {
         DerbyTable_Handler_user tableHandler = new DerbyTable_Handler_user(handler,SystemInfo.databaseTableName_user);
 
 
-        /*
-        We define a class for storing data records in a linkedhashmap.
-        */
-/*
+
+       // We define a class for storing data records in a linkedhashmap.
+
+
         // step 1a:  Read records from CSV and store them in a LinkedHashMap
         HashMap_Handler_user recordSetHandler = csvFileHandle.CSV2RecordSet();
 
@@ -38,7 +38,6 @@ public class test_DB_user {
         csvFileHandle.RecordSet2CSV(retrieveRS);
 
 
- */
 
     }
 }

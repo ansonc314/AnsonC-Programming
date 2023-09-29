@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="tableWindow" prefHeight="500.0" prefWidth="300.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.Controller_Exit">
+   <children>
+      <VBox fillWidth="false" prefHeight="500.0" prefWidth="300.0">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sqLogo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label id="H2_label" prefHeight="86.0" prefWidth="172.0" stylesheets="@style.css" text="Are you sure want to exit?" textAlignment="CENTER" textFill="#f8f8f8" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="50.0" left="60.0" right="40.0" top="80.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <ButtonBar opacity="0.54" prefHeight="40.0" prefWidth="252.0">
+              <buttons>
+                  <Button id="Button" fx:id="exitWindow_exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="23.0" prefWidth="132.0" stylesheets="@style.css" text="Exit" textFill="#000000b8" />
+                  <Button id="Button" fx:id="exitWindow_cancelButton" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+              </buttons>
+               <effect>
+                  <Glow />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="20.0" top="30.0" />
+               </VBox.margin>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
