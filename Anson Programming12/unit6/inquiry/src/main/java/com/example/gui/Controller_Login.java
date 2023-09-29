@@ -47,6 +47,7 @@ public class Controller_Login {
         if (tableHandler.recordExist(userName,password)){
             // sign-in is successful. A new window with all user  info will be displayed
             FXMLLoader loader = new FXMLLoader(getClass().getResource("table-view.fxml"));
+
             Parent parent = loader.load();
             Controller_Table ctrl = loader.getController();
             ctrl.table_user.setText(StaticGlobalVariables.currentUser);

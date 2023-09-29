@@ -8,76 +8,76 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane id="tableWindow" prefHeight="500.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.Controller_Table">
-   <children>
-      <HBox prefHeight="500.0" prefWidth="600.0">
-         <children>
-            <VBox fillWidth="false" prefHeight="500.0" prefWidth="560.0">
-               <children>
-                  <HBox prefHeight="82.0" prefWidth="506.0">
-                     <children>
-                        <ImageView fitHeight="82.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@sqLogo.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets bottom="20.0" left="20.0" top="20.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <VBox prefHeight="122.0" prefWidth="394.0">
-                           <children>
-                              <Label id="H1_label" stylesheets="@style.css" text="Welcome" textFill="#f2f2f2">
-                                 <font>
-                                    <Font size="64.0" />
-                                 </font>
-                              </Label>
-                              <Label id="H2_label" fx:id="table_user" layoutX="10.0" layoutY="10.0" text="UserName" textFill="#f2f2f2">
-                                 <font>
-                                    <Font size="64.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                           <HBox.margin>
-                              <Insets left="20.0" top="20.0" />
-                           </HBox.margin>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <TableView fx:id="mainTable" prefHeight="292.0" prefWidth="516.0">
-                    <columns>
-                      <TableColumn fx:id="colUserName" prefWidth="97.0" text="User ID" />
-                      <TableColumn fx:id="colPassword" prefWidth="107.0" text="Password" />
-                        <TableColumn fx:id="colFullName" prefWidth="289.0" text="Full Name" />
-                    </columns>
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                  </TableView>
-                  <ButtonBar opacity="0.54" prefHeight="40.0" prefWidth="514.0">
-                    <buttons>
-                        <Button id="Button" fx:id="addButton" mnemonicParsing="false" onAction="#buttonAddUser" prefHeight="22.0" prefWidth="317.0" stylesheets="@style.css" text="Add User" />
-                        <Button id="Button" fx:id="exitButton" mnemonicParsing="false" onAction="#buttonExit" prefHeight="22.0" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="#000000b8" />
-                    </buttons>
-                     <effect>
-                        <Glow />
-                     </effect>
-                     <opaqueInsets>
+    <children>
+        <HBox prefHeight="500.0" prefWidth="600.0">
+            <children>
+                <VBox fillWidth="false" prefHeight="500.0" prefWidth="560.0">
+                    <children>
+                        <HBox prefHeight="82.0" prefWidth="506.0">
+                            <children>
+                                <ImageView fitHeight="82.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@sqLogo.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets bottom="20.0" left="20.0" top="20.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <VBox prefHeight="122.0" prefWidth="394.0">
+                                    <children>
+                                        <Label id="H1_label" stylesheets="@style.css" text="Welcome" textFill="#f2f2f2">
+                                            <font>
+                                                <Font size="64.0" />
+                                            </font>
+                                        </Label>
+                                        <Label id="H2_label" fx:id="table_user" layoutX="10.0" layoutY="10.0" text="UserName" textFill="#f2f2f2">
+                                            <font>
+                                                <Font size="64.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="20.0" top="20.0" />
+                                    </HBox.margin>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <TableView fx:id="mainTable" prefHeight="292.0" prefWidth="516.0">
+                            <columns>
+                                <TableColumn fx:id="colUserName" prefWidth="97.0" text="User ID" />
+                                <TableColumn fx:id="colPassword" prefWidth="107.0" text="Password" />
+                                <TableColumn fx:id="colFullName" prefWidth="289.0" text="Full Name" />
+                            </columns>
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" />
+                            </VBox.margin>
+                        </TableView>
+                        <ButtonBar opacity="0.54" prefHeight="40.0" prefWidth="514.0">
+                            <buttons>
+                                <Button id="Button" fx:id="addButton" mnemonicParsing="false" onAction="#buttonAddUser" prefHeight="22.0" prefWidth="317.0" stylesheets="@style.css" text="Add User" />
+                                <Button id="Button" fx:id="exitButton" mnemonicParsing="false" onAction="#buttonExit" prefHeight="22.0" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="#000000b8" />
+                            </buttons>
+                            <effect>
+                                <Glow />
+                            </effect>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </ButtonBar>
+                    </children>
+                </VBox>
+                <ImageView fitHeight="498.0" fitWidth="66.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@vertical.png" />
+                    </image>
+                    <HBox.margin>
                         <Insets />
-                     </opaqueInsets>
-                  </ButtonBar>
-               </children>
-            </VBox>
-            <ImageView fitHeight="498.0" fitWidth="66.0" pickOnBounds="true">
-               <image>
-                  <Image url="@vertical.png" />
-               </image>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </ImageView>
-         </children>
-         <opaqueInsets>
-            <Insets left="10.0" />
-         </opaqueInsets>
-      </HBox>
-   </children>
+                    </HBox.margin>
+                </ImageView>
+            </children>
+            <opaqueInsets>
+                <Insets left="10.0" />
+            </opaqueInsets>
+        </HBox>
+    </children>
 </AnchorPane>

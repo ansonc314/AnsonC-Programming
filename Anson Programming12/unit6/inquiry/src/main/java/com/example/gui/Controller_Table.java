@@ -8,6 +8,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -30,6 +33,7 @@ public class Controller_Table implements Initializable {
     public TableColumn colUserName;
     public TableColumn colPassword;
     public TableColumn colFullName;
+
     ObservableList<SimpleStringRecord> userList;
 
 
@@ -51,6 +55,7 @@ public class Controller_Table implements Initializable {
 
         // Display the userList in the table
         mainTable.getItems().setAll(userList);
+
 
     }
 

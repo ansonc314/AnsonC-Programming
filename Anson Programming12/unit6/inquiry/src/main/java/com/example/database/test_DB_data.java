@@ -9,14 +9,13 @@ public class test_DB_data {
     public static void main(String[] args)  throws IOException {
 
         DerbyDatabase_Handler_data handler = new DerbyDatabase_Handler_data(SystemInfo.databaseName_data);
-
         CSV_Handler_data csvFileHandle = new CSV_Handler_data("ansonc");
-
         DerbyTable_Handler_data tableHandler = new DerbyTable_Handler_data(handler,"ANSONC");
 
         /*
         We define a class for storing data records in a linkedhashmap.
         */
+
 
         // step 1a:  Read records from CSV and store them in a LinkedHashMap
         HashMap_Handler_data recordSetHandler = csvFileHandle.CSV2RecordSet();
@@ -35,8 +34,7 @@ public class test_DB_data {
 
         // step 2b: copy records from hashmap to a csv file
         csvFileHandle.RecordSet2CSV(retrieveRS);
-
-
+        
 
     }
 }

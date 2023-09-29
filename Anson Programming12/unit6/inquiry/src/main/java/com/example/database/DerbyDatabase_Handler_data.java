@@ -12,14 +12,6 @@ public class DerbyDatabase_Handler_data {
 
 
     /**
-     * Default constructor: Create a database with databaseName_data specified in SystemInfo
-     */
-    public DerbyDatabase_Handler_data() {
-        DB_url = "jdbc:derby:database/" + SystemInfo.databaseName_data + ";create=true";
-        createConnection();
-    }
-
-    /**
      * Create a database with user-defined databaseName_data
      * @param databaseName_data
      */
@@ -28,14 +20,7 @@ public class DerbyDatabase_Handler_data {
         createConnection();
     }
 
-    public DerbyDatabase_Handler_data getHandler(){
-        if(handler == null){
-            handler = new DerbyDatabase_Handler_data();
-            return handler;
-        }else{
-            return handler;
-        }
-    }
+
 
     /**
      * this method will create a connection to the database
