@@ -60,7 +60,7 @@ public class Controller_Table implements Initializable {
     /**
      * load the sign-in records and put them in the observableArrayList userList
      */
-    private void loadData() {
+    private void loadData()  throws IOException {
         List_Handler_data recordSetList = retrieveList();
 
         ListIterator iterator = recordSetList.recordSet.listIterator();
@@ -125,12 +125,11 @@ public class Controller_Table implements Initializable {
         stage.show();
     }
 
-    private List_Handler_data retrieveList(){
-        //load all user names and passwords record
-        DerbyDatabase_Handler_data handler = new DerbyDatabase_Handler_data(SystemInfo.databaseName_data);
-        DerbyTable_Handler_data tableHandler = new DerbyTable_Handler_data(handler, StaticGlobalVariables.currentDataTableName);
+    private List_Handler_data retrieveList()  throws IOException {
 
-        List_Handler_data recordSetList = tableHandler.Derby2RecordSet();
+        CSV_Handler_data csvFileHandle = new CSV_Handler_data(StaticGlobalVariables.currentDataTableName);
+        List_Handler_data recordSetList = csvFileHandle.CSV2RecordSet();
+
         return recordSetList;
     }
 

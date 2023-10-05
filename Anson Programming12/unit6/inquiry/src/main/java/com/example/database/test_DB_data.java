@@ -7,35 +7,6 @@ import java.io.IOException;
 public class test_DB_data {
 
     public static void main(String[] args)  throws IOException {
-    /*
-        // Initializing the first formatter
-        DateFormat DFormat
-                = DateFormat.getDateInstance();
-
-        // Converting the dateformat to string
-        String str = DFormat.format(new Date());
-
-        System.out.println(str);
-
-        // Original TimeZone
-        System.out.println(
-                "The original timezone is: "
-                        + DFormat.getTimeZone()
-                        .getDisplayName());
-
-        TimeZone time_zone
-                = TimeZone.getTimeZone("America/Los_Angeles");
-
-        // Modifying the time zone
-        DFormat.setTimeZone(time_zone);
-
-        // Converting the dateformat to string
-        String str2 = DFormat.format(new Date());
-
-        System.out.println(str2);
-
-
-     */
 
         DerbyDatabase_Handler_data handler = new DerbyDatabase_Handler_data(SystemInfo.databaseName_data);
         CSV_Handler_data csvFileHandle = new CSV_Handler_data("ansonc");
