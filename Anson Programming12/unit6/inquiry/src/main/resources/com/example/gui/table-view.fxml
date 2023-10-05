@@ -27,7 +27,7 @@
                                         <Image url="@sqLogo.png" />
                                     </image>
                                     <HBox.margin>
-                                        <Insets bottom="20.0" left="20.0" top="20.0" />
+                                        <Insets bottom="20.0" left="15.0" top="20.0" />
                                     </HBox.margin>
                                 </ImageView>
                                 <VBox prefHeight="122.0" prefWidth="394.0">
@@ -107,10 +107,10 @@
                         </VBox>
                      </children>
                   </HBox>
-                        <ButtonBar opacity="0.54" prefHeight="40.0" prefWidth="514.0">
+                        <ButtonBar opacity="0.54" prefHeight="40.0" prefWidth="485.0">
                             <buttons>
-                                <Button id="Button" fx:id="addButton" mnemonicParsing="false" onAction="#buttonAddUser" prefHeight="22.0" prefWidth="317.0" stylesheets="@style.css" text="Add User" />
-                                <Button id="Button" fx:id="exitButton" mnemonicParsing="false" onAction="#buttonExit" prefHeight="22.0" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="#000000b8" />
+                                <Button id="Button" fx:id="addButton" mnemonicParsing="false" onAction="#buttonAddUser" prefHeight="22.0" prefWidth="317.0" stylesheets="@style.css" text="New Entry" />
+                                <Button id="Button" fx:id="exitButton" mnemonicParsing="false" onAction="#buttonExit" prefHeight="26.0" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="#000000b8" />
                             </buttons>
                             <effect>
                                 <Glow />

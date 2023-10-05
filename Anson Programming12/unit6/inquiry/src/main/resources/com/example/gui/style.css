@@ -49,15 +49,14 @@ http://fxexperience.com/2011/12/styling-fx-buttons-with-css/
 #Button {
 /* http://fxexperience.com/2011/12/styling-fx-buttons-with-css/  */
     -fx-cursor: hand;
-    -fx-background-color:
-        #c3c4c4,
+    -fx-background-color: #e68400,  /* #c3c4c4  */
         linear-gradient(#d6d6d6 50%, white 100%),
         radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
 
 
     -fx-background-radius: 30;
     -fx-background-insets: 0,1,1;
-    -fx-text-fill: black;
+    -fx-text-fill: MIDNIGHTBLUE;
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
     -fx-font-size: 14px;
 
@@ -77,20 +76,9 @@ http://fxexperience.com/2011/12/styling-fx-buttons-with-css/
     -fx-text-fill: #242d35;
 }
 
-/*
-#mainBox {
-    -fx-background-color: #FAFAFA;
-    -fx-border-color: #616161;
-    -fx-border-width: 2px;
-    -fx-border-style: solid;
+.table-column {
+  -fx-alignment: CENTER;
 }
-#companyLogo{
-    -fx-font-size: 15px;
-    -fx-font-family: "Arial Black";
-    -fx-fill: #818181;
-    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
-}
-*/
 
 .button{
     -fx-cursor: hand;

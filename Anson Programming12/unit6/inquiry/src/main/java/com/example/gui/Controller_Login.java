@@ -53,7 +53,7 @@ public class Controller_Login {
             ctrl.table_user.setText(StaticGlobalVariables.currentUser);
 
             Stage stage = new Stage(StageStyle.DECORATED);
-            stage.setTitle("User Sign-In Database");
+            stage.setTitle("Health Tracker");
             stage.setScene(new Scene(parent));
             stage.show();
 
@@ -80,7 +80,7 @@ public class Controller_Login {
     public void openHelpWindow()  throws IOException  {
         Parent parent = FXMLLoader.load(getClass().getResource("help-view.fxml"));
         Stage stage = new Stage(StageStyle.DECORATED);
-        stage.setTitle("Help!!");
+        stage.setTitle("Instructions");
         stage.setScene(new Scene(parent));
         stage.show();
     }

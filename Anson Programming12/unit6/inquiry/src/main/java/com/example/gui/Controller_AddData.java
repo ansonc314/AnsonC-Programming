@@ -43,12 +43,10 @@ public class Controller_AddData {
         String SBP = newSBP.getText();
         String DBP = newDBP.getText();
 
-        // define csv, derbyDB handlers which will be used for adding records
-        DerbyDatabase_Handler_data handler = new DerbyDatabase_Handler_data(SystemInfo.databaseName_data);
-        DerbyTable_Handler_data tableHandler = new DerbyTable_Handler_data(handler, StaticGlobalVariables.currentDataTableName);
-        CSV_Handler_data csvFileHandle = new CSV_Handler_data(StaticGlobalVariables.currentDataTableName);
+        // define csv handlers which will be used for adding records
 
-        List_Handler_data recordSetList = tableHandler.Derby2RecordSet();
+        CSV_Handler_data csvFileHandle = new CSV_Handler_data(StaticGlobalVariables.currentDataTableName);
+        List_Handler_data recordSetList = csvFileHandle.CSV2RecordSet();
 
         Double h =  Double.valueOf(StaticGlobalVariables.currentHeight);
         Double w =  Double.valueOf(weight);
@@ -58,8 +56,6 @@ public class Controller_AddData {
         Record_data temp = new Record_data(new String[]{weight, bmi.toString() , SBP, DBP});
         recordSetList.addRecord2First(temp);
 
-        // add record to derby DB from hashmap
-        tableHandler.RecordSet2Derby(recordSetList);
         // add record to .csv from hashmap
         csvFileHandle.RecordSet2CSV(recordSetList);
 
@@ -79,7 +75,7 @@ public class Controller_AddData {
         ctrl.table_user.setText(StaticGlobalVariables.currentUser);
 
         stage = new Stage(StageStyle.DECORATED);
-        stage.setTitle("User Sign-In Database");
+        stage.setTitle("Health Tracker");
         stage.setScene(new Scene(parent));
         stage.show();
     }

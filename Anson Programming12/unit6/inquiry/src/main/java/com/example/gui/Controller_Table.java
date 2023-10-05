@@ -104,7 +104,7 @@ public class Controller_Table implements Initializable {
 
        Parent parent = FXMLLoader.load(getClass().getResource("addData-view.fxml"));
        stage = new Stage(StageStyle.DECORATED);
-       stage.setTitle("Enter New User Details");
+       stage.setTitle("Enter New Health Record");
        stage.setScene(new Scene(parent));
        stage.show();
 

@@ -1,5 +1,7 @@
 package com.example.database;
 
+import com.example.globalVariables.StaticGlobalVariables;
+
 import java.util.LinkedList;
 import java.util.ListIterator;
 
@@ -46,7 +48,11 @@ public class List_Handler_data {
             String[] temp = temp1.getRecord();
             sum = sum + Double.valueOf(temp[choice]);
         }
-        return sum/k;
+
+        Double out = sum/k;
+        out = Math.round(out*100)/100.0;
+
+        return out;
     }
 
 

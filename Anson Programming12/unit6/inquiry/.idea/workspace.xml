@@ -15,6 +15,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -50,6 +51,8 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "C:/Users/teren/OneDrive/Desktop/VLN-Program12-2013/AnsonC-Programming/Anson Programming12/unit6/inquiry/src/main/resources/com/example/gui",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -73,7 +76,13 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\teren\OneDrive\Desktop\VLN-Program12-2013\AnsonC-Programming\Anson Programming12\unit5\login" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.database" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
       <recent name="com.example.database" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">

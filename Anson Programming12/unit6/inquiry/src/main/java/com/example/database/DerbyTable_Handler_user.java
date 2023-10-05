@@ -13,16 +13,7 @@ public class DerbyTable_Handler_user {
     DerbyDatabase_Handler_user handler;
     String tableName ;
 
-    /**
-     * default constructor
-     * @param handler - handler of a database
-     * table_name is defined in the class SystemInfo
-     */
-    public DerbyTable_Handler_user(DerbyDatabase_Handler_user handler){
-        this.handler = handler;
-        tableName = SystemInfo.databaseName_user;
-        createTable();
-    }
+
 
     /**
      * default constructor
@@ -37,10 +28,11 @@ public class DerbyTable_Handler_user {
 
 
     /**
-     * add a record (with 3 entries) to the table
+     * add a record (with 4 entries) to the table
      * @param entry0
      * @param entry1
      * @param entry2
+     * @param entry3
      */
     public void addMember(String entry0, String entry1, String entry2, String entry3){
         String qu = "INSERT INTO " + this.tableName+  " VALUES (" +
@@ -154,7 +146,6 @@ public class DerbyTable_Handler_user {
                     StaticGlobalVariables.currentHeight=entry3;
                     StaticGlobalVariables.currentUser = entry2;
                     StaticGlobalVariables.currentDataTableName=entry0.toUpperCase();
-                    System.out.println("DATATABLE = "+StaticGlobalVariables.currentDataTableName);
                 }
             }
         } catch (SQLException throwables) {

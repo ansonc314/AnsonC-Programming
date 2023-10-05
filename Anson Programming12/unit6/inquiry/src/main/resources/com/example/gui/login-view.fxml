@@ -16,7 +16,7 @@
     <children>
         <HBox alignment="CENTER" prefHeight="50.0" prefWidth="250.0" spacing="10.0" styleClass="innerBox" stylesheets="@style.css">
          <children>
-            <ImageView fitHeight="189.0" fitWidth="234.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="149.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@sqLogo.png" />
                </image>
