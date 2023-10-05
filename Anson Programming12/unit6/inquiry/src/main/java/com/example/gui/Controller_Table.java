@@ -9,10 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -25,6 +22,7 @@ import java.util.ResourceBundle;
 
 public class Controller_Table implements Initializable {
 
+    public Label lbl_avgWeight, lbl_avgSBP, lbl_avgDBP;
     public Label table_user;
     public Button addButton;
     public Button exitButton;
@@ -63,11 +61,7 @@ public class Controller_Table implements Initializable {
      * load the sign-in records and put them in the observableArrayList userList
      */
     private void loadData() {
-        //load all user names and passwords record
-        DerbyDatabase_Handler_data handler = new DerbyDatabase_Handler_data(SystemInfo.databaseName_data);
-        DerbyTable_Handler_data tableHandler = new DerbyTable_Handler_data(handler, StaticGlobalVariables.currentDataTableName);
-
-        List_Handler_data recordSetList = tableHandler.Derby2RecordSet();
+        List_Handler_data recordSetList = retrieveList();
 
         ListIterator iterator = recordSetList.recordSet.listIterator();
 
@@ -78,6 +72,13 @@ public class Controller_Table implements Initializable {
             userList.add(new SimpleStringRecord(temp[0] , temp[1], temp[2], temp[3] ));
 
         }
+
+        Double tmp1 =  recordSetList.returnAverage(0);
+        lbl_avgWeight.setText(tmp1.toString());
+        Double tmp2 =  recordSetList.returnAverage(2);
+        lbl_avgSBP.setText(tmp2.toString());
+        Double tmp3 =  recordSetList.returnAverage(3);
+        lbl_avgDBP.setText(tmp3.toString());
 
     }
 
@@ -100,11 +101,13 @@ public class Controller_Table implements Initializable {
        Stage stage = (Stage) addButton.getScene().getWindow();
        stage.close();
 
-       Parent parent = FXMLLoader.load(getClass().getResource("addUser-view.fxml"));
+
+       Parent parent = FXMLLoader.load(getClass().getResource("addData-view.fxml"));
        stage = new Stage(StageStyle.DECORATED);
        stage.setTitle("Enter New User Details");
        stage.setScene(new Scene(parent));
        stage.show();
+
     }
 
 
@@ -121,6 +124,16 @@ public class Controller_Table implements Initializable {
         stage.setScene(new Scene(parent));
         stage.show();
     }
+
+    private List_Handler_data retrieveList(){
+        //load all user names and passwords record
+        DerbyDatabase_Handler_data handler = new DerbyDatabase_Handler_data(SystemInfo.databaseName_data);
+        DerbyTable_Handler_data tableHandler = new DerbyTable_Handler_data(handler, StaticGlobalVariables.currentDataTableName);
+
+        List_Handler_data recordSetList = tableHandler.Derby2RecordSet();
+        return recordSetList;
+    }
+
 
 
 }

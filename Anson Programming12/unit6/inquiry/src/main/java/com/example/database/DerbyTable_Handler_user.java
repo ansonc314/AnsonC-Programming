@@ -150,6 +150,7 @@ public class DerbyTable_Handler_user {
                 String entry3 = resultSet.getString(RecordInfo.header_user[3]);
                 if (entry0.equals(username) && entry1.equals(password)){
                     flag = true;
+                    StaticGlobalVariables.currentHeight=entry3;
                     StaticGlobalVariables.currentUser = entry2;
                     StaticGlobalVariables.currentDataTableName=entry0.toUpperCase();
                     System.out.println("DATATABLE = "+StaticGlobalVariables.currentDataTableName);

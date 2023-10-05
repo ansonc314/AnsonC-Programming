@@ -34,6 +34,20 @@ public class List_Handler_data {
             System.out.println( iterator.next());
 
         }
-
     }
+
+
+    public double returnAverage(int choice){
+        double sum = 0;
+        ListIterator iterator = recordSet.listIterator();
+        int k = Math.min(recordSet.size(),5);
+        for (int j = 1; j < k+1; j++){
+            Record_data temp1 = (Record_data) iterator.next();
+            String[] temp = temp1.getRecord();
+            sum = sum + Double.valueOf(temp[choice]);
+        }
+        return sum/k;
+    }
+
+
 }
